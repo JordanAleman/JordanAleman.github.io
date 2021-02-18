@@ -263,5 +263,16 @@ body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .chipBox, .sizeChipBox  {
+        padding: 2.5%;
+    }
+
+    .buttonStart {
+        font-size: 30px;
+    }
+}
+
+
 
 
