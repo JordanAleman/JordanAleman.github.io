@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Jordan Alemán Santana">
+    <title>4 en Rayas</title>
+
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
+     <link rel="stylesheet" href="css/keyframe.css">
+     <link rel="stylesheet" href="css/default.css">
+ 
+</head>
+
+<body>
+
+<div id="superMain" class="superMain">
+    <header id="tablePoints" class="container-fluid tablePoints">
+        
+       <div id="header-computer" class="container-fluid header-computer">
+            <div class="row">
+                <div class="col-sm d-flex">
+                    <button id="boxPlayerOne-computer" class="boxPlayerOne boxPlayer"><p>J1</p></button>
+                    <div class="turnPlayer"><p>Comienza Amarillo</p></div>
+                </div>
+
+                <div class="col-sm ">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8 d-grid gap-2 mx-auto my-auto">
+                            <button type="button" id="buttonStart-computer" class="btn btn-primary buttonStart"><p>Reiniciar</p></button>
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+
+                <div class="col-sm justify-content-end d-flex">
+                    <div class="turnPlayer"><p>Comienza Rojo</p></div>
+                    <button id="boxPlayerTwo-computer" class="boxPlayerTwo boxPlayer"><p>J2</p></button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="header-mobile" class="container-fluid header-mobile">
+            <div class="row">
+                <div class="col-6 col-sm-6">
+                    <button id="boxPlayerOne-mobile" class="boxPlayerOne boxPlayer"><p>J1</p></button>
+                </div>
+        
+                <div class="col-6 col-sm-6 justify-content-end d-flex">
+                    <button id="boxPlayerTwo-mobile" class="boxPlayerTwo boxPlayer"><p>J2</p></button>
+                </div>
+        
+                <div class="col-sm-12 mb-3 d-grid gap-2">
+                    <button type="button" id="buttonStart-mobile" class="btn btn-primary buttonStart"><p>Reiniciar</p></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="principalBody" class="principalBody">
+        <div id="mainBoard" class="mainBoard">
+            <div id="alertWin" class="alertWin"></div>
+            <div id="allBox"><!--Rellenado en js/style.js--></div>
+        </div>
+    </main>
+    
+</div>
+
+
+<script src="js/style.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

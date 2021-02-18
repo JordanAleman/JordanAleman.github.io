@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    background-color: wheat;
+
+}
+
+:root {
+    --color-bg-main: powderblue;
+    --color-playerOne: yellow;
+    --color-playerTwo: red;
+}
+
+.superMain {
+    position: relative;
+    margin-top: 1.2rem;
+    left: 5%;
+
+    width: 90%;
+    
+    border: 12px black solid;
+    box-shadow: 0px 0px 15px 5px rgba(83,80,133,1);
+    
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Header                                   */
+/* -------------------------------------------------------------------------- */
+.header-computer {
+    display: block;
+}
+
+.header-mobile {
+    display: none;
+}
+
+.tablePoints {
+    background-color: var(--color-bg-main);
+}
+
+.boxTablePoints {
+    background-color: #F5F5DC;
+}
+
+.boxPlayer {    
+    margin: 1rem;
+    background-color: var(--color-bg-main);
+
+    width: 40%;
+    height: 100px;
+
+    font-weight: bold;
+    font-size: 50px;
+
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 BoxPlayers                                 */
+/* -------------------------------------------------------------------------- */
+.boxPlayerOne {
+    border: var(--color-playerOne) solid 10px;
+}
+
+.boxPlayerTwo {
+    border: var(--color-playerTwo) solid 10px;
+}
+
+.playerOneTurn {
+    background-color: var(--color-playerOne);
+    border: black solid 5px;
+}
+
+.playerTwoTurn {
+    background-color: var(--color-playerTwo);
+    border: black solid 5px;
+}
+
+.selectColorPlayer {
+    height: 50px;
+    width: 30%;
+    margin-top: 3%;
+}
+
+.selectColorPlayerOne {
+    background-color: var(--color-playerOne);
+}
+
+.selectColorPlayerTwo {
+    background-color: var(--color-playerTwo);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 ButtonStart                                */
+/* -------------------------------------------------------------------------- */
+.buttonStart {
+    margin-top: 1rem;
+
+    width: 100%;
+    height: 9vh;
+
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.turnPlayer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 1rem;
+}
+
+.turnPlayer p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Board                                    */
+/* -------------------------------------------------------------------------- */
+.principalBody {
+    width: 100%;
+    height: 78vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: lightseagreen;
+    color: white;
+}
+
+.mainBoard {
+    /* background-color: blue; */
+    background: rgb(17,1,190);
+    background: linear-gradient(180deg, rgba(17,1,190,1) 0%, rgba(33,42,163,1) 50%, rgba(12,55,156,1) 100%);
+    
+    border-radius: 1rem 1rem 0 0;
+
+    /* width: 1000px; */
+    width: 850px;
+    padding: 1rem;
+}
+
+.alertWin {
+    font-size: 40px;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  BaseBoard                                 */
+/* -------------------------------------------------------------------------- */
+.baseBox {
+    position: relative;
+    left: -100px;
+    bottom: -20px;
+
+    background: rgb(17,1,190);
+    background: linear-gradient(180deg, rgba(17,1,190,1) 0%, rgba(33,42,163,1) 50%, rgba(12,55,156,1) 100%);
+
+    border: black solid 4px;
+    border-radius: 1rem 1rem 0 0;
+
+    width: 1000px;
+    height: 50px;
+    
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Querys                                */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 1100px) {
+
+    /* -------------------------------------------------------------------------- */
+    /*                                   Header                                   */
+    /* -------------------------------------------------------------------------- */
+    .header-computer{
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+    }
+
+    .boxPlayer {
+        width: 75%;
+        height: 85px;
+    }
+
+    .buttonStart {
+        height: 8vh;
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                    Main                                    */
+    /* -------------------------------------------------------------------------- */
+    .principalBody {
+        height: 70vh;
+    }
+
+    .mainBoard {
+        width: 85%;
+    }
+
+    .turnPlayer p {
+        font-size: 0;
+    }
+
+    .alertWin {
+        font-size: 20px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .chipBox {
+        padding: 4.8%;
+    }
+
+    .sizeChipBox {
+        padding: 3.8%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .chipBox, .sizeChipBox  {
+        padding: 4.5%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .chipBox, .sizeChipBox  {
+        padding: 4%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chipBox, .sizeChipBox  {
+        padding: 3.8%;
+    }
+}
+
+
+
