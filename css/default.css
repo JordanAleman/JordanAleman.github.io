@@ -259,7 +259,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .chipBox, .sizeChipBox  {
-        padding: 3.8%;
+        padding: 3%;
     }
 }
 
