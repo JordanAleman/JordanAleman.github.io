@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Ejercicios Parte 2 JavaScript</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/EjerciciosParte2.css">
+    <link rel="stylesheet" href="../../css/sideMenu.css">
+
+
+
+</head>
+<body>
+
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #33032D; color: white; left: 0;">&#9776;</span>
+    
+    <div id="mainPostNav">   
+        <div class="contenido-header">
+            <div class="fondo" id="fondo">
+                <p class="texto">Ejercicios JavaScript Parte 2</p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg menu">
+            <p class="navbar-brand navbar-toggler">Menú</p>
+
+            <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Actividad1">Saludo</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Actividad2">Adivinar Número</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Actividad3">Primitiva</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Actividad4">Try Catch</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Actividad5">Throw</a>
+                        </li>
+                    </ul>
+            </div>
+
+        </nav>
+
+    
+        <div class="contenido-cuerpo">
+            <div class="container">      
+                <div class="row">           
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <br id="Actividad1"><br>
+                        <section>
+                            <h1 class="tituloActividad"><span>Saludo</span></h1>
+                            <p>Introducir el nombre del usuario en un control de edición y al pulsar el botón SALUDAR visualizar el mensaje Hola nombre, yo soy PENTIUM 4.</p>
+                            
+                            <form>
+                                <fieldset>
+                                    <h3 class="titulo"><span>Saludando a un amigo</span></h3>
+                                    
+                    
+                                    <div class="form-group">
+                                        <label>¿Tu nombre? </label>
+                                        <input class="form-control" type="text" name="Ejer1String" >
+                    
+                                        <p id="SolEjer1"></p>
+                    
+                                        <input class="btn btn-secondary" type="button" value="SALUDAR" onclick="ejercicio1()">
+                                        <input class="btn btn-danger" type="reset" value="REINICIAR" onclick="document.getElementById('SolEjer1').innerHTML = ''">
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </section>
+
+                        <br id="Actividad2"><br>
+
+                        <section>
+                            <h1 class="tituloActividad"><span>Adivinar número</span></h1>
+                            <p>El programa generará un número aleatorio comprendido entre 1 y 100 e invitará al usuario a adivinarlo. 
+                            Si el usuario introduce un número mayor que el generado se le presentará el mensaje<br> <b>INTÉNTELO CON UN NÚMERO MENOR</b>, 
+                            en caso contrario <b>INTÉNTELO CON UN NÚMERO MAYOR</b>. Cuando el número sea adivinado se le indicará al usuario el número de intentos.<br> 
+                            Se limitará a 6 dicho número de intentos.</p>
+                                    
+
+                            <fieldset class="fondoAdivinar">
+                                <h3 class="titulo"><span style="background: #e6ffff;">Adivina el número</span></h3>
+            
+                                <div>        
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="1" onclick= ejercicio2(0)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="2" onclick= ejercicio2(1)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="3" onclick= ejercicio2(2)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="4" onclick= ejercicio2(3)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="5" onclick= ejercicio2(4)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="6" onclick= ejercicio2(5)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="7" onclick= ejercicio2(6)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="8" onclick= ejercicio2(7)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="9" onclick= ejercicio2(8)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="10" onclick= ejercicio2(9)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="11" onclick= ejercicio2(10)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="12" onclick= ejercicio2(11)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="13" onclick= ejercicio2(12)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="14" onclick= ejercicio2(13)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="15" onclick= ejercicio2(14)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="16" onclick= ejercicio2(15)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="17" onclick= ejercicio2(16)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="18" onclick= ejercicio2(17)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="19" onclick= ejercicio2(18)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="20" onclick= ejercicio2(19)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="21" onclick= ejercicio2(20)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="22" onclick= ejercicio2(21)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="23" onclick= ejercicio2(22)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="24" onclick= ejercicio2(23)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="25" onclick= ejercicio2(24)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="26" onclick= ejercicio2(25)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="27" onclick= ejercicio2(26)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="28" onclick= ejercicio2(27)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="29" onclick= ejercicio2(28)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="30" onclick= ejercicio2(29)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="31" onclick= ejercicio2(30)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="32" onclick= ejercicio2(31)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="33" onclick= ejercicio2(32)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="34" onclick= ejercicio2(33)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="35" onclick= ejercicio2(34)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="36" onclick= ejercicio2(35)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="37" onclick= ejercicio2(36)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="38" onclick= ejercicio2(37)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="39" onclick= ejercicio2(38)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="40" onclick= ejercicio2(39)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="41" onclick= ejercicio2(40)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="42" onclick= ejercicio2(41)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="43" onclick= ejercicio2(42)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="44" onclick= ejercicio2(43)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="45" onclick= ejercicio2(44)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="46" onclick= ejercicio2(45)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="47" onclick= ejercicio2(46)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="48" onclick= ejercicio2(47)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="49" onclick= ejercicio2(48)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="50" onclick= ejercicio2(49)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="51" onclick= ejercicio2(50)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="52" onclick= ejercicio2(51)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="53" onclick= ejercicio2(52)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="54" onclick= ejercicio2(53)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="55" onclick= ejercicio2(54)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="56" onclick= ejercicio2(55)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="57" onclick= ejercicio2(56)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="58" onclick= ejercicio2(57)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="59" onclick= ejercicio2(58)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="60" onclick= ejercicio2(59)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="61" onclick= ejercicio2(60)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="62" onclick= ejercicio2(61)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="63" onclick= ejercicio2(62)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="64" onclick= ejercicio2(63)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="65" onclick= ejercicio2(64)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="66" onclick= ejercicio2(65)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="67" onclick= ejercicio2(66)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="68" onclick= ejercicio2(67)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="69" onclick= ejercicio2(68)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="70" onclick= ejercicio2(69)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="71" onclick= ejercicio2(70)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="72" onclick= ejercicio2(71)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="73" onclick= ejercicio2(72)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="74" onclick= ejercicio2(73)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="75" onclick= ejercicio2(74)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="76" onclick= ejercicio2(75)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="77" onclick= ejercicio2(76)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="78" onclick= ejercicio2(77)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="79" onclick= ejercicio2(78)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="80" onclick= ejercicio2(79)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="81" onclick= ejercicio2(80)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="82" onclick= ejercicio2(81)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="83" onclick= ejercicio2(82)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="84" onclick= ejercicio2(83)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="85" onclick= ejercicio2(84)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="86" onclick= ejercicio2(85)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="87" onclick= ejercicio2(86)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="88" onclick= ejercicio2(87)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="89" onclick= ejercicio2(88)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="90" onclick= ejercicio2(89)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="91" onclick= ejercicio2(90)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="92" onclick= ejercicio2(91)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="93" onclick= ejercicio2(92)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="94" onclick= ejercicio2(93)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="95" onclick= ejercicio2(94)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="96" onclick= ejercicio2(95)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="97" onclick= ejercicio2(96)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="98" onclick= ejercicio2(97)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="99" onclick= ejercicio2(98)>
+                                    <input class="normal fondoCambiar" name="Ejer2Num" type="button" value="100" onclick= ejercicio2(99)>
+        
+                                    <p id="SolEjer2"></p>
+
+                                    
+                                    <input class="btn btn-secondary" type="button" value="Volver a intentar" onclick="location.reload();">
+
+                                </div>
+                            </fieldset>
+                        </section>
+
+                        <br id="Actividad3"><br>
+
+                        <section>
+                            <h1 class="tituloActividad"><span>Primitiva</span></h1>
+                            <p>Cuando el usuario pulsa el botón GENERAR NÚMEROS, el programa generará de manera aleatoria 6 números comprendidos entre 1 y 49, sin repetir ninguno de ellos.</p>
+                        
+                            <fieldset class="text-center">
+                                <h3 class="titulo"><span>Primitiva</span></h3>
+                
+                                <p id="SolEjer3"></p>
+                
+                                <div class="form-group">        
+                                    <input class="btn btn-secondary" type="submit" value="GENERAR" onclick="ejercicio3()">
+                                    <input class="btn btn-danger" type="reset" value="VACIAR" onclick="document.getElementById('SolEjer3').innerHTML = ''">                           
+                                </div>
+                
+                                
+                            </fieldset>
+                        </section>
+                    </div>           
+                </div>      
+            </div>
+            
+            <div class="container-fluid text-center separador">
+                <p><q>Pasamos a la última sesión</q></p>
+            </div>
+
+            <div class="container">      
+                <div class="row">           
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <br id="Actividad4"><br>
+                        <section>
+                            <h1 class="tituloActividad"><span>Try Catch</span></h1>
+                            <p>Se pulsará un botón y se mostrará un mensaje personalizado diciendo a los usuarios que pueden hacer clic en Aceptar para continuar viendo la página o 
+                                haga clic en Cancelar para volver a la página principal. Si el método confirm devuelve false, el usuario hace clic en Cancelar, 
+                                y el código redirige al usuario. Si el método confirm devuelve true, el código no hace nada.
+                            </p>
+                            
+                            <fieldset>
+                                <h3 class="titulo"><span>Control de errores</span></h3>
+                                        
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#Ejercicio4">
+                                    Try-Catch
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="Ejercicio4" tabindex="-1" role="dialog" aria-labelledby="Ejercicio4Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header justify-content-center bg-info text-light m-2 ">
+                                                <h5 class="modal-title" id="Ejercicio4Label">Escoga una opción</h5>
+                                            </div>
+
+                                            <div class="modal-body small">                                      
+                                                Si le da a Aceptar no sucederá nada.<br>
+                                                Si le da a Cancelar saltará a otra ventanita con otro Aceptar y Cancelar.                                                                           
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                                <input class="btn btn-danger" type="submit" value="Cancelar" onclick="ejercicio4()">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </section>
+
+
+
+
+                        <br id="Actividad5"><br>
+                        <section>
+                            <h1 class="tituloActividad"><span>Try Catch Throw</span></h1>
+                            <p>Se solicita al usuario que introduzca un valor. Si el valor es superior a 10, inferior a 5, o no es un número, vamos a lanzar un error. 
+                                El error es entonces atrapado por el argumento de la captura y dependiendo del error generado se presentará el mensaje de error apropiado.
+                            </p>
+                            
+                            <fieldset>
+                                <h3 class="titulo"><span>Control de errores</span></h3>
+                            
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#Ejercicio5">
+                                    Try-Catch-Throws
+                                </button>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="Ejercicio5" tabindex="-1" role="dialog" aria-labelledby="Ejercicio5Label" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header justify-content-center bg-info text-light m-2 ">
+                                                <h5 class="modal-title" id="Ejercicio5Label">Escoga una opción</h5>
+                                            </div>
+
+                                            <div class="modal-body">                                      
+                                                <label>Escriba un número entre el 5 y el 10 ambos incluidos</label>
+                                                <input class="form-control" type="text" name="Ejer5Try">
+                                                
+                                                <div id="SolEjer5"></div>                                                                          
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <input class="btn btn-danger" type="submit" value="Enviar" onclick="ejercicio5()">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </section>
+                    </div>           
+                </div>      
+            </div>
+
+        
+
+            <footer class="container-fluid pie">
+                <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+            </footer>
+            
+        </div>
+    </div>
+
+    <script src="../../js/sideMenu.js"></script>
+    <script src="js/EjerciciosParte2.js"></script>
+    <script src="js/funciones2.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

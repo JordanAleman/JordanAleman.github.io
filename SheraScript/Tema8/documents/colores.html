@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>🌈 Selector de colores</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="css/specific.css">
+
+</head>
+<body>
+    <div class="fondoVentana">
+        <main>
+            <div class="jumbotron">
+                <h1 class="display-3 text-center mb-5 rounded">Ventana de colores</h1>
+                <div class="form-group">
+                    <label for="propiedadColor">Elija una propiedad:</label>
+                    <select class="form-control" id="propiedadColor">
+                        <option value="cabecera">Cabecera</option>
+                        <option value="colorCabeceraUsuario">Cabecera Usuario</option>
+                        <option value="fondoPrincipal">Fondo</option>
+                        <option value="titulosPrincipales">Títulos</option>
+                        <option value="pie">Pie de página</option>
+                        <option value="tituloPie">Titulo pie</option>
+                    </select>
+                </div>
+
+                <div class="contenidoElegirColor">
+                    
+                    <div class="row mt-5 mb-3">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <p>Elija un color:</p>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <button type="button" class="btn btn-secondary btn-block" id="visualizacionNumerica" disabled>Numérico</button>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <button type="button" class="btn btn-outline-secondary btn-block" id="visualizacionRueda">Rueda</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="contenidoBloqueColores">
+                            <div class="form-group row">
+                                <label for="colorRojo" class="col-sm-4 col-form-label text-danger">Rojo (0-255) <span class="valorColor"></span></label>
+                                <div class="col-sm-8">
+                                    <input type="input" class="form-control" id="colorRojo" placeholder="0-255" value="0">
+                                </div>
+                                <label for="colorVerde" class="col-sm-4 col-form-label mt-2 text-success">Verde (0-255) <span class="valorColor"></span></label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="input" class="form-control" id="colorVerde" placeholder="0-255" value="0">
+                                </div>
+                                <label for="colorAzul" class="col-sm-4 col-form-label mt-2 text-info">Azul (0-255) <span class="valorColor"></span></label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="input" class="form-control" id="colorAzul" placeholder="0-255" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 cajaPrevisualizacionColores" id="cajaPrevisualizacionColores"></div>
+                    </div>
+                </div>
+
+                <div class="contenidoBotones">
+                    <button type="button" class="btn btn-secondary bloque2BotonesConfirmar" id="bloque2BotonesConfirmar">Confirmar</button>
+                    <button type="button" class="btn btn-danger bloque2BotonesCerrar" id="bloque2BotonesCerrar">Cerrar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/plantilla.js"></script>
+    <script src="js/colorPicker.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

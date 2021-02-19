@@ -1,0 +1,13 @@
+.botonesCantidades {
+    text-align: center;
+    cursor: pointer;
+}
+
+.botonMasCantidadCarrito:hover {
+    background-color: #527faf !important;
+}
+
+.botonMenosCantidadCarrito:hover {
+    background-color: #d66d75 !important;
+}
+

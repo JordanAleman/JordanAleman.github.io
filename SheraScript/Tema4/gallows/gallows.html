@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ahorcado</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/animacionesGallows.css">
+    <link rel="stylesheet" href="css/stylesGallows.css">
+
+    <!-- 
+        Agradecimientos especiales a mi madre por la mayoría de los dibujos y a mi amigo Edwin por la ayuda del diseño del juego,
+        además de edición de imágenes. Sin ustedes esto no habría sido posible 😁😁
+    -->
+
+
+</head>
+<body>
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #FEF2E7; left: 0;">&#9776</span>
+    
+    <div id="mainPostNav">
+        <main class="contenido-main" id="contenido-main">
+            <header class="franjaTop" id="franjaTop">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img src="img/TradicionalLogo.png" class="cartelAhorcado" id="cartelAhorcado">  
+                </div>
+            </header>
+
+            <div class="container-fluid p-4" id="contenedorComienzo">
+                <div class="form-group mx-sm-3 mb-2 areaEscribirPalabra">
+                    <label for="palabraAhorcado">Introduzca una palabra o frase para adivinar</label>
+                    <input type="password" class="form-control" id="palabraAhorcado" placeholder="Palabra o frase" maxlength="90">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="verPalabraSinFormatoPassword">
+                        <label class="form-check-label" for="verPalabraSinFormatoPassword">
+                            Ver Palabra
+                        </label>
+                    </div>
+                    
+                    <small id="controlInputPalabra"></small>                    
+                    
+                    <div class="contenedorBotonJugarSelectorVerdugo mt-4">
+                        <label for="selectorVerdugo">Verdugo</label>
+                        <select class="form-control selectorVerdugo" id="selectorVerdugo">
+                            <option value="Tradicional">Tradicional</option> 
+                            <option value="Bruja">Bruja</option>
+                            <option value="Freddy">Freddy</option>
+                            <option value="Jason">Jason</option>
+                            <option value="Chucky">Chucky</option> 
+                            <option value="Pennywise">Pennywise</option>
+                            <option value="Thanos">Thanos</option>
+                        </select> 
+                        
+                        <button class="btn btn-primary btn-block botonJugarAhorcado" type="button" id="botonJugarAhorcado">Jugar</button>
+
+                    </div>
+                </div>
+                <div class="collapse descripcionJuegoAhorcado" id="descripcionJuegoAhorcado"><!-- Generado en js/stylesGallows.js con "descripcionJuegoAhorcado.innerHTML = ..." --></div>
+                <button class="btn btn-block btn-info botonDescripcionJuego" type="button" data-toggle="collapse" data-target="#descripcionJuegoAhorcado" aria-expanded="false" aria-controls="descripcionJuegoAhorcado">Juego del ahorcado</button>
+
+            </div>
+
+            <div class="container-fluid" id="contenedorJuego">
+                <div class="row areaLetrasAdivinar">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <button class="btn botonPista" type="button" id="botonPista">Pista</button>
+                        <div class="btn-toolbar" role="toolbar" aria-label="casillasAdivinar" id="campoCasillas">
+                                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areaContadorIntentos" id="contadorIntentos">
+                        Intentos restantes: 6
+                    </div>
+                </div>
+                
+                <div class="row areaLetrasDibujos">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="row contenedorLetras" id="contenedorLetras"><!-- Generado en js/stylesGallows.js --></div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="contenedorDibujos" id="contenedorDibujos"></div>
+                    </div>
+                    <button class="btn btn-primary botonReiniciar" type="button" id="botonReiniciar">Reiniciar</button>
+                </div>
+
+                
+                
+            </div>
+            <footer class="franjaBottom" id="franjaBottom">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="js/controlButtonsGallows.js"></script>
+    <script src="js/stylesGallows.js"></script>
+    <script src="js/jsGallows.js"></script>
+
+    <script src="../../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

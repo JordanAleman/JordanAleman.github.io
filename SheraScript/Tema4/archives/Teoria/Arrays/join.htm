@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type"
+            content="text/html;charset=utf-8">
+        <title>M&eacute;todo join</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body style="background-color: #8cb3d9">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid bg-secondary text-light" style="border: 10px #17A2B8 solid">
+                <div class="container">
+                    <h1 class="display-3">Arrays</h1>
+                    <p class="lead">Método join</p>
+                    <hr class="my-2">
+                    <p>
+                        Genera un string que contiene los substrings mantenidos por cada elemento del array unidos por el ó los caracteres indicados en el parámetro separador. <br>
+                        Si no se utiliza el parámetro, este método utiliza la coma (,) como separador. <br>
+                        Concatena los elementos de un array en una sola cadena separada por un carácter opcional
+                    </p>
+                    <p>
+                        Nombre_array.join([separador])
+                    </p>
+
+                </div>
+            </div>
+            <div class="bg-light p-3 border border-primary rounded">
+                <script type = "text/javascript">
+
+                    var star = ["Polaris", "Deneb", "Vega", "Altair"];
+
+                    document.write("<b>Array \'star\' original es así: </b><br>" + star + "<br><br>");
+                    document.write("Ahora haremos que nuestro array se transforme en una String. <br><br>")
+                    document.write("<b>Al añadirle al array</b> 'star.join()' <b>obtenemos:</b><br> " + star.join() + "<br><br>");
+                    document.write("<b>Si volvemos a mostrar nuestro array</b> 'star' <b>después de haber hecho el</b> 'join' <b>obtenemos: </b><br>" + star + "<br><br>");
+                    document.write("El método 'join' nos sirve para visualizar los valores de un array de una manera más cómoda, pero no modifica el contenido del array.<br><br>");
+                    document.write("<b>Al añadirle al array</b> 'star.join(\"*\")' <b>obtenemos:</b><br> " + star.join("*") + "<br><br>");
+            
+                </script>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

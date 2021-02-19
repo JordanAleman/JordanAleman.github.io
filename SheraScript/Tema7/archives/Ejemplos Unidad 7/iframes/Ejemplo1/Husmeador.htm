@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>El husmeador</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Una de estas variables booleanas se configurará
+// a true en base al nombre del navegador
+var es_ie = false
+var es_ns = false
+var es_opera = false
+var es_webtv = false
+var es_firefox = false
+var es_compatible = false
+// Una de estas variables lógicas tendrá un valor 
+// verdadero, dependiendo de la versión de Internet Explorer
+var es_ie2 = false
+var es_ie3 = false
+var es_ie4 = false
+var es_ie5 = false
+var es_ie55 = false
+var es_ie6 = false
+var es_ie4plus = false
+var es_ie5plus = false
+var es_ie55plus = false
+var es_ie6plus = false
+// Una de estas variables lógicas tendrá un valor verdadero, 
+// dependiendo de la versión de Netscape
+var es_ns2 = false
+var es_ns3 = false
+var es_ns4 = false
+var es_ns6 = false
+var es_ns3plus = false
+var es_ns4plus = false
+var es_ns6plus = false
+// Una de estas variables lógicas tendrá un valor
+// verdadero, basándose en el sistema operativo
+var es_win31 = false
+var es_win95 = false
+var es_win98 = false
+var es_winme = false
+var es_winnt = false
+var es_win2000 = false
+var es_winxp = false
+var es_windows = false
+var es_win32 = false
+var es_mac68k = false
+var es_macppc = false
+var es_macos = false
+var es_linux = false
+var es_other_os = false
+// Estas variables lógicas tendrá un valor
+// verdadero, si el navegador soporta DHTML
+var dhtml_ok = false
+// Trabajaremos con minúsculas para facilitar las cosas
+var user_agent = navigator.userAgent.toLowerCase()
+// NOMBRE DEL NAVEGADOR
+// Utilizamos indexOf() para examinar la cadena userAgent
+// y obtener signos reveladores del nombre del navegador
+if (user_agent.indexOf("opera") != -1) { es_opera = true }
+else if (user_agent.indexOf("webtv") != -1) { es_webtv = true }
+else if (user_agent.indexOf("msie") != -1) { es_ie = true }
+else if (user_agent.indexOf("firefox") != -1) { es_firefox = true }
+else if (user_agent.indexOf("mozilla") != -1) {
+// Para "mozilla", necesitamos barajar algunas posibilidades; primero
+    if ((user_agent.indexOf("compatible") == -1) && 
+        (user_agent.indexOf("spoofer") == -1) && 
+        (user_agent.indexOf("hotjava") == -1)) {
+        es_ns = true
+    }
+    else { es_compatible = true }
+}
+// Determinar la versión del navegador
+var major_version = parseInt(navigator.appVersion)
+var full_version = parseFloat(navigator.appVersion)
+var ie_start = user_agent.indexOf("msie")
+
+if (ie_start != -1) {
+    var version_string = user_agent.substring(ie_start + 5)
+    major_version = parseInt(version_string)
+    full_version = parseFloat(version_string)
+}
+// INTERNET EXPLORER
+if (es_ie || es_webtv) {
+    if (major_version < 3) { es_ie2 = true }
+    else if (major_version == 3) { es_ie3 = true }
+    else if (major_version == 4) { es_ie4 = true }
+    else if (major_version == 5) { es_ie5 = true }
+    else if (full_version == 5.5) { es_ie55 = true }
+    else if (major_version == 6) { es_ie6 = true }
+    if (major_version >= 4) { es_ie4plus = true }
+    if (major_version >= 5) { es_ie5plus = true }
+    if (full_version >= 5.5) { es_ie55plus = true }
+    if (major_version >= 6) { es_ie6plus = true }
+}
+// NETSCAPE
+if (es_ns) {
+    if (major_version < 3) { es_ns2 = true }
+    else if (major_version < 4) { es_ns3 = true }
+    else if (major_version == 4) { es_ns4 = true }
+    else if (major_version == 5) { es_ns6 = true }
+    if (major_version >= 3) { es_ns3plus = true }
+    if (major_version >= 4) { es_ns4plus = true }
+    if (major_version >= 5) { es_ns6plus = true }
+}
+// SISTEMA OPERATIVO
+// Utilizamos indexOf() para examinar la cadena userAgent
+// y obtener signos reveladores del sistema operativo
+// WINDOWS 3.1
+if ((user_agent.indexOf("windows 3.1") != -1) || 
+    (user_agent.indexOf("win16") != -1) ||
+    (user_agent.indexOf("16bit") != -1) ||
+    (user_agent.indexOf("16-bit") != -1)) { es_win31 = true }
+// WINDOWS 95
+else if ((user_agent.indexOf("windows 95") != -1) || 
+         (user_agent.indexOf("win95") != -1)) { es_win95 = true }
+// WINDOWS ME
+if (user_agent.indexOf("win 9x 4.90") != -1) { es_winme = true }
+// WINDOWS 98
+else if ((user_agent.indexOf("windows 98") != -1) || 
+         (user_agent.indexOf("win98") != -1)) { es_win98 = true }
+// WINDOWS XP
+else if ((user_agent.indexOf("windows nt 5.1") != -1) || 
+         (user_agent.indexOf("winnt 5.1") != -1)) { es_winxp = true }
+// WINDOWS 2000
+else if ((user_agent.indexOf("windows nt 5.0") != -1) || 
+         (user_agent.indexOf("winnt 5.0") != -1)) { es_win2000 = true }
+// WINDOWS NT
+else if ((user_agent.indexOf("windows nt") != -1) || 
+         (user_agent.indexOf("winnt") != -1)) { es_winnt = true }
+// MAC 680x0
+else if ((user_agent.indexOf("mac") != -1) && 
+        ((user_agent.indexOf("68K") != -1) || 
+         (user_agent.indexOf("68000") != -1))) { es_mac68k = true }
+// MAC PowerPC
+else if ((user_agent.indexOf("mac") != -1) && 
+        ((user_agent.indexOf("ppc") != -1) || 
+         (user_agent.indexOf("powerpc") != -1))) { es_macppc = true }
+// LINUX
+else if (user_agent.indexOf("linux") != -1) { es_linux = true }
+// OTHER OS
+else { es_other_os = true }
+// PLATFORM
+// Use los valores lógicos del sistema operativo
+// para determinar la plataforma
+// MAC OS
+if (es_mac68k || es_macppc) { es_macos = true}
+// 32-BIT WINDOWS
+if (es_win95 || es_win98 || es_winme || es_winnt || es_win2000 || es_winxp) {es_win32 = true}
+// WINDOWS
+if (es_win31 || es_win32) {es_windows = true}
+// DHTML
+if (document.getElementById || document.all || document.layers) {
+    dhtml_ok = true
+} 
+document.write("<b>Cadena userAgent completa:</b><br>")
+document.write(navigator.userAgent)
+document.write("<p>")
+document.write("<b>Nombre del navegador:</b><br>")
+if (es_ie) { document.write("Internet Explorer") }
+else if (es_ns) { document.write("Netscape") }
+else if (es_opera) { document.write("Opera") }
+else if (es_webtv) { document.write("WebTV") }
+else if (es_firefox) { document.write("Firefox") }
+else if (es_compatible) { document.write("Netscape compatible") }
+document.write("<p>")
+document.write("<b>Versión del navegador:</b><br>")
+if (es_ie2) { document.write("2.x") }
+else if (es_ie3) { document.write("3.x") }
+else if (es_ie4) { document.write("4.x") }
+else if (es_ie5) { document.write("5.x") }
+else if (es_ie55) { document.write("5.5") }
+else if (es_ie6plus) { document.write("6.x o superior") }
+else if (es_ns2) { document.write("2.x") }
+else if (es_ns3) { document.write("3.x") }
+else if (es_ns4) { document.write("4.x") }
+else if (es_ns6plus) { document.write("6.x o superior") }
+else {document.write(full_version) }
+document.write("<p>")
+document.write("<b>Sistema operativo:</b><br>")
+if (es_win31) { document.write("Windows 3.x") }
+else if (es_win95) { document.write("Windows 95") }
+else if (es_win98) { document.write("Windows 98") }
+else if (es_winme) { document.write("Windows Me") }
+else if (es_winnt) { document.write("Windows NT") }
+else if (es_win2000) { document.write("Windows 2000") }
+else if (es_winxp) { document.write("Windows XP") }
+else if (es_mac68k) { document.write("Mac 680x0") }
+else if (es_macppc) { document.write("Mac PowerPC") }
+else if (es_linux) { document.write("Linux") }
+else if (es_webtv) { document.write("WebTV") }
+else if (es_other_os) { document.write("Otro sistema operativo") }
+document.write("<p>")
+document.write("<b>DHTML</b><br>")
+if (dhtml_ok) { document.write("soporta DHTML") }
+else { document.write("no soporta DHTML") }
+//-->
+</script>
+</body>
+</html>
+

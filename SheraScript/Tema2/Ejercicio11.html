@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Jordan Aleman Santana">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="ejercicios1.css">
+        <link rel="stylesheet" href="../css/sideMenu.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+        <script src="js/funciones.js" type="text/javaScript"></script>
+
+        <title>Ejercicios 1 JavaScript</title>
+    </head>
+    <body>
+
+        <div id="particles-js"></div>
+
+        <div id="jSidenav" class="sidenav"></div>
+        <span class="openNav" id="openNav" style="background-color: transparent; color: white">&#9776</span>
+        
+        <div id="mainPostNav">
+            <div class="container-fluid" id="entrada">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">A bordo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio1.html">Ejercicio 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio2.html">Ejercicio 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio3.html">Ejercicio 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio4.html">Ejercicio 4</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio5.html">Ejercicio 5</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio6.html">Ejercicio 6</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio7.html">Ejercicio 7</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio8.html">Ejercicio 8</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio9.html">Ejercicio 9</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicio10.html">Ejercicio 10</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Ejercicio11.html">Ejercicio 11</a>
+                            </li>                                                                                
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        
+            <div class="container">
+                <div class="jumbotron bg-info text-light titulo">
+                    <h1 class="display-3">Ejercicio 11</h1>
+                    <p class="lead">Hacer una Página web que genere una pirámide de 1 a 50 de la siguiente forma:<br>
+                        1 <br>
+                        12 <br>
+                        123 <br>
+                        1234
+                    </p>
+                    
+                </div>
+
+                <section>
+                    <fieldset>
+                        <h1>Pirámide del mismo número</h1>
+
+                        <div class="form-group">
+                            <label>Número (máximo 50 / mínimo 1): </label>
+                            <input class="form-control controlInput" type="text" name="Ejer11Num"></input><br><br>
+        
+        
+                            <input type="submit" class="submit" name="sub" value="Enviar" onclick="ejercicio11()">
+                            <input type="reset" class="reset" name="sub" value="Vaciar" onclick="document.getElementById('SolEjer11').innerHTML = ''">
+        
+                            <p id="SolEjer11" align="center"></p>
+                        </div>
+                    </fieldset>
+                </section>
+                
+            </div>
+        </div>
+        
+        
+        <script src="../js/sideMenu.js"></script>
+        <script src="js/particles.min.js" type="text/javaScript"></script>
+        <script src="js/contenido.js"></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

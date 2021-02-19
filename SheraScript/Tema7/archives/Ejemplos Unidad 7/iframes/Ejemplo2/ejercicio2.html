@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+ <script>  
+ function CambiarTexto()  { 
+ 	frames.nombredeiframe.document.getElementById('IdDivFrame').innerHTML = "Nuevo texto del iframe";  
+  	frames.nombredeiframe.document.getElementById('IdDivFrame').style.backgroundColor='red';
+ }  
+  function CambiarTexto2()  { 
+    frames.nombredeiframe.document.getElementById('IdDivFrame').style.fontSize = "40px";
+   	frames.nombredeiframe.document.getElementById('IdDivFrame').innerHTML = "Otro texto asigado desde el segundo botón"; 
+    frames.nombredeiframe.document.getElementById('IdDivFrame').style.backgroundColor='blue';
+	frames.nombredeiframe.document.getElementById('IdDivFrame').style.width = "500px";
+	
+ }
+ </script>   
+ </head>  
+ <body> 
+<iframe name="nombredeiframe" src="archivoexterno.html"></iframe> <!--se llama a la otra pagina-->
+<input type="button" value="Cambiar Texto en iframe" onClick="CambiarTexto();">
+
+<input type="button" value="Cambiar Texto en iframe 2" onClick="CambiarTexto2();">
+
+<ol>
+ <li> Se visualiza dentro del iframe la otra página: "archivoexterno.html" <br>
+      La misma es llamada en el html indicándolo en el src.</li>
+ <li> Al pulsar el primer botón se cambia el contenido, esta vez se escribe en el iframe<br>
+ 	  mediante javascript. La propiedad frame nos ofrece acceso al iframe.</li>
+ <li> Al pulsar el segundo botón simplemente se cambia de estilo y texto.</li>     
+
+</ol>
+</body> 
+</html>
+
+
+
+

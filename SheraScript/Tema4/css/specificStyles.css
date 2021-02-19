@@ -1,0 +1,203 @@
+/* 
+.bg-video {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    object-fit: cover;
+} */
+
+fieldset .bloqueMostraSolucion {
+    padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Funciones                                 */
+/* -------------------------------------------------------------------------- */
+
+.contenido-funciones {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Slide de funciones                             */
+/* -------------------------------------------------------------------------- */
+
+.contenido-cuerpo-funciones {
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+    padding: 5rem 2rem;
+}
+
+.mySlides {
+    display: none;
+    animation: fade 1.5s ease;
+}
+
+.contenido-dots {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.dot {
+    cursor: pointer;
+    /* margin-top: 2rem; */
+    float: left;
+    padding: 1rem;
+    width: 33.33%;
+    /* margin: 0 2px; */
+    background-color: #bbb;
+    border-radius: 5px;
+    /* display: inline-block; */
+    transition: 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+    color: white;
+}
+
+.mySlides p {
+    font-size: 18px;
+}
+
+.accordionArray {
+    display: none;
+}
+
+.accordionArray .col-md-6, .accordionArray .col-md-12 {
+    padding: 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                         input de los datetime-local                        */
+/* -------------------------------------------------------------------------- */
+.inputDate {
+    height: auto;
+}
+
+.tituloInput {
+    font-weight: bold;
+    background-color:#F5F5DC;
+
+}
+
+#entradaFechaEjer4_2Funciones {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#fechaYHoraActualEjer4_2Funciones {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    background-color: black;
+    color: #4CAF50;
+    text-align: center;
+}
+
+
+.bloqueMostraSolucion {
+    /* padding-left: 10rem; */
+    font-size: 20px; 
+    width: 70%; 
+    margin: 4rem auto 2rem auto;
+
+}
+
+.bloqueMostraSolucion tbody td:first-child, .bloqueMostraSolucion tbody th:first-child {
+    padding-left: 5rem;
+}
+
+.bloqueMostraSolucion tbody td:last-child, .bloqueMostraSolucion tbody th:last-child{
+    padding-right: 5rem;
+}
+
+
+@font-face {
+    font-family: BFTF;
+    src: url(../img/BFTF.ttf);
+}
+
+.bftf {
+    font-size: 40px;
+    font-family: BFTF;
+    background-color: black;
+    text-align: center;
+}
+
+.bftf th {
+    color: orange;
+    mix-blend-mode: hard-light;
+
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         Flecha al top de funciones                         */
+/* -------------------------------------------------------------------------- */
+#goTop {
+    cursor: pointer;
+
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+
+    z-index: 99;
+
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: cornflowerblue;
+    color: white;
+    
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1350px) {
+
+
+    #entradaFechaEjer4_2Funciones {
+        font-size: 17px;
+    }
+
+    #fechaYHoraActualEjer4_2Funciones {
+        font-size: 15px;
+    }
+
+    .bloqueMostraSolucion {
+        width: 90%; 
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #entradaFechaEjer4_2Funciones {
+        font-size: 8px;
+    }
+
+    #fechaYHoraActualEjer4_2Funciones {
+        font-size: 8px;
+    }
+
+    /* .bloqueMostraSolucion div div {
+        padding-left: 2rem;
+    } */
+}
+

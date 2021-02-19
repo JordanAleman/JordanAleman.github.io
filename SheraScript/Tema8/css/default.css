@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    position: relative;
+
+    /* background-color: #cccccc; */
+}
+
+.fondoPrincipal {
+    background-color: #cccccc;
+}
+
+
+:root {
+    --gray-light: #eaeaea;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Header                                   */
+/* -------------------------------------------------------------------------- */
+.cabecera {
+    background-color: #8c8c8c;
+    color: white;
+    height: 100%;
+
+    margin: 0;
+    margin-bottom: 3rem;
+    /* padding: 0.5rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    font-size: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+.cabecera .cabeceraUsuario{
+    float: right;
+    padding-right: 2.5rem;
+}
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Main                                    */
+/* -------------------------------------------------------------------------- */
+.botonVentanaColores {
+    background-image: url(../img/color.jpg);
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.2; */
+    height: 100%;
+}
+
+
+
+
+/* --------------------------------------- */
+/*          Footer 
+/* --------------------------------------- */
+.pie {
+    position: relative;
+
+    background-color: black;
+    padding: 3rem 1rem;
+    margin-top: 6.8rem;
+}
+
+.tituloPie {
+    color: var(--gray-light);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 2;
+    text-align: center;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Querys                                */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 1150px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .tituloPie {
+        text-align: left;
+        padding-left: 20px;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    /* -------------------------------------------------------------------------- */
+    /*                                   Header                                   */
+    /* -------------------------------------------------------------------------- */
+    .cabecera .tituloCentro {
+        font-size: 18px;
+    }
+    .cabecera .cabeceraUsuario{
+        font-size: 18px;
+        padding-top: 0.5rem;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                    Main                                    */
+    /* -------------------------------------------------------------------------- */
+    .botonVentanaColores {
+        height: 50px;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                   Footer                                   */
+    /* -------------------------------------------------------------------------- */
+    .tituloPie {
+        font-size: 17px;
+        padding-left: 10px;
+    }
+}
+

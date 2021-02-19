@@ -1,0 +1,415 @@
+body {
+    position: relative;
+    width: 86%;
+    margin-top: 5rem;
+    left: 7%;
+
+    border: 12px black solid;
+    box-shadow: 0px 0px 15px 5px rgba(83,80,133,1);
+    background-color: wheat;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------------------------------- */
+/*          Contenido principal
+/* ---------------------------------------- */
+.contenido-main {
+    width: 100%;
+    height: 85vh;
+    background-color: rgb(84, 136, 199);
+
+ }
+
+
+
+/* ----------------------------------------- */
+/*          Área de elección
+/* ----------------------------------------- */
+ .areaEleccion div div {
+    margin: 0;
+    padding: 0;
+    
+
+ }
+
+ .botonEleccion {
+    width: 100%;
+    height: 30vh;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 99;
+
+    background-color: darkcyan;
+    border: 10px darkblue double;
+ }
+
+
+.botonSeleccionado {
+    width: 100%;
+    height: 30vh;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 99;
+
+    background-color: black;
+    border: 10px darkblue solid;
+    
+    
+ }
+
+
+.tituloEleccion {
+    position: absolute;
+    top: 10px;
+
+    font-size: 40px;
+    color: aliceblue;
+
+    z-index: 100;
+
+}
+
+.imagenAreaEleccion {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 30vh;
+    top: 0;
+    
+    z-index: 88;
+
+    /* background-color: darkgreen; */
+}
+
+#piedra {
+    width: 100%;
+    background-image: url(../img/ppt/Piedra.png); 
+}
+
+#papel {
+    width: 100%;
+    background-image: url(../img/ppt/Papel.png); 
+}
+
+ 
+#tijeras {
+    width: 100%;
+    background-image: url(../img/ppt/Tijeras.png);
+}
+
+
+/* ----------------------------------------- */
+/*     Área de resultado del juego
+/* ----------------------------------------- */
+.resultadoPuntos {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 6%;
+    text-align: center;
+}
+
+.resultadoPuntos p {
+    padding-top: 10px;
+    /* padding-bottom: 50px; */
+    color: white;
+    font-weight: bold;
+}
+
+.resultadoPuntosGanado {
+    background-color: darkblue;
+}
+
+.resultadoPuntosPerdido {
+    background-color: red;
+}
+
+.resultadoPuntosEmpate {
+    background-color: hotpink;
+}
+
+/* ----------------------------------------- */
+/*          Área de juego
+/* ----------------------------------------- */
+.areaJuego {
+    width: 100%;
+
+    position: relative;
+    margin-top: 3rem;
+}
+
+.areaJuego div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.areaJuego div div {
+    height: 35vh;
+}
+
+.tituloAreaJuego {
+    position: absolute;
+    top: 20px;
+
+    font-size: 40px;
+    color: whitesmoke;
+
+}
+
+    /* ----------------------------------------- */
+    /*          Área de marcador
+    /* ----------------------------------------- */
+    .marcadorEscondido {
+        display: none !important;
+    }
+
+    
+    .marcador {
+        color: #454545;
+    }
+
+
+    .puntosAreaJuegoMarcador {
+        border: 2px rgba(83,80,133,1) solid;
+        padding: 4rem 5rem;
+
+        /* margin-top: 8rem; */
+        position: relative;
+    }
+
+    .puntosAreaJuegoMarcador .puntosJugador {
+        position: absolute;
+        top: 40px;
+        left: -20px;
+
+        font-size: 70px;
+        background-color: rgb(84, 136, 199);
+
+    }
+
+    .puntosAreaJuegoMarcador .puntosMaquina {
+        position: absolute;
+        top: 40px;
+        right: -20px;
+
+        font-size: 70px;
+        background-color: rgb(84, 136, 199);
+    }
+
+    .puntosAreaJuegoMarcador .puntosGanador {
+        font-size: 30px;
+    }
+
+.imagenAreaJuego {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 20px;
+    
+    z-index: 99;
+}
+
+#jugadorAreaJuego {
+    width: 100%;
+    background-image: url(../img/ppt/HumanoCara.png);
+
+}
+
+#maquinaAreaJuego {
+    width: 100%;
+    background-image: url(../img/ppt/MaquinaCara.png);
+}
+
+.seleccionarJugador {
+    position: absolute;
+    top: -50%;
+    left: 12%;
+}
+
+.seleccionarOponente {
+    position: absolute;
+    top: -50%;
+    right: 12%;
+}
+
+.seleccionarJugador select, .seleccionarOponente select {
+    background-color: #5488C7;
+    border-color: #008B8B;
+}
+
+
+
+
+
+/* ---------------------------------------- */
+/*          Botón de lanzamiento
+/* ---------------------------------------- */
+.botonJugar {
+    position: absolute;
+    bottom: 0;
+
+    padding: 2rem 1rem;
+
+}
+
+
+
+/* ------------------------------------------ */
+/*          Media Querys
+/* ------------------------------------------ */
+@media screen and (max-width: 1150px) {
+    .tituloEleccion {
+        font-size: 20px;
+    }
+
+    .areaEleccion button {
+        height: 25vh;
+    }
+
+    #mensajeResultadoPuntos {
+        font-size: 12px;
+    }
+
+
+    .tituloAreaJuego {
+        font-size: 40px;
+        top: 3rem;
+    }
+
+    .imagenAreaEleccion {
+        top: -30px;
+    }
+
+
+    .marcador {
+        height: 15vh;
+    }
+    
+    .puntosAreaJuegoMarcador .puntosMaquina {
+        position: absolute;
+        top: 40px;
+        right: -17px;
+    
+        background-color: rgb(84, 136, 199);
+    }
+
+    .puntosAreaJuegoMarcador .puntosJugador {
+        position: absolute;
+        top: 40px;
+        left: -17px;
+    
+        background-color: rgb(84, 136, 199);
+    }
+
+    .puntosAreaJuegoMarcador .puntosGanador {
+        font-size: 20px;
+    }
+
+    .imagenAreaJuego {
+        top: 50px;
+    }
+
+    .seleccionarJugador {
+        left: 7%;
+    }
+
+    .seleccionarOponente {
+        right: 7%;
+    }
+
+}
+
+
+ @media screen and (max-width: 600px) {
+    body {
+        margin-top: 1rem;
+    }
+
+    .areaEleccion div div {
+        width: 33.33%;
+        float: left;
+    }
+
+    .tituloEleccion {
+        font-size: 20px;
+    }
+
+    /* Área de juego */
+        .areaJuego {
+            margin-top: 0;
+        }
+
+        .areaJuego div div {
+            width: 33.33%;
+            float: left;
+        }
+
+        .tituloAreaJuego {
+            font-size: 20px;
+            top: 4rem;
+        }
+
+        .puntosAreaJuegoMarcador {
+            margin-top: 5rem;
+            padding: 2rem 1rem;
+        }
+
+        .puntosAreaJuegoMarcador .puntosMaquina {
+            position: absolute;
+            top: 35px;
+            right: -7px;
+
+            font-size: 20px;          
+        }
+    
+        .puntosAreaJuegoMarcador .puntosJugador {
+            position: absolute;
+            top: 35px;
+            left: -7px;
+        
+            font-size: 20px;
+        }
+
+
+    .imagenAreaJuego {
+        top: 30px;
+    }
+    
+    #mensajeResultadoPuntos {
+        font-size: 11px;
+        padding-top: 8px;
+    }
+
+    .seleccionarJugador {
+        top: -35%;
+        left: 10px;
+    }
+
+    .seleccionarOponente {
+        top: -35%;
+        right: 10px;
+        /* padding: 0 4rem; */
+    }
+ }

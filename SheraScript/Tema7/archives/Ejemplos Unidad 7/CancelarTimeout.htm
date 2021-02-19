@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>setTimeout y clearTimeout</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// Visualizar el mensaje
+defaultStatus="I.E.S. El Rincón"
+
+// Fijar la demora
+var id_temporizador = setTimeout("parar_estado()", 5000)
+
+// Función llamada cuando el tiempo de demora transcurre
+function parar_estado() {
+    defaultStatus = ""
+}
+
+// Fijar el manejador del evento click
+document.onclick = cancelar_temporizador
+
+// Ejecutar la función cuando el usuario provoque el click
+function cancelar_temporizador() {
+    clearTimeout(id_temporizador)
+    alert("El temporizador timeout ha sido cancelado.")
+	document.onclick=null
+}
+
+//-->
+</script>
+
+</head>
+
+<body>
+<b>Haga click dentro de la página antes de 5 segundos para cancelar el temporizador</b>
+</body>
+</html>
+

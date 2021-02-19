@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Ventana con características</title>
+<style type="text/css">
+
+body {background-color: darksalmon;
+      margin-left: 10px;
+      margin-right: 10px;} 
+
+h1 {font-family: Century Gothic, Arial;
+    background-color: rgb(0,0,0);
+    color: rgb(192,192,192);
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: thin outset rgb(192,192,192);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding: 4px;}
+
+    
+div.ejemplo {background-color: #ffffcc;
+             border: 5px ridge;
+             padding: 6px;
+             width: 400;
+             height: 400;
+             text-align: center;}
+			 
+input.Boton {width:300;}			 
+
+</style>
+<script language="javascript">
+var wVentana=null;
+function AbrirVentana()
+  {
+  wVentana=open("Ventana.htm","Ventana",
+     "menubar=no,resizable=yes,status=yes,width=600,height=300,scrollbars=yes,left=150");
+  }
+</script>
+</head>
+<body>
+<div class="ejemplo" name="MiDiv">
+<p>Esta es la ventana principal
+<p><input type="button" class="Boton" value="ABRIR VENTANA" onclick="AbrirVentana()">
+<p><input type="button" class="Boton" value="MOVEBY" onclick="wVentana.moveBy(50,50);
+		  				wVentana.status='moveBy(50,50)'"">
+<p><input type="button" class="Boton" value="MOVETO" onclick="wVentana.moveTo(400,100);
+		  				wVentana.status='moveTo(400,100)'"">
+<p><input type="button" class="Boton" value="RESIZEBY" onclick="wVentana.resizeBy(50,-50);
+		  				wVentana.status='resizeBy(50,-50)'"">
+<p><input type="button" class="Boton" value="RESIZETO" onclick="wVentana.resizeTo(500,300);
+		  				wVentana.status='resizeTo(200,200)'"">
+<p><input type="button" class="Boton" value="SCROLL" onclick="wVentana.scroll(0,200);
+		  				wVentana.status='scroll(0,200)'"">
+<p><input type="button" class="Boton" value="SCROLLBY" onclick="wVentana.scrollBy(0,50);
+		  				wVentana.status='scrollBy(0,50)'"">
+<p><input type="button" class="Boton" value="SCROLLTO" onclick="wVentana.scrollTo(100,50);
+		  				wVentana.status='scrollTo(100,50)'"">
+<p><br></p>
+</div>
+</body>
+</html>

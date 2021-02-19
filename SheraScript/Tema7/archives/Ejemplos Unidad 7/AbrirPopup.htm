@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Abrir popup con el método open()</title>
+<script language="JavaScript" type="text/javascript">
+<!--
+var nueva_ventana
+
+function abrir_ventana() {
+    nueva_ventana = window.open("ventana.htm", "MiNuevaVentana")
+    alert("El nuevo nombre de la ventana es " + nueva_ventana.name)
+    nueva_ventana.focus()
+}
+//-->
+</script>
+</head>
+<body>
+<a href="javascript:void(0)"  onClick="abrir_ventana()">
+Abrir la página principal en una nueva ventana
+</a>
+</body>
+</html>
+

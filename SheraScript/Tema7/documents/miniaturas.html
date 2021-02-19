@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objeto Window</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/miniaturas/style.css">
+
+
+</head>
+<body>
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #8C8C8C; color: white; left: 0;">&#9776;</span>
+    
+    <div id="mainPostNav">
+        <header class="container-fluid cabecera mb-2" style="padding-left: 4rem;">       
+            <img src="../img/ElRincon.png" alt="LogoElRincon" class="rounded ml-3" width="32" height="32">
+            <span class="tituloCentro">IES El Rincón</span>
+            <span class="cabeceraUsuario">Jordan Alemán Santana</span>
+        </header>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Miniaturas</li>
+            </ol>
+        </nav>
+
+        <header class="container-fluid">
+            <div class="jumbotron jumbotron-fluid rounded p-3 text-dark contenedorTituloApartado">
+                <div class="container-fluid">                
+                    <div class="row">
+                        <div class="col-3">
+                            <h1>Miniaturas</h1>
+                        </div>
+                        <div class="col-9">
+                            <button class="btn btn-outline-info btn-block mt-2" type="button" data-toggle="collapse" data-target="#informacionMiniaturas" aria-expanded="false">Detalles</button>
+                        </div>
+                    </div>
+                    <div id="informacionMiniaturasCollapse"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mt-5">
+            <h1 class="mb-4">Página de pinturas de pintores grancanarios</h1>
+            <div id="contenedorBotonesMiniaturas" class="contenedorBotonesMiniaturas">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="img/Felo1.gif" alt="Felo 1">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Felo2.gif" alt="Felo 2">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Lujan1.gif" alt="Lujan 1">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Nestor1.gif" alt="Nestor 1">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Nestor2.gif" alt="Nestor 2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="img/Nestor3.gif" alt="Nestor 3">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Nestor4.gif" alt="Nestor 4">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Padron1.gif" alt="Padrón 1">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Padron2.gif" alt="Padrón 2">
+                    </div>
+                    <div class="col-2">
+                        <img src="img/Damaso1.gif" alt="Damaso 1">
+                    </div>
+                </div>   
+            </div>
+        </main>
+
+        <footer class="container-fluid pie fixed-bottom">
+            <h3 class="tituloPie"><span>Ejemplos de distintas características con miniaturas de imagen</span></h3>
+        </footer>
+    </div>
+
+    <script src="js/miniaturas/plantillas.js"></script>
+    <script src="js/miniaturas/openImg.js"></script>
+
+    <script src="../../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

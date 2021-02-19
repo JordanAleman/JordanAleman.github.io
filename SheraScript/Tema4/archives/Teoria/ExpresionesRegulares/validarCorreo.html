@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+                    
+        <title>Validar correo</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <style type="text/css">
+            label {font-weight: bold;}
+        </style>
+
+    </head>
+    <body style="background-color: #8cb3d9">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid bg-secondary text-light" style="border: 10px #17A2B8 solid; padding: 2rem 1rem;">
+                <div class="container">
+                    <h1 class="display-3">Correo</h1>
+                    <p class="lead">Validar correo</p>
+                    <hr class="my-2">
+                    <p>
+                        Validaremos un correo electrónico según los criterios de validación del dominio.
+                    </p>
+
+                </div>
+            </div>
+            <div class="bg-light p-3 border border-primary rounded" style="height: 47vh; overflow: scroll;">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="gmail">Gmail address</label>
+                        <input type="text" class="form-control mb-2" id="gmail" placeholder="name.subname@gmail.com">
+                        <small class="p-3" id="solGmail"></small>
+                    </div>
+                    <input class="btn btn-block btn-primary mb-4" type="submit" value="Submit" id="validarGmail">
+                    <div class="border border-info rounded p-3">
+                        <p>Para validar un correo en gmail usamos la siguientes expresión regular:</p>
+                        <q>/^([a-z\d]+[\.]{0,1})+[a-z\d]+@gmail\.[a-z]{2,6}$/gi</q>
+                    </div>
+                </div>
+                <div class="container mt-5">
+                    <div class="form-group">
+                        <label for="other">Another address</label>
+                        <input type="text" class="form-control" id="other" placeholder="name.subname_anothername@example.com">
+                        <small class="p-3" id="solOther"></small>
+                    </div>
+                    <input class="btn btn-block btn-primary mb-4" type="submit" value="Submit" id="validarOther">
+                    <div class="border border-info rounded p-3">
+                        <p>Para validar un correo en gmail usamos la siguientes expresión regular:</p>
+                        <p><q>^([\a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+@([\a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+\.[a-zA-Z]{2,4}$</q></p>
+                        <img src="another.png" alt="" width="95%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            /* SECTION Gmail */
+            const inputGmail =  document.querySelector('#gmail');
+            const solGmail = document.querySelector('#solGmail');
+
+            const gmailMatch = /^([a-zA-Z\d]+[\.]{0,1})+[a-zA-Z\d]+@gmail\.[a-zA-Z]{2,4}$/g;
+            // const gmailMatch2 = new RegExp("^([a-zA-Z\d]+[\.]{0,1})+[a-zA-Z\d]+@gmail\.[a-zA-Z]{2,4}$", "gi");
+
+            document.querySelector('#validarGmail').addEventListener('click', () => {
+                if ((inputGmail.value).match(gmailMatch)) {
+                    solGmail.classList.remove("text-danger");
+                    solGmail.classList.add("text-success");
+                    solGmail.innerHTML = "😃🎇 Correcto 🎇😃";
+                } else {
+                    solGmail.classList.remove("text-success");
+                    solGmail.classList.add("text-danger");
+                    solGmail.innerHTML = "❗ Lo sentimos, solo se permiten letras (a-z), números (0-9) y puntos no consecutivos (.).";                       
+                }
+            });
+
+            /* SECTION Another address */
+            const inputOther =  document.querySelector('#other');
+            const solOther = document.querySelector('#solOther');
+
+            const otherMatch = /^([a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+@([\a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+\.[a-zA-Z]{2,4}$/
+
+            document.querySelector('#validarOther').addEventListener('click', () => {
+                if ((inputOther.value).match(otherMatch)) {
+                    solOther.classList.remove("text-danger");
+                    solOther.classList.add("text-success");
+                    solOther.innerHTML = "😃🎇 Correcto 🎇😃";
+                } else {
+                    solOther.classList.remove("text-success");
+                    solOther.classList.add("text-danger");
+                    solOther.innerHTML = "❗ Lo sentimos, solo se permiten letras (a-z), números (0-9), puntos no consecutivos '.', guiones bajos no consecutivos '_' y puntos y guiones no consecutivos.";                       
+                }
+            });
+
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

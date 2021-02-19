@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Método mejorado para determinar el nombre del navegador a partir de userAgent</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Una de estas variables lógicas
+// tendrá un valor verdadero basándose en el nombre del navegador
+var es_ie = false
+var es_ns = false
+var es_opera = false
+var es_webtv = false
+var es_compatible = false
+var es_firefox = false
+// Trabajaremos con minúsculas para facilitar las cosas
+var user_agent = navigator.userAgent.toLowerCase()
+// Utilizamos indexOf() para examinar la cadena userAgent
+// y obtener signos reveladores del nombre del navegador
+if (user_agent.indexOf("opera") != -1) { es_opera = true }
+else if (user_agent.indexOf("webtv") != -1) { es_webtv = true }
+else if (user_agent.indexOf("msie") != -1) { es_ie = true }
+else if (user_agent.indexOf("firefox") != -1) { es_firefox = true }
+else if (user_agent.indexOf("mozilla") != -1) {
+// Para "mozilla", necesitamos barajar algunas posibilidades; primero
+if ((user_agent.indexOf("compatible") == -1) && 
+     (user_agent.indexOf("spoofer") == -1) && 
+     (user_agent.indexOf("hotjava") == -1)) {
+     es_ns = true
+}
+    else { es_compatible = true }
+}
+document.write("<b>La cadena userAgent completa es:</b><br>")
+document.write(navigator.userAgent)
+document.write("<p>")
+document.write("<b>El nombre del navegador es:</b><br>")
+if (es_ie) { document.write("Internet Explorer") }
+else if (es_ns) { document.write("Netscape") }
+else if (es_opera) { document.write("Opera") }
+else if (es_webtv) { document.write("WebTV") }
+else if (es_firefox) { document.write("Firefox") }
+else if (es_compatible) { document.write("Compatible Netscape") }
+//-->
+</script>
+</body>
+</html>
+

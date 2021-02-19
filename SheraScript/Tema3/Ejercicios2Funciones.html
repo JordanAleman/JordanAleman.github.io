@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="../css/sideMenu.css">
+        <link rel="stylesheet" href="css/Ejercicios1Funciones.css">
+
+        
+
+        <title>Funciones JavaScript</title>
+    </head>
+    <body>
+
+        <div id="jSidenav" class="sidenav"></div>
+        <span class="openNav" id="openNav" style="background-color: #EAEAEA; color: black;">&#9776;</span>
+        
+        <div id="mainPostNav">
+            <nav class="navbar navbar-expand-lg menuPrincipal" style="position: unset;">
+                <p class="navbar-brand navbar-toggler text-dark">Principal</p>
+        
+                <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarNavPrincipal" aria-controls="navbarNavPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavPrincipal">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicios1Funciones.html">Parte 1</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Parte 2</a>
+                            </li>
+                        </ul>
+                </div>
+        
+            </nav>
+
+            <header class="contenido-header" id="headerPrincipal" style="background-image: url(img/Mountain1.png);">
+                <div class="fondo" id="fondo" style="background-image: url(img/Mountain2.png);">
+                    <p class="texto" style="color: snow; mix-blend-mode: lighten;" >Ejercicios JavaScript<br> Funciones Parte 2</p>
+                </div>
+            </header>
+
+            <div class="contenido-cuerpo">
+                <div class="container-fluid contenido-cuerpo-2columnasCompletas">
+                    <div class="row ">                  
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <a href="juegosEjercicios2Funciones/Moneda.html">
+                                <section class="posicionImagen" style="background-image: url(img/juegos/Monedas.png);">
+                                    <div class="contenidoPosicionImagen">
+                                        <h1 class="tituloActividad" id="Actividad1"><span>Moneda</span></h1>
+                
+                                        <div class="container text-dark">                   
+                                            <h3>Ejercicio 1</h3>
+                                            <p class="small">
+                                                Simular el lanzamiento de una moneda al aire generando un número aleatorio que varíe entre 0 y 1. Para
+                                                dar más sensación de realidad hacer que la imagen de la moneda cambie 6 veces antes de presentar la
+                                                imagen de la parte de la moneda escogida.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                </section>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <a href="juegosEjercicios2Funciones/PPT.html">
+                                <section class="posicionImagen" style="background-image: url(img/juegos/PPT.png);">
+                                    <div class="contenidoPosicionImagen">
+                                        <h1 class="tituloActividad" id="Actividad2"><span>Piedra papel tijeras</span></h1>
+            
+                                        <div class="container text-dark">                   
+                                            <h3>Ejercicio 2</h3>
+                                            <p class="small">
+                                                El usuario elegirá su opción en un grupo de radio botones (input type="radio") y la máquina
+                                                generando un número aleatorio entre 0 y 2. Para dar más sensación de realidad hacer que la imagen
+                                                correspondiente a la opción elegida por la máquina cambie 20 veces antes de presentar opción
+                                                seleccionada. <br>
+                                                El programa indicará si gana el usuario, la máquina o si existe un empate.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </a>
+                        </div>                 
+                    </div> 
+                </div>
+
+                <div class="container mt-5">  
+                    <section>
+                        <h1 class="tituloActividad" id="Actividad3"><span>Manejo de funciones</span></h1>
+
+                        <div class="container">                   
+                            <h3>Ejercicio 3.1</h3>
+                            <p>
+                                Calcular a través de la función denominada <b>Factorial()</b> el factorial de un número que se introduce por teclado. <br>
+                                Se controlará que los caracteres introducidos sean numéricos y que correspondan a un entero que no es negativo.
+                            </p>
+
+                            <fieldset class="ejercicios2FieldParte3">
+                                <h3 class="titulo"><span>Calcular facotorial</span></h3>    
+        
+                                <div class="container form-group">
+                                    <div class="bloqueResultados">                                               
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Introduzca un número entero:</p>
+                                            <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer3_1Funciones" >
+                                            <p class="bloqueMostrarSolucion" id="solEjer3_1Funciones"></p>
+                                        </div>    
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_1Funciones">Factorial</button>         
+                                    </div>
+                                </div> 
+                            </fieldset>
+                        </div>
+
+                        <hr class="mt-5">
+
+                        <div class="container mt-5">
+                            <h3>Ejercicio 3.2</h3>
+                            <p>
+                                Diseñar la función <b>Intercambiar(numero1, numero2)</b> para hacer el intercambio de dos números
+                                introducidos por teclado pasando los argumentos por valor y por referencia.
+                            </p>
+
+                            <fieldset class="ejercicios2FieldParte3">
+                                <h3 class="titulo"><span>Intercambiar</span></h3>    
+        
+                                <div class="container form-group">
+                                    <div class="bloqueResultados">                                               
+                                        <div class="form-row">
+                                            <div class="col form-group">
+                                                <p class="bloqueTitulo">Número 1: </p>
+                                                <input type="text" class="form-control bloqueEntradaNums" name="entradaNumsEjer3_2Funciones">
+                                            </div>
+                                            <div class="col form-group">
+                                                <p class="bloqueTitulo">Número 2: </p>
+                                                <input type="text" class="form-control bloqueEntradaNums" name="entradaNumsEjer3_2Funciones">
+                                            </div>
+                                        </div>    
+
+                                        <button type="button" class="btn btn-secondary btn-block" name="enviarEjer3_2Funciones">Intercambiar por valor</button> 
+                                        <button type="button" class="btn btn-info btn-block" name="enviarEjer3_2Funciones">Intercambiar por referencia</button>        
+                                    </div>
+                                </div> 
+                            </fieldset>                          
+                        </div>
+
+                        <hr class="mt-5">
+
+                        <div class="container mt-5">
+                            <h3>Ejercicio 3.3</h3>
+                            <p>
+                                Diseñar la función <b>Suma(número de argumentos variables, separados por coma)</b> que realice la
+                                suma de los números sean estos enteros o reales. <br> 
+                                Indicará si la entrada no tiene el formato solicitado.
+                            </p>
+
+                            <fieldset class="ejercicios2FieldParte3">
+                                <h3 class="titulo"><span>Suma de argumentos variables</span></h3>    
+        
+                                <div class="container form-group">
+                                    <div class="bloqueResultados">                                               
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Suma:</p>
+                                            <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer3_3Funciones">
+                                            <p class="bloqueMostrarSolucion" id="solEjer3_3Funciones"></p>
+                                        </div>    
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_3Funciones">Sumar</button>         
+                                    </div>
+                                </div> 
+                            </fieldset>                          
+                        </div>
+
+                        <hr class="mt-5">
+
+                        <div class="container mt-5">
+                            <h3>Ejercicio 3.4</h3>
+                            <p>
+                                Realizar la función <b>Informacion(nombre, localidad, valor)</b> haciendo que los dos últimos
+                                argumentos tengan los siguiente valores por defecto LAS PALMAS DE G.C. y 100.
+                            </p>
+
+                            <fieldset class="ejercicios2FieldParte3">
+                                <h3 class="titulo"><span>Información</span></h3>    
+        
+                                <div class="container form-group">
+                                    <div class="bloqueResultados">                                               
+                                        <div class="form-row">
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group">
+                                                <p class="bloqueTitulo">Nombre:*</p>
+                                                <input type="text" class="form-control bloqueEntradaNums" name="entradaInputEjer3_4Funciones">
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group">
+                                                <p class="bloqueTitulo">Localidad: </p>
+                                                <input type="text" class="form-control bloqueEntradaNums" name="entradaInputEjer3_4Funciones">
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group">
+                                                <p class="bloqueTitulo">Valor: </p>
+                                                <input type="text" class="form-control bloqueEntradaNums" name="entradaInputEjer3_4Funciones">
+                                            </div>
+                                        </div>    
+
+                                        <p class="bloqueMostrarSolucion" id="solEjer3_4Funciones"></p>
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_4Funciones">Enviar información</button>        
+                                    </div>
+                                </div> 
+                            </fieldset>                           
+                        </div>
+
+                        <hr class="mt-5">
+
+                        <div class="container mt-5">
+                            <h3>Ejercicio 3.5</h3>
+                            <p>
+                                Repetir el cálculo del factorial, esta vez, a través de una función recursiva.
+                            </p>
+
+                            <fieldset class="ejercicios2FieldParte3">
+                                <h3 class="titulo"><span>Calcular factorial</span></h3>    
+        
+                                <div class="container form-group">
+                                    <div class="bloqueResultados">                                               
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Introduzca un número entero:</p>
+                                            <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer3_5Funciones" >
+                                            <p class="bloqueMostrarSolucion" id="solEjer3_5Funciones"></p>
+                                        </div>    
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_5Funciones">Factorial</button>         
+                                    </div>
+                                </div> 
+                            </fieldset> 
+                        </div>
+                    </section>
+                </div>
+
+                
+            </div>
+
+            <footer class="container-fluid pie">
+                <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+            </footer>
+        </div>
+
+        <script src="../js/sideMenu.js"></script>
+        <script src="js/Ejercicios2Funciones.js"></script>
+        <script src="js/diseñoPagina.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

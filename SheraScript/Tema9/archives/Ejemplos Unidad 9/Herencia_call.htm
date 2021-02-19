@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Herencia call()</title>
+    <script language="javascript">
+    function Persona(pNombre,pApellidos,pDireccion)
+	  {
+	  this.Nombre=pNombre;
+	  this.Apellidos=pApellidos;
+	  this.Direccion=pDireccion;
+      this.toString=Persona_toString;	  
+      this.NombreCompleto=Persona_NombreCompleto;	  
+	  }
+
+    function Persona_toString()
+	  {
+	  return (this.Nombre+" "+this.Apellidos+" "+this.Direccion);
+	  }
+
+    function Persona_NombreCompleto()
+	  {
+	  return (this.Apellidos+" "+this.Nombre);
+	  }
+
+    function Alumno(pNombre,pApellidos,pDireccion,pCurso)
+	  {
+	  Persona.call(this,pNombre,pApellidos,pDireccion);
+	  this.Curso=pCurso;
+      this.toString=Alumno_toString;	  
+	  }
+	  
+	  
+	/*
+	 function Alumno(pNombre,pApellidos,pDireccion,pCurso)
+	  {
+	  Persona.apply(this,arguments);
+	  this.Curso=pCurso;
+      this.toString=Alumno_toString;	  
+	  } 
+	*/
+	  
+    function Alumno_toString()
+	  {
+	  return (this.Nombre+" "+this.Apellidos+" "+this.Direccion+"<br>"+"<b>curso:</b> "+this.Curso);
+	  }
+    </script>
+</head>
+<body>
+    <script language="javascript">
+	var oPersona1=new Persona("Jorge","Washington Usa","Casa Blanca s/n");
+	document.write(oPersona1);
+	document.write("<hr>");
+	var oAlumno1=new Alumno("Jorge","Negrete Blanco","Casa Morada nº 123","Bases de Datos");
+	document.write(oAlumno1.toString());
+    </script>
+</body>
+</html>

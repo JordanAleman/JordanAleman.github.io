@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+
+    background-image: url(../img/main.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* background-color: #cccccc; */
+}
+
+ul {
+    padding-left: 1rem;
+    font-size: 15px;
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time] {
+    -webkit-appearance: none;
+}
+
+
+:root {
+    --gray-light: #eaeaea;
+}
+
+.alinearTexto {
+    vertical-align: middle !important;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Header                                  */
+/* -------------------------------------------------------------------------- */
+.cabecera {
+    /* background-color: #8c8c8c; */
+    background-color: dimgrey;
+    color: white;
+    height: 100%;
+
+    margin: 0;
+    margin-bottom: 5rem;
+    /* padding: 0.5rem; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    font-size: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Main                                    */
+/* -------------------------------------------------------------------------- */
+
+.contenedorFilasTarjetasTemas {
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    
+    width: 95%;
+}
+
+.contenedorFilasTarjetasTemas:last-child {
+    margin-top: 3rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            Efecto giro tarjetas                            */
+/* -------------------------------------------------------------------------- */
+
+    .flip-card {
+        height: 35vh;
+        margin-right: 10px;
+        border: 0;
+        /* background-color: rgba(0, 0, 0, 0.7); */
+        background-color: transparent;
+
+        vertical-align: middle;
+        
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+
+    .flip-card-inner {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    /* .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+     */
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        padding: 6rem 1rem;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        background-color: rgba(7, 16, 119, 0.7);
+
+    }
+
+    .flip-card-back {
+        padding: 1rem;
+        overflow: auto;
+    }
+
+    .flip-card-front h1 {
+        color: orange;
+    }
+
+    .flip-card-front hr {
+        border-top: 2px orange solid;
+        border-radius: 10px;
+    }
+
+    .flip-card-front h2 {
+        color: white;
+        font-size: 20px;
+    }
+    
+    
+    /* Style the back side */
+    .flip-card-back {
+        color: white;
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-back hr {
+        border-top: 1px white solid;
+    }
+
+    .flip-card-back p{
+        font-size: 15px;
+    }
+
+    .flip-card-back .unBotonCardBack{
+        position: absolute;
+        bottom: 15px;
+        left: auto;
+
+        width: 90%;
+
+        height: 6vh;
+        font-size: 18px;
+        padding: 1rem;
+    }
+
+    .flip-card-back .contenedorDosBotonesCardBack {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+
+        width: 100%;
+    }
+
+    .flip-card-back .dosBotonesCardBack{
+        width: 45%;
+
+        height: 6vh;
+        font-size: 20px;
+        padding: 1rem;
+    }
+
+/* --------------------------------------- */
+/*          Footer 
+/* --------------------------------------- */
+.pie {
+    background-color: black;
+    padding: 8px;
+    padding-top: 2rem;
+    margin-top: 6rem;
+}
+
+.tituloPie {
+    margin-top: 2rem;
+    color: var(--gray-light);
+    font-size: 20px;
+    /* font-weight: bold; */
+    z-index: 2;
+    text-align: center;
+}
+
+.pie p {
+    color: var(--gray-light);
+    text-align: center;
+}
+
+.tituloPie span {
+    background-color: black;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.tituloPie::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--gray-light);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 1190px) {
+/* -------------------------------------------------------------------------- */
+/*                                    Header                                  */
+/* -------------------------------------------------------------------------- */
+    .cabecera {
+        font-size: 18px;
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    Main                                    */
+/* -------------------------------------------------------------------------- */
+    .contenedorFilasTarjetasTemas {
+        flex-wrap: wrap;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .contenedorFilasTarjetasTemas:last-child {
+        margin-top: unset;
+    }
+    
+    .flip-card {       
+        margin: unset;
+        margin-bottom: 30px;
+        height: 30vh;
+    }
+
+    .flip-card h2{
+        font-size: 20px;
+    }
+
+    .flip-card-back h1, .flip-card-back h3 {
+        font-size: 25px;
+    }
+
+    .flip-card-back p{
+        font-size: 15px;
+    }
+
+    .flip-card-back .unBotonCardBack{
+        padding: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+/* -------------------------------------------------------------------------- */
+/*                                    Header                                  */
+/* -------------------------------------------------------------------------- */
+    .cabecera {
+        font-size: 13px;
+        margin-bottom: 2rem;
+    }
+
+}

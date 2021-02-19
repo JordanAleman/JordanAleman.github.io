@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Plugins del navegador</title>
+  
+  </head>
+<body>
+	<h1>PLUGINS</h1>
+	<h1 align="center">Listado de plugins del navegador</h1>
+	<hr>
+	<script type="text/javascript">
+
+		for (var i=0; i < navigator.plugins.length; i++) {
+			document.write("<br/>"+navigator.plugins[i].name+"<br/>");
+
+			if (navigator.plugins[i].description) {
+				document.write("<p style='font-weight:bold;'>"+ navigator.plugins[i].description+ "</p>");
+			}
+		}
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>La propiedad opener</title>
+</head>
+<body>
+<b>La dirección de la página que ha abierto esta ventana es:</b><br>
+<script language="JavaScript" type="text/javascript">
+
+document.write(opener.location);
+
+
+
+
+
+function AbreoDaFoco()
+{
+
+windows.opener.focus();
+
+}
+</script>
+
+
+<a href="Javascript:AbreoDaFoco();">Haga clic aquí</a>
+</BODY>
+</HTML>
+
+
+
+
+

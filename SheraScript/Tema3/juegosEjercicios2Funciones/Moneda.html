@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../../css/sideMenu.css">
+
+        <link rel="stylesheet" href="css/moneda.css">
+        <link rel="stylesheet" href="css/monedaJS.css">
+
+        <title>Moneda</title>
+    </head>
+    <body>
+
+        <div id="jSidenav" class="sidenav"></div>
+        <span class="openNav" id="openNav" style="background-color: #F5DEB3">&#9776</span>
+        
+        <div id="mainPostNav">
+            <main class="contenido-main">
+                <div class="container-fluid contenido-cuerpo-2columnasCompletas">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 tamañoAreaMoneda">
+                            <!-- <div class="bg-danger centrarIndicadorIntensidad">
+                            aa
+                            </div>    -->
+
+                            <div class="centrarFlipCoin">
+                                <a href="../Ejercicios2Funciones.html">
+                                    <div class="resultadoPuntos bg-dark" id="resultadoPuntos"><p id="mensajeResultadoPuntos">Escoja Cara o Cruz. Click aquí para volver</p></div>
+                                </a>
+                                <div class="seleccionMoneda">
+                                    <select class="form-control" id="selectorMovimiento">
+                                        <option value="1">Lanzamiento</option> 
+                                        <option value="2">Giro</option>
+                                    </select>
+                                            
+                                    <select class="form-control mt-2" id="selectorMonedas">
+                                        <option value="1">Clásica</option> 
+                                        <option value="2">Rupees</option>
+                                        <option value="3">Australiana</option>
+                                        <option value="4">Liberty</option>
+                                        <option value="5">Canada</option> 
+                                        <option value="6">Saudi Arabia</option>
+                                        <option value="7">Fantasy</option>
+                                        <option value="8">Dragons</option>
+                                        <option value="9">Animals</option>
+                                        <option value="10">Gods</option>
+                                        <option value="11">Digital</option>
+                                        <option value="12">2€</option>
+                                        <option value="13">Sexo</option>
+                                        <option value="14">Yes or No</option>
+                                        <option value="15">JS or PHP</option>
+                                        <option value="16">Marvel or DC</option>
+                                        <option value="17">Smile</option>
+                                    </select>
+                                    <button type="button" class="btn btn-secondary btn-block mt-2" id="monedaAleatoria">Moneda Random</button>
+                                </div>
+
+                                
+                                
+                                <div class="marcadorPuntos" id="marcadorPuntos" style="display: none;">
+                                    <h3 class="marcadorDesaparece">Marcador</h3>
+                                    <ul>
+                                        <li><b>Jugador:</b> <span id="puntosJugador">0</span></li>
+                                        <li><b>Máquina:</b> <span id="puntosMaquina">0</span></li>
+                                    </ul>                              
+                                </div>
+
+                                <div class="flip-card">
+                                    <div class="flip-card-inner" id="flipCoinAnimation">
+                                        <div class="flip-card-front"></div>
+                                        <div class="flip-card-back"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary btn-block botonLanzar" id="botonLanzador" disabled>Lanzar</button>  
+                        </div>                  
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                            <button type="button" class="monedaEleccion" id="eleccionCara">
+                                <h1 class="tituloMoneda">Cara</h1>
+                                <div class="imagenMoneda" id="cara"></div>
+                            </button>
+                            <button type="button" class="monedaEleccion" id="eleccionCruz">
+                                <h1 class="tituloMoneda">Cruz</h1>
+                                <div class="imagenMoneda" id="cruz"></div>
+                            </button> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/moneda.js"></script>
+        
+        <script src="../../js/sideMenu.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+<!-- <h1 class="texto">Ejercicios JavaScript<br> Funciones Parte 1</h1> -->

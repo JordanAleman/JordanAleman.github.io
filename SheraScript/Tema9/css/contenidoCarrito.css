@@ -1,0 +1,28 @@
+label {
+    font-weight: bold;
+}
+
+.contenedor-enlaces-nav button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: white;
+}
+
+.contenedor-enlaces-nav button:hover {
+    border: 1px white solid;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.contenedor-carrito {
+    background-color: white;
+    padding: 2rem;
+}
+
+
+
+
+.contenedor-carrito .input-compra, .contenedor-carrito .boton-compra {
+    margin: auto;
+}

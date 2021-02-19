@@ -1,0 +1,362 @@
+/* ------------------------- */
+
+
+/* Estilos Generales */
+
+
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    padding-left: 1rem;
+    font-size: 15px;
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time] {
+    -webkit-appearance: none;
+}
+
+:root {
+    --purple-dark: #170312;
+    --purple-medium: #33032d;
+    --purple-light: #531253;
+    --gray-light: #eaeaea;
+    --white: #f4fffd;
+    --green-olive: #336600;
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+    color: #000;
+}
+
+.subtexto {
+    color: skyblue;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   Header                                   */
+/* -------------------------------------------------------------------------- */
+
+.header {
+    background-image: url('../img/header.png');
+    background-size: cover;
+    transition: 1s ease;
+    z-index: 90;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-img {
+    animation: aplastar 8s ease;
+}
+
+.header .contenedor-titulo {
+    position: relative;
+    text-align: center;
+    width: calc(100vw - 20px);
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mix-blend-mode: difference;
+    z-index: 99;
+}
+
+.header .titulo {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------- */
+/*          NavBar
+/* ----------------------------- */
+
+.menuPrincipal {
+    background-color: transparent;
+    opacity: 0.8;
+    /* position: fixed; */
+    width: 100%;
+    /* Este z-index es únicamente para evitar posible futuros problemas. Cuando varios elementos se superponen, */
+    /* z-index determina cuales cubren a otros. Un elemento con mayor z-index generalmente cubre a otro menor. */
+    z-index: 99;
+}
+
+.menuPrincipal p {
+    display: inline-block;
+    /* background-color: var(--white); */
+    font-size: 34px;
+    color: orange;
+    text-decoration: none;
+    padding-top: 10px;
+    /* margin: 0; */
+    transition: .5s ease all;
+}
+
+.menuPrincipal div a {
+    /* Comparado con 'display: inline' (es display que suele estar por defecto), */
+    /* la mayor diferencia es que 'display: inline-block' permite establecer un ancho y un alto a los elementos. */
+    /* También, con 'display: inline-block' el margins/paddings del top y bottom son respetados, mientras que con  'display: inline' no. */
+    display: inline-block;
+    /* background-color: var(--white); */
+    font-size: 22px;
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 2rem;
+    transition: .5s ease all;
+}
+
+.menuPrincipal div a:hover {
+    /* background-color: black; */
+    color: white;
+    text-decoration: underline;
+    transition: .5s ease all;
+}
+
+
+
+/* ----------------------------- */
+/*          Cuerpo
+/* ----------------------------- */
+
+.contenido-cuerpo {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* background-image: url(../img/fondoAzul.png); */
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    background-color: var(--gray-light);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.tituloActividad {
+    color: var(--purple-dark);
+    font-size: 30px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.tituloActividad span {
+    background-color: var(--gray-light);
+    z-index: 99;
+    position: relative;
+}
+
+.tituloActividad::after {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+    top: -20px;
+    z-index: 1;
+}
+
+section p {
+    font-size: 15px;
+}
+
+fieldset {
+    padding: 1rem;
+    margin-top: 2rem;
+    /* border: darkblue 1px solid; */
+    border-radius: 8px;
+    background-color: #d6d6c2;
+}
+
+
+/* ------------------------------------- */
+/*          Elementos fieldset
+/* ------------------------------------- */
+
+fieldset .titulo {
+    color: var(--purple-dark);
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    z-index: 2;
+    text-align: center;
+}
+
+fieldset .titulo span {
+    background-color: #d6d6c2;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+fieldset .titulo::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+fieldset .bloqueResultados {
+    background-color: var(--gray-light);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+fieldset .bloqueTitulo {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+fieldset .bloqueEntradaNums {
+    display: inline-block;
+    width: 100%;
+    background-color: lightyellow;
+    border: 1px solid rgb(138, 168, 177);
+    border-radius: 5px;
+}
+
+fieldset .bloqueTituloResultado {
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+
+/* --------------------------------------- */
+/*          Footer 
+/* --------------------------------------- */
+
+.pie {
+    background-color: var(--purple-dark);
+    padding: 10px;
+    padding-top: 2rem;
+}
+
+.tituloPie {
+    color: var(--gray-light);
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+    text-align: center;
+}
+
+.tituloPie span {
+    background-color: var(--purple-dark);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.tituloPie::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--gray-light);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Animaciones                                */
+/* -------------------------------------------------------------------------- */
+
+@keyframes aplastar {
+    0% {
+        height: 100%;
+    }
+    30% {
+        height: 40%;
+    }
+    35% {
+        height: 40%;
+    }
+    75% {
+        height: 70%;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* ------------------------------------------ */
+/*          Media Querys
+/* ------------------------------------------ */
+
+@media screen and (max-width: 1150px) {
+    .header .titulo {
+        font-size: 40px;
+    }
+    .mySlides p {
+        font-size: 15px;
+    }
+    fieldset {
+        padding: 1rem 0;
+    }
+    fieldset .bloque2BotonesAgrupados,
+    fieldset .bloque2InputAgrupados {
+        width: 100%;
+        margin-bottom: 1rem;
+        float: none;
+    }
+    fieldset .bloqueResultados {
+        padding: 1rem 0 1rem 0;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .controlMargin {
+        margin-top: 1rem;
+    }
+}
+

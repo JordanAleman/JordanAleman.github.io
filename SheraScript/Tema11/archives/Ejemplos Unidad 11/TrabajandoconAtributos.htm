@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adjuntar múltiples ficheros a la Trabajando Atributos</title>
+<script language="javascript" type="text/javascript">
+	  function inspector(el) {
+               alert(el);
+			   var str ="";
+               for (var i in el){
+                  str+=i + ": " + el.getAttribute(i) + "\n";
+               }
+               alert(str);
+            }
+</script>
+</head>
+
+<body>
+    <p id="mwEnlaces">
+        <a id="editor" href="editorial.html">Editorial</a>
+    </p>
+	<script language="javascript" type="text/javascript">
+		var ancla = document.getElementById("editor");
+		alert(ancla);
+		inspector(ancla);
+	</script>
+</body>
+
+</html>
+  

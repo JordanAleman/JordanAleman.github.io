@@ -1,0 +1,49 @@
+/* -------------------------------------------------------------------------- */
+/*        Efectos para demostración del efecto sustitución en imágenes        */
+/* -------------------------------------------------------------------------- */
+.desvanecer {
+    animation: desvanecer 0.5s ease;
+}
+
+
+.aparecer {
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes desvanecer {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+
+footer {
+    position: relative;
+}
+
+.imagenCookie {
+    position: absolute;
+    top: 30px;
+    right: 20%;
+
+    width: 60px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 650px) {
+    .imagenCookie {
+        right: 10%;
+    }
+
+}

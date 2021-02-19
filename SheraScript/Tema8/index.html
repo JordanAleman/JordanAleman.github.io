@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos del documento</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/specific.css">
+
+</head>
+<body class="fondoPrincipal">
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #8C8C8C; color: white; left: 0;">&#9776;</span>
+    
+    <div id="mainPostNav">
+        <header class="container-fluid cabecera mb-2" style="padding-left: 4rem;">       
+            <img src="img/ElRincon.png" alt="LogoElRincon" class="rounded ml-3" width="32" height="32">
+            <span class="tituloCentro colorCabeceraUsuario">IES El Rincón</span>
+            <span class="cabeceraUsuario colorCabeceraUsuario">Jordan Alemán Santana</span>
+        </header>
+
+        <main class="container-fluid mt-4">
+            <div id="saludoBienvenidaCookies"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <h1 class="titulosPrincipales">OBJETOS DEL DOCUMENTO</h1> 
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        
+                        <div class="row">
+                            <div class="col-2">
+                                <p>Escoger colores</p>
+                            </div>
+                            <div class="col-10">
+                                <button type="button" class="btn btn-block botonVentanaColores" id="botonVentanaColores"></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+            </div>
+
+            <div class="container-fluid mt-5 text-center">
+                
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Demostración del efecto sustitución en imágenes</h2>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-outline-info btn-block" data-toggle="collapse" data-target="#informacionSustitucionImagenes" aria-expanded="false">Detalles</button>
+                    </div>
+                </div>
+                <div id="informacionSustitucionImagenesCollapse"><!-- Generado en "js/plantilla.js" --></div>
+                
+                <div id="transiciones">
+                    <div class="container mt-5">
+                        <img src="img/prim-dir.gif" alt="PrimariaDirecta" id="cambioImagen" class="imagenSustitucion">
+                    </div>
+                    <div class="container mt-5">
+                        <img src="img/prim-indir.gif" alt="SecundariaDirecta" class="imagenSustitucion">
+                    </div>
+                </div>
+                <div id="imagenIntentoCerrarVentana"><!-- Generado en "js/main.js" --></div>
+            </div>
+        </main>
+
+        <footer class="container-fluid pie">
+            <img src="img/cookie.png" alt="cookies" class="imagenCookie" id="imagenCookie" title="BorrarCookies">
+            <h3 class="tituloPie">Actividades del objeto del documento</h3>
+        </footer>
+    </div>
+
+
+    <script src="js/plantilla.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script src="../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

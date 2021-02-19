@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navegador Google Chrome</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/sideMenu.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+   
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/modalImage.css">
+
+</head>
+<body>
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #272727; color: white;">&#9776;</span>
+    
+    <div id="mainPostNav">
+        <header class="header">
+            <div class="contenedor-titulo">
+                <div class="titulo">
+                    <span class="texto-naranja">Unidad 1</span>
+                    <span class="texto-blanco">Navegadores</span>
+                    <p class="subtexto">Google Chrome</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="bordeHeader"></div>
+        
+        <nav class="jSidebar" id="jSidebar">
+            <a href="#section1">Introducción</a>
+            <a href="#section2">Clasificación</a>
+            <div class="jSidebar-subLinks">
+                <a href="#section2.1">Creación de usuario</a>
+                <a href="#section2.2">Administración de marcadores</a>
+                <a href="#section2.3">Gestor de descargas</a>
+                <a href="#section2.4">Almacenamiento seguro de contraseñas</a>
+                <a href="#section2.5">Soporte de tecnologías Webs</a>
+                <a href="#section2.6">Licencia de software</a>
+            </div>
+            <a href="#section3">Personalización</a>
+            <div class="jSidebar-subLinks">
+                <a href="#section3.2">Navegador predeterminado</a>
+                <a href="#section3.3">Opciones de abrir y cerrar Chrome</a>
+                <a href="#section3.4">Personalizar seguridad</a>
+            </div>
+            <a href="#section4">Arquitectura</a>
+            <a href="#sectionFinal">Secretos</a>
+        </nav>
+        
+        <main class="container-fluid contenidoCuerpo"> 
+            <hr class="my-3" style="border-color: white;" id="section1">
+            <section >
+                <h1>Introducción</h1>
+                <p>
+                    Hablaremos sobre <span class="text-primary">Google Chrome</span> (a partir de ahora sólo <span class="text-primary">Chrome</span>), un navegador web. Explicaremos varios de sus aspectos y características. 
+                    Para entendernos bien rápido, los navegadores web son aquellos que nos ofrecen la posibilidad de “navegar” a través de Internet. 
+                    Nos permiten acceder a cualquier página web a través de una dirección URL por medio de una interfaz gráfica intuitiva y amigable. 
+                    También nos dan una gran variedad de opciones y según que navegador sea tendremos unas opciones u otras.
+                </p>
+                <p>
+                    A destacar que <span class="text-primary">Chrome</span> es actualmente el navegador web más usado por la mayoría de los usuarios, con una diferencia además bastante notable. 
+                    Podemos ver una gráfica de esta diferencia gracias a la página siguiente: <a href="http://gs.statcounter.com/">http://gs.statcounter.com/</a>
+                </p>
+                <img src="img/estadisticas.png" alt="Estadísticas uso navegadores" class="imgPlana">
+            </section>
+
+            <hr class="my-5" id="section2">
+
+            <section>
+                <h1>Criterios de clasificación de los Navegadores</h1>
+                <h3>Plataforma de ejecución</h3>
+                <p>
+                    Las plataformas que pueden usar <span class="text-primary">Chrome</span> son prácticamente todas. <span class="text-primary">Chrome</span>, 
+                    al ser el navegador más usado en la actualidad por la mayoría de los usuarios, su capacidad de adaptación 
+                    se ha extendido a casi todas las plataformas para que pueda ser usado donde sea.
+                </p>
+                <p>
+                    Bien podemos navegar con <span class="text-primary">Chrome</span> en un Linux, Windows o Mac, como podemos usarlo en nuestros dispositivos móviles sean Android o IOS.
+                </p>
+
+                <h3 class="mt-4">Características del navegador aportadas de forma nativa.</h3>
+                <p>
+                    <span class="text-primary">Chrome</span> por defecto nos ofrece una gran variedad de opciones de personalización y funcionalidades opcionales.
+                </p>
+                <p>
+                    Entre todos los que tiene destacaremos algunos y al final nombraremos unos cuantos más que posee: 
+                </p>
+
+                <ul>
+                    <li id="section2.1">
+                        <h5>Creación de usuario y sincronización:</h5>
+                        <p>
+                            Tal vez una de sus funcionalidades más importantes. <span class="text-primary">Chrome</span> pertenece a Google y este navegador ha sido configurado para que se pueda iniciar sesión con
+                            una de nuestras cuentas de Google (cuentas de Gmail) directamente a nuestro navegador. 
+                            Con esto conseguimos tener nuestra cuenta de Google vinculada a nuestro navegador y poder disfrutar así de la sincronización.
+                        </p>
+                        <img src="img/UsuarioChrome.png" alt="UsuarioChrome" class="imgPlana">
+                        <p>
+                            Con la sincronización podremos llevar nuestra cuenta de Google a cualquier navegador <span class="text-primary">Chrome</span>, por ejemplo, al navegador <span class="text-primary">Chrome</span> del equipo un poco anticuado 
+                            de nuestro queridísimo amigo o queridísima amiga, conectarnos con nuestra cuenta Google ahí, sincronizar nuestra cuenta Google e importar todos 
+                            los datos como marcadores o contraseñas a ese navegador. Y que no haya miedo ya que todos esos datos seguirán en ese otro ordenador mientras estemos 
+                            con nuestra sesión de cuenta activa. En cuanto cerremos sesión, toda esa información se va con nosotros fielmente.
+                        </p>
+                        <p>
+                            Otras de las ventajas al iniciar sesión en algún navegador <span class="text-primary">Chrome</span> es que contaremos con muchas más opciones que nombraremos un poco, 
+                            pero tampoco haremos ahora especial mención de cada uno para no acabar con más de 100 páginas de información, porque de verdad que tiene bastante.
+                        </p>
+                        <p>
+                            Al darle al listado de aplicaciones de nuestra cuenta Google podemos ver todo lo que se nos ofrece. Y todas estas aplicaciones se cargan directamente en nuestro navegador <span class="text-primary">Chrome</span>  
+                            y por tanto se podría considerar cada una de estas opciones como funcionalidades de <span class="text-primary">Chrome</span>.
+                        </p>
+                    </li>
+
+                    <li class="mt-5" id="section2.2">
+                        <h5>Administración de marcadores:</h5>
+                        <p>
+                            Herramienta que permite organizar de manera clara y ordenada cualquier sitio web que queramos tener guardado para su posterior uso.
+                        </p>
+                        <p>
+                            Gracias a esta herramienta podemos guardar multitud de páginas que podremos ver más adelante o descubrir páginas que tenemos guardado desde hace ya mucho tiempo sin recordar ya el porqué, 
+                            volverlas a abrir, rememorar la razón por la que fue guardada o quedarnos aún más perplejos.
+                        </p>
+                        <p>
+                            Se puede organizar todo desde la propia barra de marcadores justo por debajo de la barra de URL, o también se puede organizar a través del administrador de marcadores de una manera más directa.
+                        </p>
+                        <img src="img/Marcadores.png" alt="Marcadores" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section2.3">
+                        <h5>Gestor de descargas:</h5>
+                        <p>
+                            Nos permite realizar descargas de múltiples sitios webs y poder almacenar dichas descargas donde nosotros decidamos. 
+                        </p>
+                        <img src="img/GestorDescargas1.png" alt="Gestor de descargas 1" class="imgPlana">
+                        <p>
+                            <span class="text-primary">Chrome</span> tiene su propia carpeta de Descargas por defecto, pero a través de la Configuración de <span class="text-primary">Chrome</span> 
+                            podemos modificar su destino y ponerlo donde nosotros queramos.
+                        </p>
+                        <img src="img/GestorDescargas2.png" alt="Gestor de descargas 2" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section2.4">
+                        <h5>Almacenamiento seguro de contraseñas:</h5>
+                        <p>
+                            Cuenta con su propio gestor de contraseñas. Esas contraseñas las guarda en los usuarios de Google, por tanto, dispondremos de gestor de contraseñas 
+                            siempre y cuando tengo una sesión iniciada en nuestro navegador.
+                        </p>
+                        <img src="img/password.png" alt="UsuarioChrome" class="imgPlana">
+                        <p>
+                            <span class="text-primary">Chrome</span> siempre nos pregunta educadamente si queremos guardar una nueva contraseña al crear una cuenta o acceder a una cuenta que ya teníamos creada, 
+                            pero que no hemos guardado la contraseña o cuando actualizamos una contraseña.
+                        </p>
+                        <p>
+                            Si tenemos ya alguna contraseña guardada, cuando toque tener que utilizarla, <span class="text-primary">Chrome</span> amablemente nos ofrecerá rellenar la contraseña automáticamente.
+                        </p>
+                        <p>
+                            También disponemos de un administrador de contraseñas donde podremos ver todas las cuentas con sus respectivas contraseñas. 
+                            Cuando estamos dentro de este administrador veremos que todas las contraseñas estarán cifradas y si queremos ver alguna de las contraseñas <span class="text-primary">Chrome</span> 
+                            nos pedirá que volvamos a escribir nuestra contraseña de Google <i>(esta ya no te la va a rellenar <span class="text-primary">Chrome</span>, porque si te rellena la contraseña 
+                            automáticamente para ver el resto de contraseñas la seguridad sería un poco churro)</i>. Una vez la ponemos se nos revelará cada contraseña
+                        </p>
+                    </li>
+
+                    <li class="mt-5" id="section2.5">
+                        <h5>Soporte de tecnologías Web</h5>
+                        <p>
+                            Soporta los estándares de la Web como CSS, Java, lenguajes scripting del cliente (JavaScript), XHTML (HTML con formato XML) y JSON. 
+                            Vamos, que soporta de todo. Una pequeña demostración de HTML y CSS usando Bootstrap para que se pueda ver cómo lo soporta:
+                        </p>
+                        <img src="img/TecnologiaWeb.png" alt="Soporte de tecnologías Web" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section2.6">
+                        <h5>Licencia de software</h5>
+                        <p>
+                            <span class="text-primary">Chrome</span> es de código libre y su aplicación es gratuita es cualquier plataforma.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="my-5" id="section3">
+
+            <section>
+                <h1>Personalización de la interfaz</h1>
+                <ul>
+                    <li>
+                        <h5>Aspectos gráficos</h5>
+                        <img src="img/Temas1.png" alt="Temas 1" class="imgPlana">
+                        <p>
+                            <span class="text-primary">Chrome</span> nos ofrece una gran variedad de personalización. Si lo que más nos gusta es dejar nuestro navegador bien bonito, pero dedicarle bastante rato a buscar el tema que más nos 
+                            convenza para que se vea como más nos satisfaga o que se vea horripilante porque quizás estemos junto a nuestros compañeros o compañeras de clase o trabajo y queremos chirriar sus ojos. 
+                        </p>
+                        <img src="img/Temas2.png" alt="Temas 2" class="imgPlana">
+                        <p>
+                            Además de la personalización de temas también podemos hacerlo con el tamaño de la fuente de nuestro navegador o realizar algún tipo de zoom.
+                        </p>
+                        <img src="img/Zoom.png" alt="Zoom características" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section3.2">
+                        <h5>Buscador y navegador predeterminado</h5>
+                        <p>
+                            Por defecto tiene a Google como buscador predeterminado, aunque nos permite cambiarlo por cualquier otro buscador. En cuanto al navegador predeterminando lo que hace es darnos la opción de seleccionar que sea 
+                            <span class="text-primary">Chrome</span> nuestro querido navegador por defecto. Así, cada vez que abramos cualquier link desde donde sea, se nos abrirá en <span class="text-primary">Chrome</span>.
+                        </p>
+                        <img src="img/NavegadorPredeterminado.png" alt="Navegador predeterminado" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section3.3">
+                        <h5>Opciones al cerrar y volver a abrir <span class="text-primary">Chrome</span></h5>
+                        <p>
+                            Una pequeña lista de opciones de qué hacer cuando cerramos <span class="text-primary">Chrome</span> y lo volvemos a abrir.
+                        </p>
+                        <img src="img/OpcionesAbirCerrar.png" alt="Opciones al abrir y cerrar Chrome" class="imgPlana">
+                    </li>
+
+                    <li class="mt-5" id="section3.4">
+                        <h5>Personalización de la privacidad y seguridad</h5>
+                        <p>
+                            <span class="text-primary">Chrome</span> nos permite personalizar, aunque sería quizás más apropiado decir “gestionar”, nuestra privacidad y seguridad. 
+                            Entre todas las opciones haremos especial hincapié en la de <i>Configuración del sitio Web</i>.
+                        </p>
+                        <img src="img/Seguridad1.png" alt="Personalizar seguridad 1" class="imgPlana">
+                        <p>
+                            Tenemos varias opciones que sin más nos preguntan si permitimos o no su acceso, además de que nos permite bloquear directamente su acceso para las páginas webs que le indiquemos.
+                        </p>
+                        <img src="img/Seguridad2.png" alt="Personalizar seguridad 2" class="imgPlana">
+                        <p>
+                            Queda más de estas opciones, aunque más interesante destacaremos unos poco más que ofrecen distintas opciones. Como es las notificaciones. 
+                            Veremos que como los demás nos pregunta si permitimos su acceso, pero también nos da una lista de sitios webs que nos mandan notificaciones siempre 
+                            y cuando hayamos permitido previamente el envío de estas notificaciones.
+                        </p>
+                        <p>
+                            Si le damos a uno de estos sitios webs que nos mandarán notificaciones, podremos ver que para ese sitio web en concretos también podremos cambiar casi todas las opciones de privacidad y seguridad.
+                        </p>
+                        <img src="img/Notificaciones.png" alt="Personalizar notificaciones" class="imgPlana">
+                        <p>
+                            Y por acabar esta sesión veamos qué pasa con las cookies, otra opción de privacidad y seguridad.
+                        </p>
+                        <p>
+                            No solo tenemos la opción de permitir que los sitios guarden o lean datos de cookies, o bloquear algunos sitios webs, sino que además podemos ver todas nuestras cookies 
+                            y borrar las que nos interesen o borrarlas todas directamente.
+                        </p>
+                        <img src="img/Cookies.png" alt="Personalizar cookies" class="imgPlana">
+                    </li>
+                </ul>          
+            </section>
+
+            <hr class="my-5" id="section4">
+
+            <section>
+                <h1>Arquitectura de referencia de un navegador web</h1>
+                <h3>Subsistema de renderizado</h3>
+                <p>
+                    Un <b>motor de renderizado</b> es software que toma contenido marcado <i>(como HTML, XML, archivos de imágenes, etc.)</i> e información de formateo 
+                    <i>(como CSS, XSL, etc.)</i> y luego muestra el contenido ya formateado en la pantalla de aplicaciones. 
+                    El motor “pinta” en el área de contenido de una ventana, la cual es mostrada en un monitor o una impresora. 
+                    Los motores de renderizado se usan típicamente en navegadores web, clientes de correo electrónico, 
+                    u otras aplicaciones que deben mostrar y editar contenidos web.
+                </p>
+                <p>
+                    <span class="text-primary">Chrome</span> utilizaba anteriormente WebKit, hasta que Google desarrolló <b><i>Blink</i></b> que es su actual motor de renderizado. 
+                    <b><i>Blink</i></b> fue anunciado por Google en abril de 2013, a partir de una bifurcación del proyecto WebKit. 
+                    Es utilizado por varios navegadores: Chromium, <span class="text-primary">Chrome</span>, Opera, Vivaldi, Maxthon y Microsoft Edge (a partir de 2019). 
+                </p>
+
+                <h3 class="mt-5">Subsistema de comunicaciones</h3>
+                <p>
+                    HTTP HTTPS, FTP para transferencia de archivos.
+                </p>
+
+                <h3 class="mt-5">Subsistema de persistencia de datos.</h3>
+                <p>
+                    Los métodos de almacenamiento de las apps web se pueden analizar de acuerdo con el ámbito de datos persistentes.
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <b>Persistencia de sesión:</b> Los datos de esta categoría se conservan siempre y cuando haya una sesión web o pestaña del navegador activa. 
+                            Un ejemplo de un mecanismo de almacenamiento con persistencia de sesión es la Session Storage API.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Persistencia de dispositivo:</b> Los datos de esta categoría se conservan entre sesiones y pestañas/ventanas del navegador dentro de un dispositivo. 
+                            Un ejemplo de un mecanismo de almacenamiento con persistencia de dispositivo es la Cache API.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <b>Persistencia global:</b> Los datos de esta categoría se conservan entre sesiones y dispositivos. Así, se convierte en la forma más robusta de persistencia de datos. 
+                            Un ejemplo de un mecanismo de almacenamiento con persistencia global es Google Cloud Storage.
+                        </p>
+                    </li>
+                </ul>
+
+                <h3 class="mt-5">Intérprete de JavaScript</h3>
+                <p>
+                    <span class="text-primary">Chrome</span> V8 es un motor de código abierto para JavaScript creado por Google. Está escrito en C++ y es usado en <span class="text-primary">Chrome</span> desde el 2019.
+                </p>
+
+                <h3 class="mt-5">Parser XML</h3>
+                <p>
+                    La creación del <b>Document Object Model</b> o <b>DOM</b> es una de las innovaciones que más ha influido en el desarrollo de las páginas web dinámicas y de las aplicaciones web más complejas.
+                </p>
+                <p>
+                    <b>DOM</b> permite a los programadores web acceder y manipular las páginas XHTML como si fueran documentos XML. De hecho, <b>DOM</b> se diseñó originalmente para manipular de forma sencilla los documentos XML.
+                </p>
+                <p>
+                    A pesar de sus orígenes, <b>DOM</b> se ha convertido en una utilidad disponible para la mayoría de lenguajes de programación (Java, PHP, JavaScript) y cuyas únicas diferencias se encuentran en la forma de implementarlo.
+                </p>
+                <img src="img/DOM.png" alt="DOM (Document Object Model)" class="imgPlana">
+                
+            </section>
+
+            <hr class="my-5">
+                    
+            <section class="sectionFinal" id="sectionFinal">
+                <h1>Secretos de Google</h1>
+                <p>
+                    Para finalizar veamos unos cuantos secretitos que tiene Google según lo que busquemos 😁.
+                </p>
+                <p>
+                    Según lo que busquemos en el buscador de Google podremos acceder a algún huevo de pascua (Easter Egg). <br>
+                    Vamos a conocer algunos.
+                </p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?biw=1745&bih=852&sxsrf=ACYBGNT8BFqTIv-TzPf0oo52aC_x6DP7fw%3A1577368298556&ei=6roEXsjDIcmsadGNjyg&q=do+a+barrel+roll&oq=do+a+barrel+roll&gs_l=psy-ab.12...0.0..5748...0.0..0.0.0.......0......gws-wiz.PgB6c4SRqWY&ved=0ahUKEwjI4PXoutPmAhVJVhoKHdHGAwUQ4dUDCAs">
+                            <h4>1. Do a barrel roll</h4>
+                        </a>
+                        <p>Al buscar estas palabras toda la pantalla dará una vuelta.</p>
+                        <img src="img/Secreto1.png" alt="Do a barrel roll">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?biw=1745&bih=852&sxsrf=ACYBGNTg0QCq-GwVX6CECuOP375A-NZyEA%3A1577370066863&ei=0sEEXuyjNOnTgwfH76_AAQ&q=askew&oq=askew&gs_l=psy-ab.3..0i67i70i255j0j0i67j0l3j0i67j0j0i203l2.5054.5823..6893...0.4..0.133.578.1j4......0....1..gws-wiz.......0i71j35i39j0i131j0i131i20i263.hrE1qbIL2ao&ved=0ahUKEwjs1I60wdPmAhXp6eAKHcf3CxgQ4dUDCAs&uact=5">
+                            <h4>2. askew</h4>
+                        </a>
+                        <p>Al escribirlo, hará que la pantalla se quede torcida como si estuviera "tildada".</p>
+                        <img src="img/Secreto2.png" alt="askew">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?q=atari+breakout&biw=1745&bih=852&sxsrf=ACYBGNQEQlHZN02A5AXLxvkS-wxYVc5MmQ:1577371563678&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjVgu39xtPmAhUD0uAKHcutB4gQ_AUoAXoECBEQAw">
+                            <h4>3. atari breakout</h4>
+                        </a>
+                        <p>Al escribir "atari breakout" e ir a "imágenes", la búsqueda se convertirá en un juego, ¡incluso con puntuación!</p>
+                        <img src="img/Secreto3.png" alt="atari breakout">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?q=super+mario+bros&sxsrf=ACYBGNRo-LJmx_FF02gD-5elDO9CRdKUSg:1577372368258&source=lnms&sa=X&ved=0ahUKEwii2sD9ydPmAhVC3IUKHeXqDGAQ_AUIDSgA&biw=1745&bih=852&dpr=1.1">
+                            <h4>4. super mario bros</h4>
+                        </a>
+                        <p>Cuando buscamos al bueno de Mario, tendremos a la derecha una cajita característica que nos dará monedas al hacerle click.</p>
+                        <img src="img/Secreto4.png" alt="Super Mario Bross">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNQSOIh5CesCF582tg9yX68p4WRq_Q%3A1577372662744&ei=9ssEXsf_LNDMaOy1g9gP&q=graph+for+sin%28x%29+%2B+cos%28y%29&oq=graph+for+x%3Dsin&gs_l=psy-ab.3.0.0i22i30l2j0i22i10i30l4j0i22i30l2j0i22i10i30j0i22i30.26386.71011..72254...7.1..0.138.2396.4j18......0....1..gws-wiz.......0i71j35i39j0i131i67j0j0i67j0i131j0i10j0i203j33i160j33i22i29i30.vjfhejag87Q">
+                            <h4>5. graph for sin(x) + cos(y)</h4>
+                        </a>
+                        <p>Con el comienzo de "graph for " y una función, Google nos muestra gráficamente la función.</p>
+                        <img src="img/Secreto5.png" alt="graph for">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNRdFEebUJiAAtOaUE0pMEgJ9ipK9A%3A1577372736185&ei=QMwEXtn4CoHSa8iThYAN&q=the+answer+to+life+the+universe+and+everything&oq=the+&gs_l=psy-ab.3.0.35i39l3j0i131j0i67j0i131l4j0.205044.205383..206200...1.0..0.173.746.0j6......0....1..gws-wiz.......0i131i67.Oo0hdAw2tIM">
+                            <h4>6. La vida</h4>
+                        </a>
+                        <p>Al introducir "the answer to life, the universe and everything" Google calculará que es 42. Si entiendes la referencia estaré orgulloso de ti 😁</p>
+                        <img src="img/Secreto6.png" alt="42 is the answer">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNQJYug7GhoAldYX0nKu5gc0yddydQ%3A1577372943487&ei=D80EXta0HYq5gwfEtajYCw&q=%3Cblink%3E&oq=%3Cblink%3E&gs_l=psy-ab.3..0i67j0i10j0l4j0i67l2j0l2.67265.67265..67847...0.1..0.99.99.1......0....2j1..gws-wiz.......0i71.BHvzTaSzaXY&ved=0ahUKEwiW-OWPzNPmAhWK3OAKHcQaCrsQ4dUDCAs&uact=5">
+                            <h4>7. &lt;blink></h4>
+                        </a>
+                        <p>Literalmente "parpadear". Veremos como esa palabra parpadea cada vez que sale.</p>
+                        <img src="img/Secreto7.png" alt="Blink">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNQBX1L7AoUqnqem1jj3u5b8mQG0Eg%3A1577373012635&ei=VM0EXtG4JuCZjLsP6r6q4As&q=pac+man+doodle&oq=pac+man+doodle&gs_l=psy-ab.3..35i39j0j0i203l7j0i22i30.147438.147438..148360...0.4..0.118.118.0j1......0....2j1..gws-wiz.......0i71.SpKY0QuCVOs&ved=0ahUKEwjRsuKwzNPmAhXgDGMBHWqfCrwQ4dUDCAs&uact=5">
+                            <h4>8. Pac Man</h4>
+                        </a>
+                        <p>Si escribimos "pac man doodle" podremos jugar desde nuestro propio navegador a un pequeño emulador de Pac Man,</p>
+                        <img src="img/Secreto8.png" alt="Pac Man">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?q=tic+tac+toe&oq=tic+tac+toe&aqs=chrome..69i57j0l7.2311j0j7&sourceid=chrome&ie=UTF-8">
+                            <h4>9. Tic Tac Toe</h4>
+                        </a>
+                        <p>Uno de tantos juegos que nos ofrece Google. A ver si conseguimos garnale al menos una vez 🤗.</p>
+                        <img src="img/Secreto9.png" alt="Tic Tac Toe">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNQ3_kUnYr881AEDhSgg1LTOjj9C4g%3A1577373991800&ei=J9EEXtC3MIqxUPqAqeAK&q=flip+a+coin&oq=flip+a+coin&gs_l=psy-ab.3..0i67j0i20i263j0j0i203j0l2j0i203l4.172122.173557..173938...0.4..0.134.1209.1j10......0....1..gws-wiz.......0i71j35i39j0i131i67j0i131j0i10i67._TKgRG-PfIs&ved=0ahUKEwiQ59WD0NPmAhWKGBQKHXpACqwQ4dUDCAs&uact=5">
+                            <h4>10. Lanzar una moneda</h4>
+                        </a>
+                        <p>¿Una decisión u otra? Dejemos que Google decida lanzando una moneda.</p>
+                        <img src="img/Secreto10.png" alt="Flip a coin">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNT6gyBnsEvaLEm36DIDghjoqAERZw%3A1577374167077&ei=19EEXr-3BMSKjLsPud6AsA0&q=roll+a+dice&oq=roll+a&gs_l=psy-ab.3.1.0i67l2j0j0i67l2j0j0i20i263j0l3.76640.77653..80472...0.1..0.109.622.0j6......0....1..gws-wiz.......0i71j35i39j0i131.QXY2kbYFS8U">
+                            <h4>11. Tirar un dado</h4>
+                        </a>
+                        <p>Un dado o varios, además diferentes dados. En un momento tenemos tantos dados como queramos o necesitemos.</p>
+                        <img src="img/Secreto11.png" alt="Roll a dice">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?sxsrf=ACYBGNS3m2XnhHPNAMTLSiSJBWnuzkIAPw:1577374423578&q=recursi%C3%B3n&spell=1&sa=X&ved=2ahUKEwj-pMfR0dPmAhUQ8BoKHRcpBmAQBSgAegQIFRAq&biw=1745&bih=852">
+                            <h4>12. Recursión</h4>
+                        </a>
+                        <p>Chiste puro de programador. Si buscamos "recursión" nos preguntará si quisimos decir "recursión", link que nos mandaría exactamente al mismo lugar. Se entiende, ¿verdad 😋?</p>
+                        <img src="img/Secreto12.png" alt="Recursion">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?biw=1745&bih=852&sxsrf=ACYBGNT08My_LUgwMSdJqGR_IdUZFJrD7Q%3A1577374585675&ei=edMEXrjZKMWCauT_scgL&q=sonic+the+hedgehog&oq=sonic+&gs_l=psy-ab.3.1.0i67l10.10161.11095..12482...0.1..0.103.585.5j1......0....1..gws-wiz.......0i71j35i39.DUXysUq-0wU">
+                            <h4 class="mt-4">13. Sonic the hedgehog</h4>
+                        </a>
+                        <p>A la derecha estará un Sonic muy simpático que interactuará con nuestros clicks. Y tras varios clicks habrá una sorpresa. </p>
+                        <img src="img/Secreto13.png" alt="Sonic the hedgehog">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                        <a href="https://www.google.com/search?biw=1745&bih=852&sxsrf=ACYBGNT0r9owhC0UxeYnZJZsZC3I_zOF2g%3A1577374620934&ei=nNMEXs3OOI2qa_KpgJAG&q=thanos&oq=thanos&gs_l=psy-ab.3..35i39j0i67j0i20i263j0i67l3j0i131i67j0i67j0j0i131.163958.164667..164812...0.1..0.128.679.0j6......0....1..gws-wiz.......0i71.4LRnl9AB1Io&ved=0ahUKEwjNjNWv0tPmAhUN1RoKHfIUAGIQ4dUDCAs&uact=5">
+                            <h4 class="mt-4">14. Thanos</h4>
+                        </a>
+                        <p>¿Qué sucede cuando Thanos chasquea los dedos? Si le hacemos click a su guante lo averiguaremos (o recordaremos).</p>
+                        <img src="img/Secreto14.png" alt="Thanos">
+                    </div>
+                </div>   
+            </section>         
+        </main>
+        
+
+        
+        <div id="modalActivo"></div>
+    </div>
+
+    <script src="js/modalImage.js"></script>
+
+    <script src="../js/sideMenu.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

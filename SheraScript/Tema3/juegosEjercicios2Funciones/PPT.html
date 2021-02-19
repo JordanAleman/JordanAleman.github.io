@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/ppt.css">
+    <!-- Agradecimientos especiales a mi madre por los dibujos aportados -->
+
+    <title>Piedra papel tijeras</title>
+</head>
+<body>
+
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #F5DEB3; left: 0;">&#9776</span>
+    
+    <div id="mainPostNav">
+        <main class="contenido-main">
+            <div class="container-fluid areaEleccion">
+                <div class="row ">           
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <button type="button" class="botonEleccion" id="eleccionPiedra">
+                                <h1 class="tituloEleccion">Piedra</h1>
+                                <div class="imagenAreaEleccion" id="piedra"></div>
+                        </button>           
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <button type="button" class="botonEleccion" id="eleccionPapel">
+                                <h1 class="tituloEleccion">Papel</h1>
+                                <div class="imagenAreaEleccion" id="papel"></div>
+                        </button>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <button type="button" class="botonEleccion" id="eleccionTijeras">
+                                <h1 class="tituloEleccion">Tijeras</h1>
+                                <div class="imagenAreaEleccion" id="tijeras"></div>
+                        </button>
+                    </div>            
+                </div>
+            </div>
+
+            <a href="../Ejercicios2Funciones.html">
+                <div class="resultadoPuntos bg-dark" id="resultadoPuntos"><p id="mensajeResultadoPuntos">Escoja Piedra, Papel o Tijeras. Click aquí para volver</p></div>
+            </a>
+
+            <div class="container-fluid areaJuego">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 jugador">
+                        <h1 class="tituloAreaJuego">Jugador</h1>
+                        <div class="imagenAreaJuego" id="jugadorAreaJuego"></div>
+                    </div>                
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 marcador">
+                        <div class="marcadorEscondido" id="marcadorEscondido">
+                            <span class="puntosAreaJuegoMarcador">
+                                <p class="puntosJugador" id="puntosJugador">0</p>
+                                <p class="puntosMaquina" id="puntosMaquina">0</p>
+                                <p class="puntosGanador" id="ganadorActual"></p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 maquina">
+                        <h1 class="tituloAreaJuego">Máquina</h1>
+                        <div class="imagenAreaJuego" id="maquinaAreaJuego"></div>
+                    </div>
+                    <div class="seleccionarJugador">
+                        <select class="form-control" id="selectorJugador">
+                            <option value="Humano">Humano</option> 
+                            <option value="Humana">Humana</option>
+                        </select>
+                    </div>
+                    <div class="seleccionarOponente">
+                        <select class="form-control" id="selectorOponente">
+                            <option value="Maquina">Robot</option> 
+                            <option value="Planta">Planta</option>
+                            <option value="Marciano">Marciano</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-block botonJugar" id="botonJugar" disabled>Jugar</button>  
+        </main>
+    </div>
+
+    <script src="js/ppt.js"></script>
+
+    <script src="../../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

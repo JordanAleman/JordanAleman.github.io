@@ -1,0 +1,23 @@
+    <html>
+    <head>
+    <script language="javascript">
+	//como actualizar dos iframes al mismo tiempo.
+    function twoframes()    {
+            document.all("frame1").src="appnameYappVersion.htm";
+            document.all("frame2").src="Screen.htm";
+		//la función all nos permite acceder a los distintos elementos de la página, al igual que lo hemos hecho antes de otras formas
+
+    }
+    </script>
+    </head>
+ 
+    <body>
+    <iframe src="Husmeador.htm" name="frame1"></iframe>
+    <iframe src="userAgent.htm" name="frame2"></iframe>
+    <br><br><br><br>
+    <form>
+    <input type="button" onclick="twoframes()" value="Cambiar la URL de los dos iframes">
+    </form>
+    </body>
+    </html>
+

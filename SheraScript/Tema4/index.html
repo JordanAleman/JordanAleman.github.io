@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios Tema 4</title>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/specificStyles.css">
+    <link rel="stylesheet" href="css/defaultStyles.css">
+
+</head>
+
+<body>
+
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #013353; color: white;">&#9776;</span>
+    
+    <div id="mainPostNav">
+        <header class="header">
+            <div class="contenedor-titulo">
+                <div class="titulo">
+                    <span class="texto-naranja">Unidad 4</span>
+                    <span class="texto-blanco">Objetos del lenguaje</span>
+                    <p class="subtexto">Ejercicios de Javascript</p>
+                </div>
+            </div>
+
+        </header>
+
+        <a href="gallows/gallows.html" class="container-fluid text-center separador btn">
+            <p><q>Juguemos al Ahorcado</q></p>
+        </a>
+
+        <main class="contenido-cuerpo" id="contenido-cuerpo">
+            <section class="contenido-funciones container">
+                <div class="contenido-dots" id="contenido-dots">
+                    <button class="dot btn">Parking</button>
+                    <button class="dot btn">Vector</button>
+                    <button class="dot btn">Correo</button>
+                </div>
+                <div class="contenido-cuerpo-funciones">
+                    <div class="mySlides">
+                        <h1 class="tituloActividad"><span>Parking</span></h1>
+                        <h3>Ejercicio 2</h3>
+                        <p>
+                            El usuario introducirá la fecha y hora de entrada del vehículo al aparcamiento en el formato solicitado. El programa comprobará que se trata de una fecha y hora correcta y anterior a la fecha y hora del sistema. <br><br> Cuando
+                            se pulse el botón PRECIO el programa visualizará la fecha y hora del sistema y calculará el precio de estancia en el aparcamiento teniendo en cuenta las siguientes consideraciones: <br><br>
+                        </p>
+                        <ul>
+                            <li><b>Primera hora: </b>1.20€.</li>
+                            <li><b>Horas restantes o fracciones: </b>A razón de 1.50€.</li>
+                            <li><b>Máximo: </b>20€ por cada día completo de estancia.</li>
+                        </ul>
+
+                        <fieldset>
+                            <h3 class="titulo"><span>Facturar parking</span></h3>
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">
+                                    <div class="col form-group">
+                                        <p class="bloqueTitulo">Introducir fecha: </p>
+                                        <div class="input-group row">                                       
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">                                       
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text tituloInput">Date</span>
+                                                </div>
+                                                <input type="datetime-local" class="form-control p-3 inputDate" id="entradaFechaEjer4_2Funciones">
+                                            </div>
+                                        
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 controlMargin">                                       
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text tituloInput">Today</span>
+                                                </div>
+                                                <input type="text" class="form-control p-3 inputDate" id="fechaYHoraActualEjer4_2Funciones" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-striped bloqueMostraSolucion" id="solEjer4_2Funciones">
+
+                                    </table>
+
+                                    <!-- <button type="button" class="btn btn-success btn-block" name="enviarEjer4_2Funciones">Pagar</button> -->
+
+
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="mySlides">
+                        <h1 class="tituloActividad"><span>Vector</span></h1>
+                        <h3>Ejercicio 3</h3>
+                        <p>
+                            El usuario introducirá una serie de elementos de tipo Number o String<br> Visualizar el vector desordenado en pantalla, luego ordenado y también con sus elementos al revés.<br> Se aceptará como válido números y letras. Cualquier
+                            otro caracter que no sea número y letra se interpretará como separación entre palabras y/o números.
+                        </p>
+                        <ul>
+                            <li><b>Vector: </b>Muestra el vector por defecto</li>
+                            <li><b>Ordenar por defecto: </b>Ordenará el array introducido por el usuario como lo ordena Javascript al usar "nombrearray.sort()"</li>
+                            <li><b>Ordenar con condiciones: </b>Ordenadar primero números de menor a mayor y luego letras de la a a la z ignorando mayúsculas:</li>
+                        </ul>
+
+                        <fieldset>
+                            <h3 class="titulo"><span>Ordenar vectores</span></h3>
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">
+                                    <div class="col form-group">
+                                        <p class="bloqueTitulo">Introduzca elementos:</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="arrayOrdenar">Array:</span>
+                                            </div>
+                                            <input type="text" class="form-control bloqueEntradaNums" aria-describedby="arrayOrdenar" id="entradaVectorEjer4_3Funciones" value=" 12, Hola, b, C, d - 4 & 7 A ">
+                                        </div>
+
+                                        <div class="container text-center">
+                                            <div id="accordionArray" class="accordionArray mt-5">
+                                                <div id="creacionResultadosVector"><!-- Generado en el Javascript js/styles.js --></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="button" class="btn btn-secondary btn-block" id="enviarEjer4_3Funciones" data-toggle="tooltip" data-placement="bottom" title="Ordenará el array introducido">Ordenar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="mySlides">
+                        <h1 class="tituloActividad"><span>Validar Correo</span></h1>
+                        <h3>Ejercicio 4</h3>
+                        <p>
+                            El usuario introducirá un correo electrónico, se validará usando expresiones regulares. Volver a solicitarlo hasta que sea correcto
+                        </p>
+
+                        <fieldset>
+                            <h3 class="titulo"><span>Validar correo</span></h3>
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">
+                                    <div class="col form-group">
+                                        <p class="bloqueTitulo">Escriba un correo: </p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validarCorreo">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-describedby="validarCorreo" id="entradaCorreoEjer4_4Funciones">
+                                            <small class="p-1" id="solCorreoEjer4_4Funciones" style="width: 100%;"></small>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-danger bloque2BotonesAgrupados" name="enviarEjer4_4Funciones">Gmail</button>
+                                    <button type="button" class="btn btn-info bloque2BotonesAgrupados" name="enviarEjer4_4Funciones">Another</button>
+
+                                    <div id="accordionEmail">
+                                        <div class="card">
+                                            <a class="card-header" data-toggle="collapse" href="#collapseGmail">
+                                                <div class="collapsed card-link">
+                                                    Gmail
+                                                </div>
+                                            </a>
+                                            <div id="collapseGmail" class="collapse">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-outline-secondary mb-2" style="float: right;" id="copiaGmail">Copy</button>
+                                                    <p style="font-size: 16px;">/^([a-zA-Z\d]+[\.]{0,1})+[a-zA-Z\d]+@gmail\.[a-zA-Z]{2,4}$/</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <a class="card-header" data-toggle="collapse" href="#collapseAnother">
+                                                <div class="collapsed card-link">
+                                                    Anyway
+                                                </div>
+                                            </a>
+                                            <div id="collapseAnother" class="collapse">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-outline-secondary mb-2" style="float: right;" id="copiaAnother">Copy</button>
+                                                    <p style="font-size: 16px;">/^([a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+@([\a-zA-Z\d]+([\.]{0,1}|[\_]{0,1}))+[a-zA-Z\d]+\.[a-zA-Z]{2,4}$/</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="container-fluid pie">
+            <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+        </footer>
+    </div>
+    
+    <script src="js/styles.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

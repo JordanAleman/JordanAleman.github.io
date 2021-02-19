@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Cerrando ventanas</title>
+<script language="JavaScript" type="text/javascript">
+<!--
+var nueva_ventana
+function abrir_ventana() {
+    nueva_ventana = window.open("Opener2.htm", "")
+}
+function cerrar_ventana() {
+    
+    if (!nueva_ventana) {
+        alert("La ventana nunca ha sido abierta.")
+    }
+    else if (nueva_ventana.closed) {
+        alert("La ventana ya está cerrada.")
+    }
+    else {
+        nueva_ventana.close()
+    }
+}
+//-->
+</script>
+</head>
+<body>
+<a href="javascript:void(0)" onClick="abrir_ventana()">
+   Abrir Opener2.htm
+</a>
+<p>
+<a href="javascript:void(0)" onClick="cerrar_ventana()">
+   Cerrar Opener2.htm
+</a>
+</body>
+</html>
+

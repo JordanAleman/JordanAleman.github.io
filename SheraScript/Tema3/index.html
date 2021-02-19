@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Liu+Jian+Mao+Cao|Noto+Serif:400,700,700i|Open+Sans:400,700&display=swap" rel="stylesheet"> -->
+        
+        <link rel="stylesheet" href="css/Ejercicios1Funciones.css">
+        <link rel="stylesheet" href="../css/sideMenu.css">
+
+
+        
+
+        <title>Funciones JavaScript</title>
+    </head>
+    <body>
+
+        <div id="jSidenav" class="sidenav"></div>
+        <span class="openNav" id="openNav" style="background-color: #33032D; color: white; left: 0;">&#9776;</span>
+        
+        <div id="mainPostNav">
+            <nav class="navbar navbar-expand-lg menuPrincipal">
+                <p class="navbar-brand navbar-toggler text-dark">Principal</p>
+        
+                <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarNavPrincipal" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavPrincipal">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Parte 1</a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ejercicios2Funciones.html">Parte 2</a>
+                            </li>
+                        </ul>
+                </div>
+        
+            </nav>
+
+            <header class="contenido-header" id="headerPrincipal" style="background-image: url(img/Dia.png);">
+                <div class="fondo" id="fondo" style="background-image: url(img/Noche.png);">
+                    <p class="texto">Ejercicios JavaScript<br> Funciones Parte 1</p>
+                </div>
+            </header>
+        
+            <nav class="navbar navbar-expand-lg menuSecundario">
+                <p class="navbar-brand navbar-toggler menuMovil">Menú</p>
+        
+                <button class="navbar-toggler bg-secondary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Actividad1">Aritmética</a>
+                            </li>
+        
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFuncionesVarias" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Funciones varias
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownFuncionesVarias" style="background-color: #33032d; width: auto;">
+                                    <a class="dropdown-item" href="#Actividad2.1">Ejercicio2.1</a>
+                                    <a class="dropdown-item" href="#Actividad2.2">Ejercicio2.2</a>
+                                    <a class="dropdown-item" href="#Actividad2.3">Ejercicio2.3</a>
+                                </div>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Actividad3">Diferentes loops</a>
+                            </li>
+                        </ul>
+                </div>
+        
+            </nav>
+
+            <div class="contenido-cuerpo">
+                <main class="container"> 
+                    <br id="Actividad1"> 
+                    <section class="mt-2">
+                        <h1 class="tituloActividad"><span>Aritmética</span></h1>
+                        <h3>Ejercicio 1</h3>
+                        <p>
+                            Realizar un programa que solicite al usuario el resultado de una operación aritmética dada. Utilizar dos funciones.<br> 
+                            La primera captura el resultado introducido por el usuario e invoca otra función que verifica si el resultado es correcto.<br>
+                            En esta segunda función utilizaremos return para devolver el resultado.
+                        </p>
+                        
+                        
+                        <fieldset>
+                            <h3 class="titulo"><span style="background: lightskyblue;">Cálculo aritmético</span></h3>
+                            <p class="small mb-1">Si el resultado es decimal, redondee a dos decimales.</p>
+
+                            <div class="container form-group">
+                                <button type="button" class="btn btn-info text-light bloque2BotonesAgrupados" id="generadorOperacion1">Operación aritmética sencilla</button>
+                                <button type="button" class="btn btn-dark bloque2BotonesAgrupados" id="generadorOperacion2">Operación aritmética avanzada</button>
+
+                                <div class="bloqueResultados">                                               
+                                    <div id="operacionEscondida">
+                                        <output id="muestraOperacion"></output>
+                                    </div>
+                                    <div>
+                                        <p class="bloqueTitulo">Resultado:</p>
+                                        <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer1">
+                                        <button type="button" class="btn btn-secondary bloqueBotonEnviar" id="enviarEjer1Funciones">Enviar</button>
+                                    </div>
+
+                                    <p class="mt-4" id="solEjer1Funciones"></p>
+                                </div>
+
+                            </div> 
+                        </fieldset>   
+                    </section>
+
+                    <section>
+                        <h1 class="tituloActividad" id="Actividad2.1"><span>Funciones varias</span></h1>
+                        <h3>Ejercicio 2.1</h3>
+                        <p>
+                            Defina una función que acoja un argumento numérico, que incremente ese argumento y que después lo devuelva al emisor de la llamada.<br>
+                            Invoque esa función desde la sección &lt;body> de una página y muestre el resultado en la pantalla.
+                        </p>
+
+                        <fieldset class="ejerciciosFieldParte2">
+                            <h3 class="titulo"><span>Incremento argumento</span></h3>    
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">                                               
+                                    <div class="form-row">
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Introduzca un número cualquiera:</p>
+                                            <input type="text" class="form-control bloqueEntradaNums" name="entradaNumsEjer2_1">
+                                        </div>
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Introduzca un incrementador:</p>
+                                            <input type="text" class="form-control bloqueEntradaNums" name="entradaNumsEjer2_1">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-secondary bloqueBotonEnviar" id="enviarEjer2_1Funciones">Incrementar</button>
+
+                                    <p class="mt-4" id="solEjer2_1Funciones"></p>
+                                </div>
+
+                            </div> 
+                        </fieldset>
+
+                        <br id="Actividad2.2">
+                        <hr><h3 class="mt-5">Ejercicio 2.2</h3>
+                        <p>
+                            Defina una función que acepte dos parámetros numéricos. 
+                        </p>
+                            <ul>
+                                <li>
+                                    Si el valor del primer parámetro es mayor que el segundo, muestre al visitante una alerta.
+                                </li>
+                                <li>
+                                    Si el valor del primer parámetro es menor o igual que el segundo, devuelva la suma de ambos parámetros.
+                                </li>
+                            </ul>
+
+                        <fieldset class="ejerciciosFieldParte2">
+                            <h3 class="titulo"><span>Suma o no</span></h3>    
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">                                               
+                                    <div class="form-row">
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Número 1: </p>
+                                            <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer2_2_1" name="entradaNumsEjer2_2">
+                                        </div>
+                                        <div class="col form-group">
+                                            <p class="bloqueTitulo">Número 2: </p>
+                                            <input type="text" class="form-control bloqueEntradaNums" id="entradaNumsEjer2_2_2" name="entradaNumsEjer2_2">
+                                        </div>
+                                    </div>
+                                    
+                                    <button type="button" class="btn btn-secondary btn-block" id="enviarEjer2_2Funciones">Enviar</button>
+                                    <p class="mt-4" id="solEjer2_2Funciones"></p>
+                                </div>
+
+                            </div> 
+                        </fieldset>
+
+                        <br id="Actividad2.3">
+                        <hr><h3 class="mt-5">Ejercicio 2.3</h3>
+                        <p>
+                            Añada las funciones alert() adecuadas al siguiente código, de manera que pueda ver<br>
+                            el valor en la variable result, antes y después de la llamada a la función.<br>
+                            He aquí el código:<br>
+                        </p>
+                        <p class="small">
+                            function addNumbres(){                                          <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;firstNum = 4;                       <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;secondNum = 8;                      <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;result = firstNum + secondNum;      <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;return result;                      <br>
+                            }                                                               <br>
+                            result = 0;                                                     <br>
+                            sum = addNumbers();                                             <br>
+                        </p>
+                            
+
+                        <fieldset class="ejerciciosFieldParte2">
+                            <h3 class="titulo"><span>Mostrar resultado antes y después</span></h3>    
+
+                            <div class="container form-group">
+                                <div class="bloqueResultados">                                                    
+                                    <button type="button" class="btn btn-info btn-block" id="enviarEjer2_3Funciones">Cambiar Result</button>
+                                    <p class="mt-4 text-center" id="solEjer2_3Funciones"></p>
+                                </div>
+
+                            </div> 
+                        </fieldset>
+                    </section>
+
+                    <br id="Actividad3"><br>
+
+                    <section>
+                        <h1 class="tituloActividad"><span>Diferentes loops</span></h1>
+                        <h3 class="mb-3">Ejercicio 3</h3>
+                        <p>
+                            Realizar un programa que contenga las diferencias entre los loops:
+                        </p>
+                        <ul>
+                            <li>for</li>
+                            <li>forEach</li>
+                            <li>for in</li>
+                            <li>for of</li>
+                        </ul>
+                        <br>
+                        <p>
+                            En el mismo código explicar las diferencias, pros y contras, de cada uno de ellos.
+                        </p>
+                        
+                        
+                        <fieldset class="ejerciciosFieldParte3">
+                            <h3 class="titulo"><span>Loop for</span></h3>
+                            <p class="small subTextoH6Parte1">
+                                El bucle <b><i>for</i></b> cumple la siguiente sintaxis.                                                <br>
+                                <b>for (statement 1; statement 2; statement 3) {}</b>, todos valores opcionales donde:                  <br>
+                                <i><b>statement 1:</b></i> Se ejecuta antes de iniciarse el bucle. Normalmente aquí se inicia            
+                                una variable como un contador (i = 0).                                                                  <br>
+                                <i><b>statement 2:</b></i> Define la condición de salida del bucle (i &lt;= 5).<br> 
+                                Si no se indica ninguna condición, habrá que poner como mínimo un ';' en este statement y 
+                                dentro del bucle un 'break' para indicarle cuando saldrá del bucle, o si no sería un bucle infinito.    <br>
+                                <i><b>statement 3:</b></i> Se ejecuta después de cada vuelta del bucle. Normalmente se suele Incrementar
+                                o Decrementar la variable que hemos inicializado en el primer statement (i++).                          <br><br>
+
+                                Tiene varios usos este bucle <b><i>for</i></b>, tanto para cálculos matemáticos 
+                                como para realizar recorridos como en un array.
+                            </p>
+
+                            <div class="container">
+                                <div class="row">                              
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Recorriendo un array</h6>
+                                        <p>
+                                            let fruits = ["apple", "orange", "cherry", "avocado", "banana", "cherries"];                    <br>
+                                            let log = "";                                                                                   <br>
+                                                                                                                                            <br>
+                                            for (i=0; i &lt; fruits.length; i++) {                                                             <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;log += "&lt;b>" + i + ": &lt;/b>" + fruits[i] + "&lt;br>";              <br>
+                                            }
+                                                                                                                                                                                            
+                                        </p>
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_1_1Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_1_1Funciones"></p>                              
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Cálculo numérico</h6>
+                                        <p>
+                                            let log = "";                                                                       <br>
+                                                                                                                                <br>
+                                            for (i = 0; i &lt;= 5; i++) {                                                          <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;log += "&lt;b>Número: &lt;/b>" + (i * 5) + "&lt;br>"    <br> 
+                                            }                                                                                   <br><br>                                                                                           
+                                        </p>
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_1_2Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_1_2Funciones"></p>                             
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </fieldset>
+                        
+                        <fieldset class="ejerciciosFieldParte3">
+                            <h3 class="titulo"><span>Loop forEach</span></h3>
+                            <p class="small subTextoH6Parte1">
+                                El bucle <b><i>forEach</i></b> es más bien una función que realiza el recorrido de un array.    <br>
+                                La sintaxis es <q><b>forEach(function(currentValue, index, arr))</b></q> donde:                 <br>
+                                <i><b>currentValue:</b></i> Corresponde al valor en el recorrido del array.                     <br>
+                                <i><b>index:</b></i> Corresponde a la posición en el array.                                     <br>
+                                <i><b>arr:</b></i> Corresponde al array que se está recorriendo.                                <br>
+                            </p>
+
+                            <div class="container">
+                                <div class="row">                              
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Recorriendo un array</h6>
+                                        <p>
+                                            let fruits = ["apple", "orange", "cherry", "avocado", "banana", "cherries"];                    <br>
+                                            let log = "";                                                                                   <br>
+                                                                                                                                            <br>
+                                            fruits.forEach((item, index) =>                                                                 <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;log += "&lt;b>" + index + ": &lt;/b>" + item + "&lt;br>";              <br>
+                                                                                                                                            <br><br><br>                                                   
+                                        </p>
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_2_1Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_2_1Funciones"></p>                              
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Actualizando los valores de un array</h6>
+                                        <p>
+                                            let fruits = [4, 8, 15, 16, 23, 42];                            <br>
+                                            let log = "";                                                   <br>
+                                                                                                            <br>
+                                            fruits.forEach((item, index, arr) => {                          <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;log += "&lt;b>" + index + ": &lt;/b>" + item + " * 10 => "  <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;arr[index] = item * 10;                                     <br>                                
+                                                &nbsp;&nbsp;&nbsp;&nbsp;log += item + "&lt;br>"                                     <br>
+                                            });                                                             <br>                                                                                                      
+                                        </p>
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_2_2Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_2_2Funciones"></p>                             
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </fieldset>
+
+                        <fieldset class="ejerciciosFieldParte3">
+                            <h3 class="titulo"><span>Loop for in</span></h3>
+                            <p class="small">
+                                El bucle <b><i>for in</i></b> se realiza a través de las propiedades de un objeto.<br>
+                                Podremos ver el nombre de las propiedades de cada objeto o las posiciones de nuestros arrays,
+                                o podremos ver las propiedades en sí de cada objeto como el contenido de nuestros arrays.
+                            </p>
+                            <div class="container">
+                                <div class="row">                              
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Propiedades de un objeto</h6>
+                                        <p>
+                                            let person = {fname:"John", lname:"Doe", age:25};                                               <br>
+                                            let text = "";                                                                                  <br>
+                                                                                                                                            <br>
+                                            for (let index in person) {                                                                     <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;text += "&lt;b>" + index + ":&lt;/b> " + person[index] + "&lt;br>"; <br>
+                                            }                                                       
+                                        </p>
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_3_1Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_3_1Funciones"></p>                              
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Posiciones y contenido de un array</h6>
+                                        <p>
+                                            let cars = ['BMW', 'Volvo', 'Mini'];        <br>                  
+                                            let text = "";                              <br>
+                                                                                        <br>
+                                            for (let index in cars) {                   <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;text += "&lt;b>" + index + ":&lt;/b> " + cars[index] + "&lt;br>";   
+                                            <br>}
+                                        </p>
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_3_2Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_3_2Funciones"></p>                             
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </fieldset>
+
+                        <fieldset class="ejerciciosFieldParte3">
+                            <h3 class="titulo"><span>Loop for of</span></h3>
+                            <p class="small">
+                                El bucle <b><i>for of</i></b> recorre los valores de un array o de una String. En el caso de una String, recorrerá caracter por caracter. <br><br>
+                                En ambos casos accederemos directamente a su valor a través de la variable que crearemos dentro del bucle <i>for of</i> que llamaremos 'valor'
+                                y mostraremos los resultados con esta variable al mostrarla sin más y al mostrarla como posición del array o del String.
+                                
+                                
+                            </p>
+                            <div class="container">
+                                <div class="row">                              
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Recorriendo un array</h6>
+                                        <p>
+                                            let cars = ['BMW', 'Volvo', 'Mini'];        <br>                  
+                                            let text = "";                              <br>
+                                                                                        <br>
+                                            for (let valor of cars) {                   <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;text += "&lt;b>Posición: &lt;/b>" + cars[valor] + <br>
+                                                " ----------- &lt;b>Valor: &lt;/b>" + valor + "&lt;br>";   
+                                            <br>}                                                      
+                                        </p>
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_4_1Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_4_1Funciones"></p>                              
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-5">
+                                        <h6>Recorriendo una String</h6>
+                                        <p>
+                                            let mensaje = "Hola, Mundo";                <br>                  
+                                            let text = "";                              <br>
+                                                                                        <br>
+                                            for (let index of mensaje) {                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;text += "&lt;b>Posición: &lt;/b>" + mensaje[valor] + <br>
+                                                " ----------- &lt;b>Valor: &lt;/b>" + valor + "&lt;br>"; 
+                                            <br>}
+                                        </p>
+
+                                        <button type="button" class="btn btn-secondary btn-block" id="enviarEjer3_4_2Funciones">Ejecutar</button>
+                                        <p class="mt-3" id="solEjer3_4_2Funciones"></p>                             
+                                    </div>
+                                </div>
+                            </div>                
+                        </fieldset>
+                    </section>
+
+                </main>
+
+                <footer class="container-fluid pie">
+                    <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+                </footer>
+                
+            </div>
+        </div>
+
+        <script src="../js/sideMenu.js"></script>
+        <script src="js/Ejercicios1Funciones.js"></script>
+        <script src="js/diseñoPagina.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

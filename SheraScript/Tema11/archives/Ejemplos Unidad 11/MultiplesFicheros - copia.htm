@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Adjuntar múltiples ficheros a la vez</title>
+<script language="javascript" type="text/javascript">
+	function nuevoFichero() {
+			// Se accede al primer elemento input encontrado en el documento:
+			var var_input = document.getElementsByTagName("input")[0];
+			
+			/* Se crea un nuevo elemento input referenciado por la variable nuevoInput 
+			utilizando el método cloneNode resultando un elemento idéntico al primero: */
+			var nuevoInput = var_input.cloneNode(true);
+			
+			/*Aquí se accede al nodo padre del elemento input mediante el método parentNode  
+			y a la vez se inserta un nuevo elemento hijo copia del primero por medio del método appendChild: */
+			var_input.parentNode.appendChild(nuevoInput);
+			
+			
+			var recorrer=document.formulario["ficheros[]"];
+			
+			for(var i=0;i<recorrer.length;i++){
+				alert(recorrer[i]);
+            }
+               
+	}
+</script>
+</head>
+
+<body>
+	<form name="formulario" action="noExiste.php" method="post" enctype="multipart/form-data">
+		<fieldset><legend>Adjuntar múltiples ficheros</legend>				
+			<input name="ficheros[]" type="file" size="60" />
+		</fieldset>
+       <a href="javascript: nuevoFichero();">Adjuntar otro fichero</a>   
+       <input name="Subir" type="submit" value="Adjuntar" />
+    </form>
+</body>
+
+</html>

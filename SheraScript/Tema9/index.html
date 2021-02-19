@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Compras</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/default.css"/>
+	<link rel="stylesheet" href="css/contenidoCarrito.css">
+
+</head>
+
+<body>
+	<nav class="menu" id="menu">
+		<div class="contenedor contenedor-botones-menu">
+			<button id="btn-menu-barras" class="btn-menu-barras">
+				<i class="fas fa-bars"></i>
+			</button>
+			<button id="btn-menu-cerrar" class="btn-menu-cerrar">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                              Cabecera Nav                               -->
+<!-- ----------------------------------------------------------------------- -->
+		<div class="contenedor contenedor-enlaces-nav">
+			<div class="btn-departamentos" id="btn-departamentos">
+				<p>Todos los <span>Departamentos</span></p>
+				<i class="fas fa-caret-down"></i>
+			</div>
+
+			<div class="enlaces">
+				<a type="button" id="botonCarrito">Carrito</a>
+				<a type="button" id="botonArrayObjetos">ArrayObjetos</a>
+				<a type="button" id="botonCreacionObjetos">CreaciónObjetos</a>
+			</div>
+
+		</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                          Contenedor categorías                          -->
+<!-- ----------------------------------------------------------------------- -->
+		<div class="contenedor contenedor-grid">
+			<div class="grid" id="grid">
+				<div class="categorias">
+					<button class="btn-regresar">
+						<i class="fas fa-arrow-left">&nbsp;&nbsp;Regresar</i>
+					</button>
+					<h3 class="subtitulo">Categorias</h3>
+
+					<a href="#" data-categoria="tecnologia">Tecnología<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="libros">Libros<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="ropa">Ropa<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="hogar">Hogar<i class="fas fa-angle-right"></i></a>
+					<a href="#" data-categoria="alimentacion">Alimentación<i class="fas fa-angle-right"></i></a>
+				</div>
+				<div class="contenedor-subcategorias">
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                         Subcategoría Tecnología                         -->
+<!-- ----------------------------------------------------------------------- -->
+					<div class="subcategoria activo" data-categoria="tecnologia">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+							<h3 class="subtitulo">Tecnologías</h3>
+							<a class="opcion-subcategoria">Sobremesa</a>
+							<a class="opcion-subcategoria">Tablets</a>
+							<a class="opcion-subcategoria">Monitores</a>
+						</div>
+						<div class="banner-subcategoria">
+							<img src="img/tecnologia-banner-1.png" alt="Tecnología-Banner">
+						</div>
+						<div class="galeria-subcategoria">
+							<div><img src="img/tecnologia-galeria-1.png" alt="Tecnología-Galería-1"></div>
+							<div><img src="img/tecnologia-galeria-2.png" alt="Tecnología-Galería-2"></div>
+							<div><img src="img/tecnologia-galeria-3.png" alt="Tecnología-Galería-3"></div>
+							<div><img src="img/tecnologia-galeria-4.png" alt="Tecnología-Galería-4"></div>
+						</div>
+					</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Subcategoría Libros                           -->
+<!-- ----------------------------------------------------------------------- -->
+					<div class="subcategoria" data-categoria="libros">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+							<h3 class="subtitulo">Libros</h3>
+							<a class="opcion-subcategoria">Sobremesa</a>
+							<a class="opcion-subcategoria">Tablets</a>
+							<a class="opcion-subcategoria">Monitores</a>
+						</div>
+						<div class="banner-subcategoria">
+							<img src="img/libros-banner-1.png" alt="Libros-Banner">
+						</div>
+						<div class="galeria-subcategoria">
+							<div><img src="img/libros-galeria-1.png" alt="Libros-Galería-1"></div>
+							<div><img src="img/libros-galeria-2.png" alt="Libros-Galería-2"></div>
+							<div><img src="img/libros-galeria-3.png" alt="Libros-Galería-3"></div>
+							<div><img src="img/libros-galeria-4.png" alt="Libros-Galería-4"></div>
+						</div>
+					</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                            Subcategoría Ropa                            -->
+<!-- ----------------------------------------------------------------------- -->
+					<div class="subcategoria" data-categoria="ropa">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+							<h3 class="subtitulo">Ropa</h3>
+							<a class="opcion-subcategoria">Sobremesa</a>
+							<a class="opcion-subcategoria">Tablets</a>
+							<a class="opcion-subcategoria">Monitores</a>
+						</div>
+						<div class="banner-subcategoria">
+							<img src="img/ropa-banner-1.png" alt="Ropa-Banner">
+						</div>
+						<div class="galeria-subcategoria">
+							<div><img src="img/ropa-galeria-1.png" alt="Ropa-Galería-1"></div>
+							<div><img src="img/ropa-galeria-2.png" alt="Ropa-Galería-2"></div>
+							<div><img src="img/ropa-galeria-3.png" alt="Ropa-Galería-3"></div>
+							<div><img src="img/ropa-galeria-4.png" alt="Ropa-Galería-4"></div>
+						</div>
+					</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                           Subcategoría Hogar                            -->
+<!-- ----------------------------------------------------------------------- -->
+					<div class="subcategoria" data-categoria="hogar">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+							<h3 class="subtitulo">Hogar</h3>
+							<a class="opcion-subcategoria">Sobremesa</a>
+							<a class="opcion-subcategoria">Tablets</a>
+							<a class="opcion-subcategoria">Monitores</a>
+						</div>
+						<div class="banner-subcategoria">
+							<img src="img/hogar-banner-1.png" alt="Hogar-Banner">
+						</div>
+						<div class="galeria-subcategoria">
+							<div><img src="img/hogar-galeria-1.png" alt="Hogar-Galería-1"></div>
+							<div><img src="img/hogar-galeria-2.png" alt="Hogar-Galería-2"></div>
+							<div><img src="img/hogar-galeria-3.png" alt="Hogar-Galería-3"></div>
+							<div><img src="img/hogar-galeria-4.png" alt="Hogar-Galería-4"></div>
+						</div>
+					</div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                        Subcategoría Alimentación                        -->
+<!-- ----------------------------------------------------------------------- -->
+					<div class="subcategoria" data-categoria="alimentacion">
+						<div class="enlaces-subcategoria">
+							<button class="btn-regresar"><i class="fas fa-arrow-left"> Regresar</i></button>
+							<h3 class="subtitulo">Alimentación</h3>
+							<a class="opcion-subcategoria">Sobremesa</a>
+							<a class="opcion-subcategoria">Tablets</a>
+							<a class="opcion-subcategoria">Monitores</a>
+						</div>
+						<div class="banner-subcategoria">
+							<img src="img/comida-banner-1.png" alt="Comida-Banner">
+						</div>
+						<div class="galeria-subcategoria">
+							<div><img src="img/comida-galeria-1.png" alt="Comida-Galería-1"></div>
+							<div><img src="img/comida-galeria-2.png" alt="Comida-Galería-2"></div>
+							<div><img src="img/comida-galeria-3.png" alt="Comida-Galería-3"></div>
+							<div><img src="img/comida-galeria-4.png" alt="Comida-Galería-4"></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+<!-- ----------------------------------------------------------------------- -->
+<!--                        Fin contenedor categorías                        -->
+<!-- ----------------------------------------------------------------------- -->
+
+	</nav>
+
+	<main class="container-fluid">
+		<div class="contenedor-carrito contenedor" id="contenedor-carrito">
+			<h1>Tecnología</h1>
+			<div class="container mt-4">
+				<label for="altavoces" class="etiqueta-compra">Altavoces genéricos: <span class="precio-compra" value="altavoces">65</span>€</label>
+				<div class="form-group row">
+					<img class="col-sm-2 col-form-label" src="img/ALTAVOCES.GIF">
+					<div class="col-sm-7 input-compra">
+						<input type="number" class="form-control" id="Altavoces/65" placeholder="Cantidad">
+					</div>
+					<div class="col-sm-3 boton-compra">
+						<button class="btn btn-secondary btn-block">Añadir</button>
+					</div>
+				</div>
+
+				<label for="impresoras" class="etiqueta-compra">Impresoras genéricas: <span class="precio-compra">150</span>€</label>
+				<div class="form-group row">
+					<img class="col-sm-2 col-form-label" src="img/IMPRESORA.GIF">
+					<div class="col-sm-7 input-compra">
+						<input type="number" class="form-control" id="Impresoras/150" placeholder="Cantidad">
+					</div>
+					<div class="col-sm-3 boton-compra">
+						<button class="btn btn-secondary btn-block">Añadir</button>
+					</div>		
+				</div>
+
+				<label for="fuentes" class="etiqueta-compra">Fuentes genéricas: <span class="precio-compra">90</span>€</label>
+				<div class="form-group row">
+					<img class="col-sm-2 col-form-label" src="img/FUENTE.GIF">
+					<div class="col-sm-7 input-compra">
+						<input type="number" class="form-control" id="Fuentes/90" placeholder="Cantidad">
+					</div>
+					<div class="col-sm-3 boton-compra">
+						<button class="btn btn-secondary btn-block">Añadir</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/style.js"></script>
+	<script src="js/main.js"></script>
+
+	<script src="https://kit.fontawesome.com/8a41b28853.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+
+</html>

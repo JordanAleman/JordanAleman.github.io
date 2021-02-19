@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios Tema 6</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/sideMenu.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/specificStyles.css">
+
+</head>
+
+<body>
+    <div id="jSidenav" class="sidenav"></div>
+    <span class="openNav" id="openNav" style="background-color: #010711; color: white">&#9776;</span>
+    
+    <div id="mainPostNav">
+        <header class="header">
+            <div class="contenedor-titulo">
+                <div class="titulo">
+                    <span class="texto-naranja">Unidad 6</span>
+                    <span class="texto-blanco">Objetos del lenguaje</span>
+                    <p class="subtexto">Ejercicios de Javascript</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="contenido-cuerpo container-fluid">
+            <section class="mt-2">
+                <h1 class="tituloActividad"><span>Listas de varios niveles</span></h1>
+                <h3>Ejercicio 1</h3>
+                <p>
+                    Diseñar un programa que disponga de dos listas (select) y un textarea. <br>
+                    La primera lista dispondrá de las siguientes opciones: a) Vídeo. b) Discos. c) Juegos y la segunda lista dispondrá de opciones distintas según la opción seleccionada en la primera, así: <br>
+                </p>
+                <ul>
+                    <li>Si Vídeos -> a) Humor. b) Drama. c) Ficción. d) Otros</li>
+                    <li>Si Discos -> a) Pop. b) Rock. c) Latino. d) Otros.</li>
+                    <li>Si Juegos -> a) Simulador. b) Rol. c) Medieval. d) Otros.</li>
+                </ul>
+                <p>
+                    El textarea visualizará un texto en función de las opciones elegidas, por ejemplo:
+                </p> 
+                    <ul><li>Texto de Juego -> Simulador.</li></ul>
+                
+                
+                <fieldset>
+                    <h3 class="titulo"><span>Tome su elección</span></h3>
+
+                    <div class="container">
+                        <div class="form-row mb-4">
+                            <label for="selectVideoclub" class="col-sm-4 col-form-label">Servicio de videoclub</label>
+                            <div class="col-sm-8">
+                                <select class="custom-select mr-sm-2" id="selectVideoclub">
+                                    <option disabled selected>Seleccione algo...</option>
+                                    <option value="0">Vídeos</option>
+                                    <option value="1">Discos</option>
+                                    <option value="2">Juegos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row mb-4" id="contenedorResultado"></div>
+                        <div class="form-row" id="textareaGenero"></div>
+                    </div>
+                    
+                </fieldset>   
+            </section>
+
+            <section class="mt-2">
+                <h1 class="tituloActividad"><span>Botón casi inaccesible</span></h1>
+                <h3>Ejercicio 2</h3>
+                <p>
+                    Diseñar un programa que disponga de un único botón denominado PULSA. <br>
+                    Cuando el usuario desee pulsarlo el botón se desplazará a la izquierda y arriba un valor aleatorio. <br>
+                    Si se consigue alcanzarlo se visualizará un cuadro alert con la leyenda “Me pillaste”.
+                </p>
+                
+                
+                <fieldset>
+                    <h3 class="titulo"><span>¡Atrápame!</span></h3>
+
+                    <div class="container-fluid contenido-botonInaccesible" id="contenido-botonInaccesible">
+                        <img class="imgBotonInaccesible botonInaccesible" id="botonInaccesible" src="img/Woman0.png" alt="Dancing Woman">
+                    </div>
+                    
+                </fieldset>   
+
+                <div class="fixed-top" id="atrapado"></div>
+                
+            </section>
+
+            <section class="mt-2">
+                <h1 class="tituloActividad"><span>Burbujeo de sucesos</span></h1>
+                <h3>Ejercicio 3</h3>
+                <p>
+                    Diseñar el programa de la figura con las siguientes condiciones:
+                </p>
+                
+                <ul>
+                    <li>Estará contenido en un div</li>
+                    <li>Aprovechando el burbujeo de sucesos se controlarán los eventos al bajar tecla, al subir botón ratón y al hacer doble clic.</li>
+                    <li>Al bajar botón ratón se cambia el color de fondo del botón seleccionado a orchid siempre que no sea rojo.</li>
+                    <li>Al subir botón ratón se cambia el color de fondo del botón seleccionado a skyblue siempre que no sea rojo.</li>
+                    <li>Al hacer doble clic se cambia el color de fondo del botón seleccionado a rojo siempre que ya no lo sea, se establece a coral el color de fondo del texto correspondiente a dicho botón y se copia dicho texto en el textarea.</li>
+                </ul>
+                
+                <fieldset>
+                    <h3 class="titulo"><span>El absurdo</span></h3>
+
+                    <div class="container-fluid">
+                        <div class="btn-group botonesHistoria" role="group" aria-label="Basic example" id="botonesHistoria"><!-- Generado en js/plantillas.js --></div>
+                        <div id="cajaHistoria"><!-- Generado en js/plantillas.js --></div>
+                    </div>
+                    
+                </fieldset>   
+            </section>
+        </main>
+
+        <footer class="container-fluid pie">
+            <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+        </footer>
+    </div>
+    
+    <script src="js/plantillas.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="../js/sideMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

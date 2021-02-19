@@ -1,0 +1,65 @@
+main {
+    border: 5px rgb(121, 73, 28) ridge;
+    padding: 1rem 1rem 0 1rem;
+    position: relative;
+}
+
+
+.contenedoresMarcos {
+    border-top: 5px black double;
+    min-height: 300px;
+    height: 100%;
+
+    background-color: whitesmoke;
+    padding: 0;
+}
+
+.contenedoresMarcos div {
+    padding: 0;
+}
+
+
+
+.segundoContenedor{
+    border-left: 5px black double;
+}
+
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Querys                                */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 750px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    
+}
+
+@media screen and (max-width: 580px) {
+    .contenedoresMarcos div {
+        height: 300px;
+    }
+
+    .contenedoresMarcos div:last-child {
+        border-left: unset;
+        border-top: 5px black double;
+        padding-top: 1rem;
+    }
+
+    .contenedorPrincipal {
+        height: 500px;
+    }
+
+    .mostrarNombreIframeContenedorPrincipal {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

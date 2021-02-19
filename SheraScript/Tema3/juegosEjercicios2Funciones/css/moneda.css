@@ -1,0 +1,368 @@
+body {
+    position: relative;
+    width: 86%;
+    margin-top: 5rem;
+    left: 7%;
+
+    border: 12px black solid;
+    box-shadow: 0px 0px 15px 5px rgba(83,80,133,1);
+    background-color: wheat;
+}
+
+/* ---------------------------------------- */
+/*          Contenido principal
+/* ---------------------------------------- */
+.contenido-main {
+    width: 100%;
+    background-color: whitesmoke;
+
+ }
+
+
+.contenido-cuerpo-2columnasCompletas {
+    width: 100%;
+    position: relative;
+    
+}
+
+.contenido-cuerpo-2columnasCompletas div div {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.tamañoAreaMoneda {
+    height: 70vh;
+}
+
+
+
+.centrarIndicadorIntensidad {
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+
+
+/* ---------------------------------------- */
+/*                   Puntos
+/* ---------------------------------------- */
+.seleccionMoneda {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+}
+
+.resultadoPuntos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    text-align: center;
+}
+
+.marcadorPuntos {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+
+}
+
+.resultadoPuntos p {
+    padding-top: 10px;
+    /* padding-bottom: 50px; */
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* ---------------------------------------- */
+/*                FlipCoin
+/* ---------------------------------------- */
+.centrarFlipCoin {
+    /* background-color: black; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card {
+    position: relative;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-image: url(../img/monedas/1Cara.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 50%;
+}
+
+.flip-card-back {
+    background-image: url(../img/monedas/1Cruz.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 50%;
+    transform: rotateY(180deg);
+}
+
+
+
+
+/* ---------------------------------------- */
+/*          Botón de lanzamiento
+/* ---------------------------------------- */
+.botonLanzar {
+    position: absolute;
+    bottom: 0;
+
+    padding: 2rem 1rem;
+
+}
+
+/* ---------------------------------------------------- */
+/*          Bloque de elección de monedas
+/* ---------------------------------------------------- */
+.tituloMoneda {
+    position: absolute;
+    top: 0;
+
+    font-size: 70px;
+    color: aliceblue;
+
+}
+
+/* Clase de la moneda por defecto */
+.monedaEleccion {
+    height: 35vh;
+    width: 100%;
+    
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 99;
+
+    background-color: #17A2B8;
+    border: 10px darkblue double;
+
+    
+}
+
+/* Clase de la moneda seleccionada por medio de javascript */
+.monedaSeleccionada {
+    height: 35vh;
+    width: 100%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 99;
+
+    background-color: black;
+    border: 10px darkblue solid;
+}
+
+.imagenMoneda {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 40%;
+    
+    z-index: 99;
+
+}
+
+
+/* ------------------------------------------ */
+/*          Media Querys
+/* ------------------------------------------ */
+@media screen and (max-height: 650px) {
+    body {
+        margin-top: 1rem;
+        background-color: whitesmoke;
+
+    }
+
+
+    /* .monedaEleccion, .monedaSeleccionada {
+        width: 50%;
+        height: 25vh;
+        float: left;
+    } */
+
+    .tituloMoneda{
+        font-size: 40px;
+    }
+    
+    .botonLanzar {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .centrarFlipCoin {
+        height: 80%;
+    }
+
+    .centrarIndicadorIntensidad {
+        height: 80%;
+    }
+
+    /* .marcadorPuntos {
+        position: absolute;
+        top: 30px;
+        left: 5px;
+    } */
+
+    
+
+    .flip-card {
+        width: 100px;
+        height: 100px;
+        
+        /* top: 5rem; */
+    }
+
+    .resultadoPuntos {
+        height: 12%;
+    }
+
+    /* .marcadorPuntos {
+        position: absolute;
+        top: 50px;
+        left: 5px;
+    } */
+
+
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        margin-top: 1rem;
+        background-color: whitesmoke;
+
+    }
+
+    .tamañoAreaMoneda {
+        height: 55vh;
+    }
+
+    .monedaEleccion, .monedaSeleccionada {
+        width: 50%;
+        height: 25vh;
+        float: left;
+    }
+
+    .tituloMoneda{
+        font-size: 45px;
+    }
+    
+    .botonLanzar {
+        position: relative;
+    }
+
+    .centrarFlipCoin {
+        height: 80%;
+    }
+
+    .centrarIndicadorIntensidad {
+        height: 80%;
+    }
+
+    .resultadoPuntos {
+        height: 10%;
+    }
+
+    .marcadorPuntos {
+        position: absolute;
+        top: 60px;
+        right: 50px;
+    }
+
+    
+
+    .flip-card {
+        width: 100px;
+        height: 100px;
+        
+        top: 5rem;
+        /* left: 4rem; */
+    }
+
+
+}
+
+/* Tamaño móviles */
+@media screen and (max-width: 600px) {
+    .tamañoAreaMoneda {
+        height: 60vh;
+    }
+
+
+    .marcadorDesaparece {
+        display: none;
+    }
+
+    .marcadorPuntos {
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .flip-card {
+        width: 100px;
+        height: 100px;
+        
+        top: 5rem;
+
+    }
+}

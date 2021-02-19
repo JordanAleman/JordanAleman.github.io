@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Determinar el sistema operativo</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Una de estas variables lógicas tendrá un valor
+// verdadero, basándose en el sistema operativo
+var es_win31 = false
+var es_win95 = false
+var es_win98 = false
+var es_winme = false
+var es_winnt = false
+var es_win2000 = false
+var es_winxp = false
+var es_mac68k = false
+var es_macppc = false
+var es_linux = false
+var es_other_os = false
+// Trabajaremos con minúsculas para facilitar las cosas
+var user_agent = navigator.userAgent.toLowerCase()
+// Utilizamos indexOf() para examinar la cadena userAgent
+// y obtener signos reveladores del sistema operativo
+// WINDOWS 3.1
+if ((user_agent.indexOf("windows 3.1") != -1) || 
+    (user_agent.indexOf("win16") != -1) ||
+    (user_agent.indexOf("16bit") != -1) ||
+    (user_agent.indexOf("16-bit") != -1)) { es_win31 = true }
+// WINDOWS 95
+else if ((user_agent.indexOf("windows 95") != -1) || 
+         (user_agent.indexOf("win95") != -1)) { es_win95 = true }
+// WINDOWS ME
+if (user_agent.indexOf("win 9x 4.90") != -1) { es_winme = true }
+// WINDOWS 98
+else if ((user_agent.indexOf("windows 98") != -1) || 
+         (user_agent.indexOf("win98") != -1)) { es_win98 = true }
+// WINDOWS XP
+else if ((user_agent.indexOf("windows nt 5.1") != -1) || 
+         (user_agent.indexOf("winnt 5.1") != -1)) { es_winxp = true }
+// WINDOWS 2000
+else if ((user_agent.indexOf("windows nt 5.0") != -1) || 
+         (user_agent.indexOf("winnt 5.0") != -1)) { es_win2000 = true }
+// WINDOWS NT
+else if ((user_agent.indexOf("windows nt") != -1) || 
+         (user_agent.indexOf("winnt") != -1)) { es_winnt = true }
+// MAC 680x0
+else if ((user_agent.indexOf("mac") != -1) && 
+        ((user_agent.indexOf("68K") != -1) || 
+         (user_agent.indexOf("68000") != -1))) { es_mac68k = true }
+// MAC PowerPC
+else if ((user_agent.indexOf("mac") != -1) && 
+        ((user_agent.indexOf("ppc") != -1) || 
+         (user_agent.indexOf("powerpc") != -1))) { es_macppc = true }
+// LINUX
+else if (user_agent.indexOf("linux") != -1) { es_linux = true }
+// OTROS SISTEMAS OPERATIVOS
+else { es_other_os = true }
+document.write("<b>La cadena userAgent completa es:</b><br>")
+document.write(navigator.userAgent)
+document.write("<p>")
+document.write("<b>El sistema operativo es:</b><br>")
+if (es_win31) { document.write("Windows 3.x") }
+else if (es_win95) { document.write("Windows 95") }
+else if (es_win98) { document.write("Windows 98") }
+else if (es_winme) { document.write("Windows Me") }
+else if (es_winnt) { document.write("Windows NT") }
+else if (es_win2000) { document.write("Windows 2000") }
+else if (es_winxp) { document.write("Windows XP") }
+else if (es_mac68k) { document.write("Mac 680x0") }
+else if (es_macppc) { document.write("Mac PPC") }
+else if (es_linux) { document.write("Linux") }
+else if (es_webtv) { document.write("WebTV") }
+else if (es_other_os) { document.write("Otro sistema operativo") }
+//-->
+</script>
+</body>
+</html>
+

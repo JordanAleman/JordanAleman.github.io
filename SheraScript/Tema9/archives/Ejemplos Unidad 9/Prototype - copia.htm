@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Propiedad prototype</title>
+</head>
+<body>
+<script language="javascript">
+	var Saludator = function(nom) {
+					this.nombre = nom
+					this.saluda = function() {
+							document.write("hola "+this.nombre)
+				      			}
+				}
+  
+	var obj1 = new Saludator("mundo")
+	
+	
+	/*
+	Saludator.prototype = {
+			apellido: "cruel",
+			despide: function() {
+					document.write("adios "+this.nombre+" "+this.apellido)
+				  }
+		}
+	
+	*/
+		
+			
+		Saludator.prototype.apellido = "cruel"
+		Saludator.prototype.despide = function() {
+				document.write("adios "+this.nombre+" "+this.apellido)
+				}
+
+		
+				
+		
+		obj1.despide() 			// "adios mundo cruel"
+		obj1.apellido="en crisis";
+		obj1.despide() 			// "adios mundo en crisis"
+  	    	  
+
+</script>
+</body>
+</html>

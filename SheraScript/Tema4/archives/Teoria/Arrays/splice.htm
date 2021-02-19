@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+                    
+        <title>M&eacute;todo splice</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body style="background-color: #8cb3d9">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid" style="border: 10px #17A2B8 solid">
+                <div class="container">
+                    <h1 class="display-3">Arrays</h1>
+                    <p class="lead">Método slice</p>
+                    <hr class="my-2">
+                    <h4>
+                        Nombre_array.splice(inicio, [número_elementos_a_borrar], [elem1, ... elemN])
+                    </h4>
+                    <p>
+                        Elimina elementos de un array y, si es necesario, inserta nuevos elementos en su lugar, devolviendo los elementos eliminados.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-light p-3 border border-primary rounded">
+                <script type = "text/javascript">
+            
+                    var star = ["Polaris", "Deneb", "Vega", "Altair"];
+                    document.write("<b>Array \'star\' original: </b><br>" + star.join(" - ") + "<br><br>");
+                    
+                    document.write("<b>Elementos extraídos realizando</b> 'star.splice(2,3)'<b>:</b><br>" + star.splice(2,3).join(" - ") + "<br><br>"); 
+
+                    document.write("<b>Array \'star\' después de realizar</b> 'star.splice(2,3)'<b>: </b><br>" + star.join(" - ") + "<br><br>");
+
+                </script>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</body>
+</html>

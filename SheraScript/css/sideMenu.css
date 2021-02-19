@@ -1,0 +1,141 @@
+/* The side navigation menu */
+.sidenav {
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    z-index: 9001; /* Stay on top */
+
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    padding-top: 20px; /* Place content 60px from the top */
+    background-color: black; /* Black*/
+
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav .jCloseSidenav {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 26px;
+    margin-left: 50px;
+
+    background-color: transparent;
+    border: 0;
+    color: white;
+
+    transition: 0.2s ease;
+}
+
+.sidenav .jCloseSidenav:hover {
+    background-color: orange;
+    color: black;
+}
+
+.sidenav h1 {
+    padding: 0.3rem 0.5rem; 
+    color: orange;
+    margin-bottom: 1rem;
+}
+
+.homeSideNav {
+    background-color: black;
+    padding: 1rem 1rem !important;
+}
+
+
+/* The navigation menu links */
+.sidenav a, .jDropdown {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    
+    border-top: 2px #28399A solid;
+    
+    font-size: 20px;
+    color:  white;
+    
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .jDropdown-container a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.jDropdown:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.jDropdownActive {
+    background-color: black !important;
+}
+
+.linkSideNav, .jDropdown {
+    background-color: rgb(78, 77, 77);
+}
+
+
+.jDropdown span {
+    float: right;
+    color: white;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+
+
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.jDropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+
+
+
+.openNav {
+    font-size: 40px;
+    /* color: black; */
+    /* background-color: white; */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    cursor: pointer;
+    opacity: 0.4;
+    z-index: 9000;
+
+    transition: 0.5s ease;
+}
+
+.openNav:hover {
+    opacity: 1;
+}
+
+
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

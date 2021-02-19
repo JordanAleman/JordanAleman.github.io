@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>History.- Recorrido por el historial</title>
+	<script language="javascript">
+	function Ir()
+	  {
+	  var indice=document.getElementById('slcPaginas').selectedIndex;
+		//alert(indice);
+		var location=document.getElementById('slcPaginas').options[indice].text;
+		//alert(location);
+		window.location.href=location;
+	  
+	  }
+	</script>
+</head>
+<body bgcolor="#81DAF5" onload="divHistorial.innerText=history.length">
+<center>
+<table border="1">
+<caption><h2>Página 3</h2></caption>
+<tr height="100">
+  <td width="200">
+    <h3>Contenido de Página 3</h3>
+	<select id="slcPaginas" onchange="Ir()"> 
+        <option> Elija la página a la que quiere ir</option>
+        <option> Pagina1.htm </option>
+        <option> Pagina2.htm </option>
+        <option> Pagina3.htm </option> 
+      </select> 
+  </td>
+</tr>
+<tr>
+   <td>
+     <table border="0">
+	   <tr>
+	     <td>Páginas en el historial </td>
+		 <td><div id="divHistorial" style="width=30px;text-align:center;"></td>
+		 <td width="50"></td>
+		 <td><input type="button" value="<" onclick="history.back()" style="width:30px;"></td>
+		 <td width="20"></td>
+		 <td><input type="button" value=">" onclick="history.forward()" style="width:30px;"></td>
+		 <td width="50"></td>
+	     <td>Movimiento relativo a la página +-</td>
+		 <td width="20"></td>
+		 <td><input type="text" id="txtPagina" style="width:30px;"></td>
+		 <td width="20"></td>
+		 <td><input type="button" value="IR" onclick="eval('history.go('+txtPagina.value+')')" style="width:30px;"></td>
+	   </tr>
+	 </table> 
+   </td>
+</tr>
+</table>
+</center>
+</body>
+</html>

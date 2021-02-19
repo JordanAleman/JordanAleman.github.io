@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+                    
+        <title>M&eacute;todo sort</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body style="background-color: #8cb3d9">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid" style="border: 10px #17A2B8 solid">
+                <div class="container">
+                    <h1 class="display-3">Arrays</h1>
+                    <p class="lead">Método sort</p>
+                    <hr class="my-2">
+                    <h4>
+                        Nombre_array.sort([función])                    
+                    </h4>
+                    <p>
+                        Ordena los elementos del array. <br>
+                        Si no se utiliza el parámetro, este método ordena los elementos del array de menor a mayor comparando cada elemento como si se tratase de una string. <br>
+                        Si se pasa como parámetro una función de ordenación, este método ordena los elementos del array de acuerdo con el criterio de ordenación de la función.                    
+                    </p>
+
+                </div>
+            </div>
+            <div class="bg-light p-3 border border-primary rounded">
+                <script type = "text/javascript">
+
+                    var star = ["Polaris", "Deneb", "Vega", "Altair"];
+                    document.write("<b>Array 'star' original antes de ordenar: </b><br>" + star.join() + "<br><br>");
+                    document.write("<b>Usando y mostrando el método</b> 'star.sort()'<b>:</b> <br>" + star.sort() + "<br><br>");
+
+                    document.write("En cuanto realizamos el método 'sort' sobre el array, ese array tendrá sus valores ordenados.<br><br>");
+                    document.write("<b>Array 'star' original después de ordenar: </b><br>" + star.join() + "<br><hr>");
+
+
+                    var numbers = [25,350,905,35,2];
+                    document.write("<b>Array 'numbers' original antes de ordenar: </b><br>" + numbers.join(" - ") + "<br><br>");
+
+                    numbers.sort();
+                    document.write("<b>Array 'numbers' original después de ordenar: </b><br>" + numbers.join(" - ") + "<br><br>");
+                    numbers.sort((a,b) => b - a);
+                    document.write("<b>Array 'numbers' ordenador de mayor a menor: </b><br>" +  numbers.join(" - ")  + "<br><hr>");
+
+                    var arr = ['80', '9', '700', 40, 1, 5, 200];
+                    var comparar = ((a, b) => a - b);
+
+                    document.write("<b>Array:</b> var arr = ['80', '9', '700', 40, 1, 5, 200]<br><b>Función:</b> var comparar = ((a, b) => a - b);<br><br>");
+
+                    document.write("<b>Original: </b>" + arr.join(" - ") + "<br>");
+                    arr.sort()
+                    document.write("<b>Ordenado sin función: </b>" + arr.join(" - ") + "<br>");
+                    arr.sort(comparar)
+                    document.write("<b>ordenado con función: </b>" + arr.join(" - "));
+                   
+
+                </script>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>La propiedad opener</title>
+</head>
+<body>
+<b>La dirección de la página que ha abierto esta ventana es:</b><br>
+<script language="JavaScript" type="text/javascript">
+
+document.write(opener.location);
+
+function goback(){
+parent.opener.focus();
+return false;}
+
+
+/*
+function AbreoDaFoco()
+{
+document.write(top.parent.name);
+//windows.opener.focus();
+ top.parent.focus();
+}
+</script>
+*/
+
+<a href="" onclick="goback()">Haga clic aquí</a>
+</BODY>
+</HTML>
+
+
+
+
+

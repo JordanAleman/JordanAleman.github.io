@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+                    
+        <title>M&eacute;todo slice</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    </head>
+    <body style="background-color: #8cb3d9">
+        <div class="container">
+            <div class="jumbotron jumbotron-fluid" style="border: 10px #17A2B8 solid">
+                <div class="container">
+                    <h1 class="display-3">Arrays</h1>
+                    <p class="lead">Método slice</p>
+                    <hr class="my-2">
+                    <h4>
+                        Nombre_array.slice(índice_inicio,[índice_fin])
+                    </h4>
+                    <p>
+                        Devuelve un array formado por los elementos del array que se encuentran entre las posiciones marcadas por índice_inicio y índice_fin - 1.
+                    </p>
+
+                </div>
+            </div>
+            <div class="bg-light p-3 border border-primary rounded">
+                <script type = "text/javascript">
+
+                    var star = ["Polaris", "Deneb", "Vega", "Altair"];
+                    document.write("<b>Array \'star\' original: </b><br>" + star + "<br><br>");
+
+                    var elementosStar = star.slice(2,4);   //slice(principio,fin)
+                    document.write("<b>Realizamos la operación</b> 'star.slice(2,4)' <b>y lo mostramos:</b><br>" + star.slice(2,4) + "<br><br>");
+
+                    document.write("El método 'array.slice' no realiza cambios en el Array. Sólo muestra el contenido que le indicamos por parámetro.<br><br>");
+                    
+                    document.write("<b>Comprobamos que ha habido algún cambio en el array original después de hacerle un 'slice':</b><br> " + star + "<br><br>");
+
+                </script>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

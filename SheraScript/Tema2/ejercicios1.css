@@ -1,0 +1,207 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+.titulo {
+    border-style: double; 
+    border-width: 12px;
+    padding: 1rem;
+}
+
+
+fieldset {
+    padding: 1rem;
+
+    border: blue 3px solid;
+    border-radius: 8px;
+
+    background-color: blanchedalmond;
+}
+
+fieldset p, fieldset ul, fieldset div div {
+    margin-top: 2rem;        
+}
+
+fieldset h1 {
+    margin-bottom: 1rem;
+}
+
+
+
+.controlSelect {
+    cursor: pointer; 
+    width: 50%; 
+    display: inline-block;
+}
+
+.controlInput {
+    width: 50%;
+}
+
+.myFoot {
+    width: 100%;
+    position: absolute;
+    margin-top: 40rem;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+/* ---------------------------------- Menú -------------------------------------- */
+nav {
+    margin-left: 3rem;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+
+nav a, nav div a {
+    transition: 0.2s ease;
+
+}
+
+nav a:hover {
+    cursor: pointer;
+    padding: 6px;
+
+    background-color: violet;
+
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 5px 1px  #6C757D;
+
+    transition: 0.2s ease;
+    transform: scaleX(1.5) scaleY(1.5) ;
+}
+
+nav div a:hover {
+    cursor: pointer;
+    padding: 4px;
+
+
+    color: white;
+    background-color: cyan;
+
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 5px 1px  #6C757D;
+
+    transition: 0.2s ease;
+    transform: scaleX(1.2) scaleY(1.2);  
+}
+
+.navbar{
+	padding: 15px 10px;
+	background: #fff;
+	border: none;
+    border-radius: 0;
+	margin-bottom: 40px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+/* -------------------- Botones ------------------------------ */
+.submit {
+    transition: 0.2s ease;
+
+    padding: 6px;
+    border: gray 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 0px -200px #6C757D;
+
+    background-color:  #6C757D;
+    color: white;
+
+}
+
+.submit:hover {
+    cursor: pointer;
+
+    border:  #6C757D 2px solid;
+    box-shadow: 0px 0px 5px 1px  #6C757D;
+
+    transition: 0.2s ease;
+    transform: scaleX(1.2) scaleY(1.2);  
+}
+
+.reset {
+    transition: 0.2s ease;
+
+    padding: 6px;
+    margin-left: 0.5rem;
+
+    border: gray 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 0px -200px #DC3545;
+
+    background-color: #DC3545;
+    color: white;
+}
+
+.reset:hover {
+    cursor: pointer;
+
+    border: #DC3545 2px solid;
+    box-shadow: 0px 0px 5px 1px #DC3545;
+
+    transition: 0.2s ease;
+    transform: scaleX(1.2) scaleY(1.2);  
+}
+
+
+
+/* ---------------- Animaciones --------------------------- */
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    background: black;
+
+}
+
+
+#entrada {
+    z-index: 99;
+    position: relative;
+
+    background: #00001a;
+    transition: 0.2s ease;
+}
+
+
+#tapaIndex {
+    margin-top: 1rem;
+
+    z-index: 99;
+    position: absolute;
+
+    background: #00001a;
+}
+
+#entradaIndex {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 2rem;
+    bottom: 0;
+
+    position: relative;
+    
+
+    animation: 3s retirada ease;
+}
+
+@keyframes retirada {
+    0%  {
+        bottom: 1200px;
+    } 
+}

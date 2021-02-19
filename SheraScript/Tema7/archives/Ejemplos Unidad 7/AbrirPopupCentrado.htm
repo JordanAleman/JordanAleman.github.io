@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Centrar ventana en la pantalla</title>
+<script language="JavaScript" type="text/javascript">
+<!--
+function abrir_ventana_centrada() {
+    var altura_ventana = 620
+    var anchura_ventana = 990
+    var abscisa_ventana = (screen.availWidth / 2) - (anchura_ventana / 2)
+    var ordenada_ventana = (screen.availHeight / 2) - (altura_ventana /2)
+    var dimensiones_ventana = "height=" + altura_ventana + 
+                            ",width=" + anchura_ventana + 
+                            ",left=" + abscisa_ventana + 
+                            ",top=" + ordenada_ventana
+    window.open("ventana.htm", "", dimensiones_ventana)
+}
+//-->
+</script>
+</head>
+<body>
+<a href="javascript:void(0)" 
+   onClick="abrir_ventana_centrada()">
+Abrir página principal en una ventana centrada
+</a>
+</body>
+</html>
+

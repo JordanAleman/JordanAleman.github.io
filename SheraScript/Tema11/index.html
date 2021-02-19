@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 🍕🍕</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/default.css">
+
+</head>
+<body class="fondoPrincipal">
+    <header class="container-fluid cabecera">       
+        <span class="tituloCentro colorCabeceraUsuario">Pizzería Aprisa 🍕</span>
+        <span class="cabeceraUsuario colorCabeceraUsuario">Cuanto antes, estómago feliz</span>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 tamanio botonTamanio" id="grande">
+                    Grande
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 tamanio botonTamanio" id="mediana">
+                    Mediana
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 tamanio botonTamanio" id="pequenia">
+                    Pequeña
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">                  
+                    <img src="img/salchichas.jpg" alt="Salchichas">
+                    Salchichas
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/peperoni.jpg" alt="Peperoni">
+                    Peperoni
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/jamon.jpg" alt="Jamón">
+                    Jamón
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/pimiento.jpg" alt="Pimiento">
+                    Pimiento
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/setas.jpg" alt="Setas">
+                    Setas
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/cebolla.jpg" alt="Cebolla">
+                    Cebolla
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/pinia.jpg" alt="Piña">
+                    Piña
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/aceitunas.jpg" alt="Aceitunas">
+                    Aceitunas
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/anchoas.jpg" alt="Anchoas">
+                    Anchoas
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/gambas.jpg" alt="Gambas">
+                    Gambas
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/bacon.jpg" alt="Bacon">
+                    Bacon
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 eleccion botonIngrediente">
+                    <img src="img/salmon.jpg" alt="Salmón">
+                    Salmón
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-block mt-5 py-3 botonRealizarPedido" id="botonRealizarPedido">Realizar pedido</button>
+
+            <div id="mostrarPedido"></div>
+        </div>
+    </main>
+
+    <footer class="container-fluid pie">
+        <h3 class="tituloPie">🍕 Actividades DOM 🍕</h3>
+    </footer>
+
+
+    <script src="js/styles.js"></script>
+    <script src="js/main.js"></script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

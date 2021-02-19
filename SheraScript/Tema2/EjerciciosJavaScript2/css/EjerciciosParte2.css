@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700,700i|Open+Sans:400,700&display=swap');
+
+:root {
+    --purple-dark: #170312;
+    --purple-medium: #33032d;
+    --purple-light: #531253;
+    --gray-light: #eaeaea;
+    --white: #f4fffd;
+
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 22px;
+}
+
+
+
+/* ----------------------------- */
+/*          Header
+/* ----------------------------- */
+
+ .contenido-header {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../img/Cielo.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+ }
+
+ .contenido-header .fondo {
+    width: 0%;
+    height: 100%;
+    max-width: 100%;
+
+    background-image: url(../img/Estrellas.png);
+
+    /* opacity: 0.9; */
+
+ }
+
+ .contenido-header .texto {
+    width: calc(100vw - 20px);
+    height: 100vh;
+    /* background: rgba(0, 0, 0, .5); */
+
+    font-size: 70px;
+    font-weight: 400px;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: yellow;
+
+    mix-blend-mode: exclusion;
+ } 
+
+
+
+/* ----------------------------- */
+/*          NavBar
+/* ----------------------------- */
+
+.menu {
+    background-color: var(--purple-medium);
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    
+    position: sticky;
+    top: 0;
+    /* margin-bottom: 60px; */
+
+
+    /* Este z-index es únicamente para evitar posible futuros problemas. Cuando varios elementos se superponen, */
+    /* z-index determina cuales cubren a otros. Un elemento con mayor z-index generalmente cubre a otro menor. */
+    z-index: 999; 
+
+}
+.menu p {
+    display: inline-block;
+    background-color: var(--purple-medium);
+    font-size: 34px;
+    color: var(--gray-light);
+    text-decoration: none;
+
+    padding-top: 10px;
+    /* margin: 0; */
+
+
+    transition: .5s ease all;
+}
+.menu div a {
+    /* Comparado con 'display: inline' (es display que suele estar por defecto), */
+    /* la mayor diferencia es que 'display: inline-block' permite establecer un ancho y un alto a los elementos. */
+    /* También, con 'display: inline-block' el margins/paddings del top y bottom son respetados, mientras que con  'display: inline' no. */
+    display: inline-block;
+    background-color: var(--purple-medium);
+    font-size: 22px;
+    color: var(--gray-light);
+    text-decoration: none;
+
+    padding: 10px 30px;
+    margin: 0 30px;
+
+    transition: .5s ease all;
+
+}
+
+.menu div a:hover {
+    transform: translateY(12px);
+    background-color: var(--purple-light);
+}
+
+
+
+
+/* ----------------------------- */
+/*          Cuerpo
+/* ----------------------------- */
+
+.contenido-cuerpo {
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+
+    background-image: url(../img/Bordes.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    
+ }
+
+ 
+
+fieldset {
+    padding: 1rem;
+
+    border: blue 3px solid;
+    border-radius: 8px;
+
+    background-color: blanchedalmond;
+}
+
+fieldset p, fieldset ul, fieldset div div {
+    margin-top: 2rem;        
+}
+
+fieldset h1 {
+    margin-bottom: 1rem;
+}
+
+section {
+    background-color: var(--gray-light);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.tituloActividad {
+    color: var(--purple-dark);
+    font-size: 30px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+
+    z-index: 2;    
+}
+
+
+.tituloActividad span {
+    background-color: var(--gray-light);
+    z-index: 99;
+    position: relative;
+}
+
+.tituloActividad::after {
+    content: "";
+    display: inline-block;
+
+    height: 4px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+
+    top: -20px;
+    z-index: 1;
+}
+
+
+
+
+fieldset .titulo {
+    color: var(--purple-dark);
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+
+    z-index: 2;
+
+    text-align: center;
+    
+}
+
+
+fieldset .titulo span {
+    background-color: #FFEBCD;
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+fieldset .titulo::after {
+    content: "";
+    display: inline-block;
+
+    height: 2px;
+    width: 100%;
+    background: var(--purple-dark);
+    position: relative;
+
+    top: -29px;
+    z-index: 1;
+}
+
+
+/* ----------------------------- */
+/*          Separador
+/* ----------------------------- */
+.separador {
+    background-image: url(../img/Separador.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+    width: 100%;
+    height: 250px;    
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.separador p {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-family: 'Noto Serif', serif;
+    color: var(--white);
+}
+
+
+
+/* -------------------------------------------------- */
+/*          Botones Ejercicio Adivinar Número 
+/* -------------------------------------------------- */
+.eliminadoInferior {
+    background-color: red;
+    border: black 1px solid;
+
+    margin-bottom: 1rem;
+    font-size: 12px;
+    text-decoration:line-through;
+    
+    transition: 0.2s ease;
+}
+
+.eliminadoInferior:hover {
+    box-shadow: 0px 0px 5px 1px red;
+
+    transition: 0.2s ease;
+}
+
+.eliminadoSuperior {
+    background-color:  rgb(36, 60, 212);
+    border: black 1px solid;
+    color: white;
+
+    margin-bottom: 1rem;
+    font-size: 12px;
+    text-decoration:line-through;
+    
+    transition: 0.2s ease;
+}
+
+.eliminadoSuperior:hover {
+    box-shadow: 0px 0px 5px 1px  rgb(36, 60, 212);
+
+    transition: 0.2s ease;
+}
+
+
+.correcto {
+    background-color: green;
+    border: black 1px solid;
+    color: white;
+
+    margin-bottom: 1rem;
+    font-size: 12px;
+    
+    transition: 0.2s ease;
+
+    animation: 4s correcto 1;
+}
+
+.correcto:hover {
+    border: green 2px solid;
+    box-shadow: 0px 0px 5px 1px green;
+
+    transition: 0.2s ease;
+    transform: scaleX(1.2) scaleY(1.2);
+
+
+
+}
+
+
+@keyframes correcto {
+    50%  {
+        transform: rotate(360deg)  scaleX(3) scaleY(3);
+    } 
+}
+
+
+.normal {  
+    padding: 2px;;
+    margin: 4px;
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.normal:hover {
+    cursor: pointer;
+
+    box-shadow: 0px 0px 5px 1px rgb(87, 105, 112);
+    transition: 0.2s ease;
+}
+
+.fondoCambiar {
+    background-color: white;
+    border: 0;
+}
+
+
+.fondoAdivinar {
+    background-color: #e6ffff;
+}
+
+.fondoAdivinar input{
+    font-size: 15px;
+}
+
+.fondoAdivinar div{
+    background-color: white;
+    padding: 1rem;
+}
+
+#SolEjer2 li {
+    font-size: 16px;
+}
+
+#SolEjer2 li span {
+    font-weight: bold;
+}
+
+
+/* --------------------------------------- */
+/*          Ejercicio5 
+/* --------------------------------------- */
+#SolEjer5 p{ 
+    font-size: 15px;
+    font-family: 'Noto Serif', serif;
+    color: var(--gray-light);
+
+    background-color: black;
+    border-radius: 5px;
+    padding: 1rem;
+    
+}
+
+
+/* --------------------------------------- */
+/*          Footer 
+/* --------------------------------------- */
+
+.pie {
+    background-color: var(--purple-dark);
+
+    margin-top: 5rem;
+    padding: 10px;
+    padding-top: 2rem;
+    
+
+}
+
+.tituloPie {
+    color: var(--gray-light);
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+
+    z-index: 2;
+
+    text-align: center;
+    
+}
+
+
+.tituloPie span {
+    background-color: var(--purple-dark);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.tituloPie::after {
+    content: "";
+    display: inline-block;
+
+    height: 2px;
+    width: 100%;
+    background: var(--gray-light);
+    position: relative;
+
+    top: -29px;
+    z-index: 1;
+}
+
+/* --------------------------------------- */
+/*          MediaQuerys 
+/* --------------------------------------- */
+
+@media screen and (max-width: 992px) {
+    p {
+        font-size: 18px;
+    }
+
+    fieldset .titulo {
+        text-align: left;
+    }
+
+    fieldset .titulo span {
+        padding: 5px 5px 0 0;
+        font-size: smaller;
+        
+    }
+
+    fieldset .titulo::after {
+        content: unset;
+    }
+
+    .contenido-cuerpo {
+        background-image: unset;
+    }
+
+    .contenido-header .texto {
+        font-size: 20px;
+    }
+
+
+}

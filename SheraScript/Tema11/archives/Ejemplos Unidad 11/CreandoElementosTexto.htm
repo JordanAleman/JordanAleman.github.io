@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Creando elementos y texto</title>
+
+</head>
+
+<body>
+	<a href="editorial.html">Editorial</a>
+	
+	<p> jhkfjhgkhjghkjglk j gkjh llfgjh lkgjhkghk</p>
+	
+	 <script language="javascript" type="text/javascript">
+		document.write("<br />");
+		
+		var nuevoEnlace = document.createElement("a");
+		var nodoTexto = document.createTextNode("Semblanza");
+		nuevoEnlace.appendChild(nodoTexto);
+				
+		nuevoEnlace.setAttribute("href", "Semblanza.html");				// El setAttribute se verá en el apartado 11.6
+		nuevoEnlace.setAttribute("title", "Artículos de programación");
+		
+		
+		var cuerpoRef = document.getElementsByTagName("body")[0];
+        cuerpoRef.appendChild(nuevoEnlace);
+         
+		/*Recordar que las dos últimas líneas anteriores se pueden sustituir poniendo un id al body
+				<body id=”cuerpo”>
+		y luego colocando estas dos líneas en su lugar
+             var cuerpoRef = document.getElementById("cuerpo");
+             cuerpoRef.appendChild(nuevoEnlace);
+		*/
+		
+	</script>
+	<p>ULTIMO SOCORROOOOOO</p>
+	
+		
+	
+</body>
+
+</html>
+  
+  

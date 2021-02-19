@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: cyan;
+}
+
+:root {
+    --purple-dark: #170312;
+    --gray-light: #eaeaea;
+}
+
+.contenido-formulario {
+    height: 100%;
+
+    padding: 2rem;
+    background-color: beige;
+
+    border-radius: 10px;
+}
+
+/* .contenido-rellenar {
+    height: 100%;
+} */
+
+.tituloActividad {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+
+    z-index: 2;    
+}
+
+
+.tituloActividad span {
+    background-color: transparent;
+    z-index: 99;
+    position: relative;
+}
+
+.tituloActividad::after {
+    content: "";
+    display: inline-block;
+
+    height: 4px;
+    width: 100%;
+    background: black;
+    position: relative;
+
+    top: -10px;
+    z-index: 1;
+}
+
+fieldset .bloqueInput {
+    margin-bottom: 2rem;
+}
+
+
+/* .tituloMuestraDatos {
+    border-radius: 5px;
+    background-color: #DBB0BA;
+
+    padding: 0 10px;
+} */
+
+
+.muestraDatosForm1 {
+    height: 100%;
+    min-height: 40px;
+}
+
+.botonGroup {
+    width: 48%;
+}
+
+
+/* --------------------------------------- */
+/*          Footer 
+/* --------------------------------------- */
+.pie {
+    background-color: var(--purple-dark);
+
+    margin-top: 5rem;
+    padding: 10px;
+    padding-top: 2rem;
+    
+
+}
+
+.tituloPie {
+    color: var(--gray-light);
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+
+    z-index: 2;
+
+    text-align: center;
+    
+}
+
+
+.tituloPie span {
+    background-color: var(--purple-dark);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+.tituloPie::after {
+    content: "";
+    display: inline-block;
+
+    height: 2px;
+    width: 100%;
+    background: var(--gray-light);
+    position: relative;
+
+    top: -29px;
+    z-index: 1;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Propiedad prototype</title>
+</head>
+<body>
+<script language="javascript">
+	Ahora=new Date();
+	document.write("Salida por defecto: "+Ahora+"<br>");
+
+	function Date_toString()
+		{
+			var sFecha;
+			sFecha=this.getDate()+"/"+(this.getMonth()+1)+"/"+this.getFullYear();
+			return sFecha;
+		}
+		
+	Date.toString=Date_toString;
+	document.write("Salida personalizada: "+Ahora);
+</script>
+</body>
+</html>

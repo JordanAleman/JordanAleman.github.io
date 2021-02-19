@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/sideMenu.css">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+    </head>
+    <body>
+        <div id="jSidenav" class="sidenav"></div>
+        <span class="openNav" id="openNav">&#9776;</span>
+        
+        <div id="mainPostNav">
+            <header class="container">
+                <div class="jumbotron p-3">
+                    <p class="display-3">Formulario</p>
+                    <p class="lead">Prueba de un formulario</p>
+                    <hr class="my-2">
+                    <button type="button" class="btn btn-outline-info" data-toggle="collapse" data-target="#mostrarInformacionJumbotron" aria-expanded="false">Información detalladada</button>
+                    <div id="visualizarInformacionJumbotron"></div>
+
+                </div>
+            </header>
+
+            <main class="container-fluid">
+                <form class="row contenido-formulario">
+                    <section class="container col-6 contenido-rellenar">
+                        <h3 class="tituloActividad"><span>Datos personales</span></h3>
+
+                        <div class="container">                   
+                            <div class="form-group row">
+                                <label for="apellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="apellidos" name="inputText">
+                                </div>
+                            </div> 
+
+                            <div class="form-group row">
+                                <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="nombre" name="inputText">
+                                </div>
+                            </div>
+                            
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <label class="col-form-label col-sm-2 pt-0">Sexo</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sexoRadio" value="Mujer" id="sexoRadio1" checked>
+                                            <label class="form-check-label" for="sexoRadio1">
+                                            Mujer
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="sexoRadio" value="Hombre" id="sexoRadio2">
+                                            <label class="form-check-label" for="sexoRadio2">
+                                            Hombre
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" name="inputText" value="aa@aa.aa">
+                                    <small id="emailCorrecto"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="container col-6 contenido-rellenar">
+                        <h3 class="tituloActividad"><span>Información</span></h3>
+
+                        <div class="container">                   
+                            <div class="form-row">
+                                <label for="selectLlegada" class="col-sm-4 col-form-label">¿Cómo llegó hasta aquí?</label>
+                                <div class="col-sm-8">
+                                    <select class="custom-select mr-sm-2" id="selectLlegada">
+                                        <option value="0">Al azar...</option>
+                                        <option value="1">Le indicaron la URL de la página</option>
+                                        <option value="2" selected>A través de un buscador</option>
+                                        <option value="3">Mediante un enlace desde otra página</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label class="col-form-label pt-0 mt-3">Desearía más información sobre:</label>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox1Form1" name="checkboxTemas" value="Material audiovisual">
+                                    <label class="form-check-label" for="checkbox1Form1">
+                                    Material audiovisual
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox2Form1" name="checkboxTemas" value="Textos electrónicos">
+                                    <label class="form-check-label" for="checkbox2Form1">
+                                    Textos electrónicos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="checkbox3Form1" name="checkboxTemas" value="Libros de textos">
+                                    <label class="form-check-label" for="checkbox3Form1">
+                                    Libros de textos
+                                    </label>
+                                </div>
+                            </div> 
+                            
+                            <button type="button" class="btn btn-outline-secondary btn-block" id="botonAnadir">Añadir</button>
+                            <div id="visualizarModalModificarDatos"></div>
+
+                        </div>
+                    </section>
+                    <div class="col-12 mt-4">
+                        <section class="container contenido-mostrar">
+                            <div class="tituloMuestraDatos">
+                                <h1 class="tituloActividad"><span>Editorial Ciclos F.P.</span></h1>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Lista de usuarios:</label>                       
+                                <select class="custom-select" id="selectMuestraUsuarios">
+    
+                                </select>
+                            </div>
+
+                            
+                            <button type="button" class="btn btn-outline-secondary botonGroup" id="botonVisualizarDatos" data-toggle="modal" data-target="#modalDatos">Visualizar datos</button>
+                            <button type="button" class="btn btn-outline-danger botonGroup" id="botonEliminar" data-toggle="modal" data-target="#modalEliminarDatos">Eliminar</button>
+                            <div id="visualizarModalDatos"></div>
+                            <div id="visualizarModaEliminarDatos"></div>
+
+                        </section>
+                    </div>
+                </form>
+            </main>
+
+            <footer class="container-fluid pie">
+                <h3 class="tituloPie"><span>Jordan Alemán Santana</span></h3>
+            </footer>
+        </div>
+
+        <script src="js/plantillas.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/usersControl.js"></script>
+
+        <script src="../js/sideMenu.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+    </body>
+</html>

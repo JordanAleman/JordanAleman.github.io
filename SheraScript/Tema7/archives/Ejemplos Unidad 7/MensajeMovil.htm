@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Mensaje móvil en la barra de estado</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+// Mensaje en la barra de estado
+var mensaje_barra_estado = "Instituto de E.S. El Rincón"
+
+// Retraso
+var tiempo_demora = 50
+
+// Donde comienza el mensaje
+var posicion_inicio = 100
+
+// Máximo número de scroll
+var maximo_numero_scrolls = 2
+
+// Rellenar el mensaje con espacios en blanco para obtener la posición de inicio
+for (var contador = 1; contador <= posicion_inicio; contador++) {
+    mensaje_barra_estado = " " + mensaje_barra_estado
+}
+
+var posicion_actual = 0
+var total_scrolls = 0
+
+// Lanzar el temporizador
+var id_temporizador = setInterval("mensaje_scroll()", tiempo_demora)
+
+// Función llamada después de cada intervalo
+function mensaje_scroll(){
+
+    // Incrementar la posición actual
+    posicion_actual++
+    
+    // Podemos avanzar todavía?
+    if (posicion_actual < mensaje_barra_estado.length)
+    
+        // En caso afirmativo, visualizar el mensaje
+        status = mensaje_barra_estado.substring(posicion_actual)
+    else {
+    
+        // Si no es así actualizar los valores de las variables de control
+        posicion_actual = 0
+        total_scrolls++
+        
+        // Hemos alcanzado el máximo número de scrolls?
+        if (total_scrolls == maximo_numero_scrolls) {
+        
+            // Si la respuesta es afirmativa, parar el temporizador
+            clearInterval(id_temporizador)
+            status = ""
+            return
+        }
+    }
+}
+
+//-->
+</script>
+
+</head>
+
+<body>
+</body>
+</html>
+

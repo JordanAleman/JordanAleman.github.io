@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script type="text/javascript">
+function cambiarEstilo(){
+var iframe = document.getElementById("iframe1");
+var input= iframe.contentWindow.document.getElementById("input1").style.backgroundColor='red'; //aqui accedo al botón
+}
+function cambiarEstilo2(){
+		frames.nombredeiframe.document.getElementById('input1').style.backgroundColor='blue';	
+}
+</script>
+</head>
+
+<body>
+<iframe src="otrapagina.html" id="iframe1" name="nombredeiframe" id="fram"></iframe>
+
+<input type="button" value="cambiar estilo" onClick="cambiarEstilo()">
+
+<input type="button" value="cambiar estilo 2" onClick="cambiarEstilo2()">
+
+<ol>
+<li>Se accede a un elemento en otra página</li>
+<li>Primer botón: accede al elemento de la otra página mediante - contentWindow - propiedad del iframe.</li>
+<li>Segundo botón: accede al elemento, gracias a la propieda - frame - </li>
+</ol>
+</body>
+</html>

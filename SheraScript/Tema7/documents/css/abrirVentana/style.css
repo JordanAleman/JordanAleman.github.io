@@ -1,0 +1,44 @@
+.fondoVentana {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background-image: url(../../img/window.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.tituloModal, .cuerpoModal {
+    display: unset;
+    text-align: center;
+}
+
+.tituloModal h1 {
+    font-size: 90px;
+}
+
+.cuerpoModal {
+    font-size: 45px;
+}
+
+
+@media screen and (max-width: 750px) {
+    h1 {
+        font-size: 20px;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tituloModal h1 {
+        font-size: 50px;
+    }
+
+    .cuerpoModal {
+        font-size: 25px;
+    }
+}

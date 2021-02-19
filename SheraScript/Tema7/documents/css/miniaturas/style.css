@@ -1,0 +1,46 @@
+.contenedorBotonesMiniaturas img {
+    width: 150px;
+    height: 150px;
+
+    cursor: pointer;
+}
+
+.contenedorBotonesMiniaturas .row:last-child {
+    margin-top: 2rem;
+}
+
+
+.fondoLienzo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background-image: url(../../img/lienzo.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.contenidoImagenCompleta {
+    text-align: center;
+}
+
+.contenidoImagenCompleta img {
+    width: 450px;
+    height: 450px;
+}
+
+
+@media screen and (max-width: 750px) {
+    h1 {
+        font-size: 20px;
+        padding-top: 14px;
+    }
+
+    .contenedorBotonesMiniaturas img {
+        width: 100px;
+        height: 100px;
+    }
+}

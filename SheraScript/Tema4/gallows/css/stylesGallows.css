@@ -1,0 +1,450 @@
+body {
+    position: relative;
+    width: 86%;
+    margin-top: 2rem;
+    margin-left: 7%;
+
+    /* border-radius: 10px; */
+    /* border: 12px black solid; */
+    /* box-shadow: 0px 0px 15px 5px rgba(83,80,133,1); */
+    background-image: url(../img/ahorcadoFondo.png);
+    
+}
+
+label {
+    font-weight: bold;
+}
+
+.thanos {
+    background-color: black;
+    background-image: url(../img/Thanos0.png);
+    background-size: 45%;
+    background-position: top;
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    /* background-repeat: no-repeat; */
+}
+
+/* ---------------------------------------- */
+/*          Contenido principal
+/* ---------------------------------------- */
+.contenido-main {
+    width: 100%;
+    height: 90vh;
+    background-color: #4d2600;
+
+    border-radius: 20px;
+    position: relative;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Franja top                                 */
+/* -------------------------------------------------------------------------- */
+.franjaTop {
+    height: 10vh;
+    background-color: red;
+    background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+
+    border-radius: 20px 20px 0 0;
+    position: relative;
+
+    
+}
+
+.franjaTop div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* .cartelAhorcado {
+    width: 30%;
+} */
+
+.noTradicional {
+    position: absolute;
+    top: -25px;
+    width: 25%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          Área de escribir palabra                          */
+/* -------------------------------------------------------------------------- */
+#contenedorComienzo {
+    /* display: none; */
+    height: 75vh;
+    background-color: #FDE7AA;
+}
+
+.areaEscribirPalabra {
+    padding: 3rem;
+    /* background-color: #F5DEB3; */
+    border-radius: 5px;
+}
+
+.areaEscribirPalabra input {
+    margin-bottom: 1rem;
+}
+
+.contenedorBotonJugarSelectorVerdugo {
+    width: 100%;
+}
+
+.contenedorBotonJugarSelectorVerdugo .botonJugarAhorcado {
+    width: 100%;
+    margin-top: 3rem;
+
+    height: 60px;
+
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.contenedorBotonJugarSelectorVerdugo .selectorVerdugo {
+    width: 100%;
+}
+
+
+.botonDescripcionJuego{
+    position: absolute;
+    bottom: 5.5%;
+    left: 0;
+
+    padding: 2rem;
+    /* border-radius: 10px; */
+}
+
+.descripcionJuegoAhorcado {
+    position: absolute;
+    bottom: 16%;
+    left: 0;
+    width: 100%;
+
+    color: white;
+}
+
+.descripcionJuegoAhorcado div {
+    background-color: black;
+}
+
+.botonVolverInicio {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                          Área del juego principal                          */
+/* -------------------------------------------------------------------------- */
+#contenedorJuego {
+    display: none;
+    background-color: #FDE7AA;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Área Adivinar letra                            */
+/* -------------------------------------------------------------------------- */
+.areaLetrasAdivinar {
+    height: 35vh;
+}
+
+.botonPista {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 10%;
+
+    opacity: 0.3;
+
+    border: 0;
+    background-color: #FCD881;
+    color: black;
+    font-weight: bold;
+}
+
+.botonPista:hover {
+    background-color: #EEC97B;
+    color: white;
+
+    opacity: 1;
+}
+
+.areaLetrasAdivinar div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.casillaLetra {
+    height: 6vh;
+    width: 4vw;
+
+    padding: 0;
+    margin-right: 10px;
+    font-size: 30px;
+
+    text-align: center;
+    font-weight: bold;
+
+    border: 1px black solid;
+    border-radius: 5px;
+
+    cursor: inherit;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                          Área contador de intentos                         */
+/* -------------------------------------------------------------------------- */
+.areaContadorIntentos {
+    height: 5vh;
+    background-color: #0476AA;
+
+    color: white;
+    font-weight: bold;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: auto 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                          Área letras y dibujos                        */
+/* -------------------------------------------------------------------------- */
+.areaLetrasDibujos {
+    height: 35vh;
+}
+
+
+.contenedorLetras, .contenedorDibujos {
+    background-color: black;
+
+    border: 5px #EEC97B solid;
+    border-radius: 5px;
+
+    height: 30vh;
+    margin: 1rem 0;
+    padding: 2rem;
+
+    z-index: 10;
+
+}
+
+.contenedorDibujos {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.contenedorDibujos:hover {
+    position: absolute;
+    z-index: 10;
+    bottom: 50%;
+    right: 35%;
+    transform:scale(3.5);
+    width: 30%;
+}
+
+.contenedorBotonLetra {
+    margin-right: 35px;
+    margin-left: -15px;
+}
+
+
+.botonLetra {
+    height: 6vh;
+    width: 4vw;
+
+    padding: 0;
+    font-size: 24px;
+
+    text-align: center;
+    font-weight: bold;
+
+    border: 3px white solid;
+    border-radius: 2px;
+
+    background-color: #06DCB8;
+    color: white;
+}
+
+.botonLetra:hover {
+    background-color: blue;
+}
+
+
+.botonReiniciar {
+    position: absolute;
+    bottom: 4%;
+    left: 42.5%;
+
+    width: 15%;
+    height: 7%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    border: 3px white solid;
+    border-radius: 5px;
+
+    z-index: 5;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Franja Bottom                               */
+/* -------------------------------------------------------------------------- */
+.franjaBottom {
+    background-color: #EE311B;
+    height: 5vh;
+
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Querys                                */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 1650px) {
+    .contenedorLetras, .contenedorDibujos {
+        padding: 1rem;
+    }
+
+    .contenedorBotonLetra {
+        margin-right: 30px;
+        margin-left: -15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .botonDescripcionJuego {
+        padding: 1rem;
+    }
+
+    #descripcionJuegoAhorcado {
+        bottom: 3.7rem;
+    }
+
+    /* .contenedorLetras{
+        padding: 1rem;
+    } */
+
+    .botonLetra {
+        height: 5vh;
+        width: 3vw;
+   
+        font-size: 18px;
+        border: 2px white solid;
+    }
+}
+
+
+
+@media screen and (max-width: 850px) {
+    body {
+        width: 95%;
+        margin-left: 3%;
+        margin-top: 1rem;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                  Franja top                                  */
+    /* -------------------------------------------------------------------------- */
+    .cartelAhorcado {
+        width: 200px;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                          Área de escribir palabra                          */
+    /* -------------------------------------------------------------------------- */
+    .areaEscribirPalabra {
+        font-size: 11px;
+        padding: 0;
+    }
+    
+    .contenedorBotonJugarSelectorVerdugo .botonJugarAhorcado {
+        margin-top: 1rem;
+    }
+
+    .botonDescripcionJuego {
+        padding: 5px;
+    }
+
+    .descripcionJuegoAhorcado {
+        font-size: 10px;
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                          Área contador de intentos                         */
+    /* -------------------------------------------------------------------------- */
+    .areaContadorIntentos {
+        height: 100%;
+        padding: 5px;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                              Casilla de letras                             */
+    /* -------------------------------------------------------------------------- */
+    .casillaLetra {
+        height: 35px;
+        width: 40px;
+        font-size: 16px;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                            Área letras y dibujos                           */
+    /* -------------------------------------------------------------------------- */
+    .areaLetrasDibujos {
+        height: 100%;
+    }
+
+    .areaLetrasDibujos div {
+        justify-content: inherit;
+        
+        width: 100%;
+    }
+
+    .contenedorLetras, .contenedorDibujos {    
+        height: 165px;
+        margin: 0;
+        padding: 10px 2px;
+    
+    }
+
+    .contenedorBotonLetra {
+        margin-right: 15px;
+        margin-left: 10px;
+    }
+
+    .areaLetrasDibujos .botonLetra {
+        height: 25px;
+        width: 40px;
+        font-size: 9px;
+        border: 2px white solid;
+    }
+
+    .botonReiniciar {
+        height: 7%;
+        width: 13%;
+        bottom: 2%;
+
+        font-size: 10px;
+    }
+
+
+    /* -------------------------------------------------------------------------- */
+    /*                                Franja Bottom                               */
+    /* -------------------------------------------------------------------------- */
+    .franjaBottom {
+        height: 7vh;
+    }
+}

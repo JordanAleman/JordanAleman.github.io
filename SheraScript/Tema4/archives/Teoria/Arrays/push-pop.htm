@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		
+		<title>M&eacute;todo push-pop</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	</head>
+	<body style="background-color: #8cb3d9">
+		<div class="container">
+			<div class="jumbotron jumbotron-fluid p-2" style="border: 10px #17A2B8 solid">
+				<div class="container ">
+					<h1 class="display-3 text-center">Arrays</h1>
+					<p class="lead text-center">Método push y método pop</p>
+					<hr class="my-2">
+					<div class="container">						
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<h3>Método pop</h3>
+								<h5>
+									Nombre_array.pop()
+                                </h5>
+								<p>
+									Elimina y devuelve el último elemento del array. Este método modifica la longitud del array (atributo length).
+								</p>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+								<h3>Método push</h3>
+								<h5>
+									Nombre_array.push(elem1, ... elemN)								
+                                </h5>
+								<p>
+									Añade al final del array los elementos que se pasan como parámetro y devuelve la nueva longitud de éste.
+								</p>
+							</div>
+						</div>						
+					</div>
+					
+					
+	
+				</div>
+			</div>
+			<div class="container bg-light p-3 border border-primary rounded">
+				<script type = "text/javascript">
+
+                    var star = ["Polaris", "Deneb", "Vega", "Altair"];
+                    document.write("<b>Array 'star' original: </b><br>" + star.join(" - ") + "<br><br>");
+                    star.push("Aldebaran");
+                    
+                    document.write("<b>Añadimos</b> 'Aldebaran' <b>al final del array con </b>'star.push(\"Aldebaran\") <b>y mostramos el resultado: </b> <br>" + star.join(" - ") + "<br><br>");
+                
+                    var eliminaUltimo = star.pop();
+                    document.write("<b>Eliminamos el último elemento del array con </b>'star.pop()' <b>. Si mostramos esta operación obtenemos: </b><br>" + eliminaUltimo + "<br><br>");
+                  
+                    document.write("<b>Tras estos cambios, el array 'star' tendrá los siguientes elementos: </b><br>" + star.join(" - "));
+
+                </script>
+
+				
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+
+    
+

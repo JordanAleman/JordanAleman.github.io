@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Creación de Objetos 🏗</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/ventanas.css">
+
+    </head>
+    <body>
+        <header class="cabecera"></header>
+        
+        <main class="contenedor">
+            <div class="container">
+                <h1>Creación de objetos</h1>
+
+                <h3>Creación 1</h3>
+                <table class="table table-striped mt-3">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Constelación</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Clase Espectral</th>
+                        <th scope="col">Magnitud</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rellenoTablaCreacion1">
+                    </tbody>
+                </table> 
+
+                <div class="p-4 border border-primary rounded">
+                    <p>
+                        El modo de crear los objetos ha sido de uno en uno y la forma de añadir las propiedades a cada objeto ha sido también de uno en uno.
+                    </p>
+
+                    <ul>
+                        <li>star["Polaris"] = new Object;</li>
+                        <li>star["Mizar"] = new Object;</li>
+                        <li>star["Aldebaran"] = new Object;</li>
+                        <li>star["Rigel"] = new Object;</li>
+                    </ul>
+
+                    <ul>
+                        <li>star["Polaris"].constellation = "Ursa Minor";</li>
+                        <li>star["Mizar"].constellation = "Ursa Major";</li>
+                        <li>star["Aldebaran"].constellation = "Taurus";</li>
+                        <li>star["Rigel"].constellation = "Orion";</li>                                         
+                    </ul>
+
+                    <ul>
+                        <li>star["Polaris"].type = "Double/Cepheid";</li>
+                        <li>star["Mizar"].type = "Spectroscopic Binary";</li>
+                        <li>star["Aldebaran"].type = "Irregular Variable";</li>
+                        <li>star["Rigel"].type = "Supergiant with Companion";</li>                                         
+                    </ul>
+                </div>
+
+                <h3 class="mt-5">Creación 2</h3>
+                <table class="table table-striped mt-3">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Constelación</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Clase Espectral</th>
+                        <th scope="col">Magnitud</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rellenoTablaCreacion2">
+                    </tbody>
+                </table> 
+
+                <div class="p-4 border border-primary rounded">
+                    <p>
+                        function Star(constell,type,specclass,magnitude) {      <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.constellation = constell;  <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.type = type;               <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.spectralClass = specclass; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.mag  = magnitude;          <br>
+                        }
+                    </p>
+                    <p>
+                        El modo de crear los objetos ha sido por medio de una "función constructora". A través de esta función se crean directamente todos los objetos
+                        junto a sus propiedades siguiendo el siguiente patrón:
+                    </p>
+                    <ul>
+                        <li>star["Polaris"] = new Star("Ursa Minor","Double/Cepheid","F7",2.0);</li>
+                        <li>star["Mizar"] = new Star("Ursa Major","Spectroscopic Binary","A1 V",2.3);</li>
+                        <li>star["Aldebaran"] = new Star("Taurus","Irregular Variable","K5 III",0.85);</li>
+                        <li>star["Rigel"] = new Star("Orion","Supergiant with Companion","B8 Ia",0.12);</li>                                         
+                    </ul>
+                </div>
+
+                <h3 class="mt-5">Creación 3</h3>
+                <table class="table table-striped mt-3">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Constelación</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Clase Espectral</th>
+                        <th scope="col">Magnitud</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rellenoTablaCreacion3">
+                    </tbody>
+                </table> 
+
+                <div class="p-4 border border-primary rounded">
+                    <p>
+                        function Star(constell,type,specclass,magnitude) {      <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.constellation = constell;  <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.type = type;               <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.spectralClass = specclass; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this.mag  = magnitude;          <br>
+                        }
+                    </p>
+    
+                    <p>
+                        if ("Polaris" in star) {                                                                                                    <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;star["Polaris"].aka = "The North Star";                                                             <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log('%c⧭', 'color: #c0f022', "Polaris found and is also known as " + star["Polaris"].aka);  <br>
+                        }
+                    </p>
+
+                    <p>
+                        El modo de crear los objetos ha sido por medio de una "función constructora". A través de esta función se crean directamente todos los objetos
+                        junto a sus propiedades siguiendo el siguiente patrón:
+                    </p>
+                    <ul>
+                        <li>star["Polaris"] = new Star("Ursa Minor","Double/Cepheid","F7",2.0);</li>
+                        <li>star["Mizar"] = new Star("Ursa Major","Spectroscopic Binary","A1 V",2.3);</li>
+                        <li>star["Aldebaran"] = new Star("Taurus","Irregular Variable","K5 III",0.85);</li>
+                        <li>star["Rigel"] = new Star("Orion","Supergiant with Companion","B8 Ia",0.12);</li>                                         
+                    </ul>
+
+                    <p>
+                        Además añade una pequeña función que le asigna una propiedad al objeto "Polaris" y muestra un mensaje en la consola de comando. Ese mensaje muestra la nueva propiedad de "Polaris".
+                    </p>
+                </div>
+
+                
+            </div>
+        </main>
+
+        <script src="js/creacionObjetos/creacion1.js"></script>
+        <script src="js/creacionObjetos/creacion2.js"></script>
+        <script src="js/creacionObjetos/creacion3.js"></script>
+
+        <script src="https://kit.fontawesome.com/8a41b28853.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

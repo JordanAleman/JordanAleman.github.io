@@ -1,0 +1,34 @@
+    <html>
+    <head>
+    <script language="javascript">
+	//como actualizar dos iframes al mismo tiempo.
+    function twoframes()    {
+            document.all("frame1").src="appnameYappVersion.htm";
+            document.all("frame2").src="Screen.htm";
+		//la función all nos permite acceder a los distintos elementos de la página, al igual que lo hemos hecho antes de otras formas
+}
+   function cambiar(){
+	    document.getElementById("frame1").src = "appnameYappVersion.htm";
+		document.getElementById("frame2").src = "Screen.htm";
+   }
+    </script>
+    </head>
+ 
+    <body>
+    <iframe src="Husmeador.htm" name="frame1" id="frame1"></iframe>
+    <iframe src="userAgent.htm" name="frame2" id="frame2"></iframe>
+    <br><br><br><br>
+    <form>
+    <input type="button" onclick="twoframes()" value="Cambiar la URL de los dos iframes">
+    <input type="button" onClick="cambiar()" value="Otra forma de intercambiar">
+    </form>
+
+    <ol>
+    <li>Se muestran en dos iframes dos paginas: "husmeador.hmtl" en el iframe1 y "userAgent.html" en el iframe2</li>
+    <li>Mediante el botón se llama a una función que intercambiara las páginas que se visualizan dentro de los iframes</li>
+    <li>El ejemplo mostrado se hace uso de la propiedad - all - para referirse a los elementos.</li>
+    <li>La propiedad all actualmente está desfasada por lo que se recomienda usar getElementById</li>
+    </ol>
+    </body>
+    </html>
+
