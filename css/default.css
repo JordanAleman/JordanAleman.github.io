@@ -145,13 +145,11 @@ body {
 }
 
 .mainBoard {
-    /* background-color: blue; */
     background: rgb(17,1,190);
     background: linear-gradient(180deg, rgba(17,1,190,1) 0%, rgba(33,42,163,1) 50%, rgba(12,55,156,1) 100%);
     
     border-radius: 1rem 1rem 0 0;
 
-    /* width: 1000px; */
     width: 850px;
     padding: 1rem;
 }
@@ -163,22 +161,23 @@ body {
 
 
 /* -------------------------------------------------------------------------- */
-/*                                  BaseBoard                                 */
+/*                                  chipBoxs                                  */
 /* -------------------------------------------------------------------------- */
-.baseBox {
-    position: relative;
-    left: -100px;
-    bottom: -20px;
+.chipBox {
+    perspective: 1000px;
 
-    background: rgb(17,1,190);
-    background: linear-gradient(180deg, rgba(17,1,190,1) 0%, rgba(33,42,163,1) 50%, rgba(12,55,156,1) 100%);
+    background-color: gainsboro;
+    font-weight: bold;
 
-    border: black solid 4px;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 50%;
+    border: black groove 5px;
 
-    width: 1000px;
-    height: 50px;
-    
+    margin: 0.3rem;
+    padding: 2.5rem;
+}
+
+.sizeChipBox {
+    padding: 2rem;
 }
 
 
