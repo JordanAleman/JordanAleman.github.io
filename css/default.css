@@ -107,7 +107,6 @@ body {
 .buttonStart {
     margin-top: 1rem;
 
-    width: 100%;
     height: 9vh;
 
     font-weight: bold;
@@ -188,6 +187,12 @@ body {
 /*                                Media Querys                                */
 /* -------------------------------------------------------------------------- */
 @media screen and (max-width: 1100px) {
+    .superMain {
+        position: initial;
+        margin-top: initial;
+        left: initial;
+        width: initial;
+    }
 
     /* -------------------------------------------------------------------------- */
     /*                                   Header                                   */
@@ -206,8 +211,8 @@ body {
     }
 
     .buttonStart {
-        height: 8vh;
-        font-size: 40px;
+        height: 70%;
+        font-size: 30px;
         margin-top: 0;
     }
 
@@ -216,11 +221,12 @@ body {
     /*                                    Main                                    */
     /* -------------------------------------------------------------------------- */
     .principalBody {
-        height: 70vh;
+        height: initial;
+        padding: 1rem;
     }
 
     .mainBoard {
-        width: 85%;
+        width: 100%;
     }
 
     .turnPlayer p {
@@ -234,38 +240,34 @@ body {
 
 
 
-
 @media screen and (max-width: 1150px) {
-    .chipBox {
-        padding: 4.8%;
-    }
-
-    .sizeChipBox {
-        padding: 3.8%;
+    .chipBox, .sizeChipBox {
+        padding: 6%;
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 800px) {
     .chipBox, .sizeChipBox  {
-        padding: 4.5%;
+        padding: 6%;
     }
 }
 
 @media screen and (max-width: 620px) {
     .chipBox, .sizeChipBox  {
-        padding: 4%;
+        padding: 5.5%;
     }
 }
 
 @media screen and (max-width: 500px) {
     .chipBox, .sizeChipBox  {
-        padding: 3%;
+        padding: 5%;
     }
 }
 
 @media screen and (max-width: 400px) {
     .chipBox, .sizeChipBox  {
-        padding: 2.5%;
+        padding: 4.5%;
     }
 
     .buttonStart {
